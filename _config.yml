@@ -14,7 +14,7 @@ description: The Stochastic Self-Consistent Harmonic Approximation
 #url: "https://example.com"
 
 # baseurl should be an empty string
-baseurl: "/new-test"
+baseurl: "/sschacode.github.io"
 
 # --- Navigation bar options --- #
 
@@ -42,7 +42,7 @@ navbar-links:
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: "/new-test/img/SSCHA_Logo_original_Horizontala_leyeda_Gabe.png"
+title-img: "/sschacode.github.io/img/SSCHA_Logo_original_Horizontala_leyeda_Gabe.png"
 
 # --- Background colour/image options --- #
 
