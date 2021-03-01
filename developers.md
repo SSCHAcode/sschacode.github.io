@@ -15,6 +15,11 @@ title: Developers
 >
 >**e-mail:** m.calandrabuonaura@unitn.it
 
+[![Marco Cherubini](img/Marco_Cherubini.jpg)](https://github.com/marcocherubini) [**Marco Cherubini**](https://github.com/marcocherubini) – Università di Roma La Sapienza, Rome, Italy
+
+> PhD student at the [*Università di Roma La Sapienza*](https://www.uniroma1.it/en/pagina-strutturale/home) .
+>**e-mail:** xxx@xx
+
 [![Ion Errea](img/Ion_Errea.jpg)](https://ionerrea.wordpress.com/) [**Ion Errea**](https://ionerrea.wordpress.com/) – University of the Basque Country, San Sebastian, Spain
 
 > Professor at the University of the Basque Country (UPV/EHU), leader of the *Quantum Theory of Materials* group at the [*Materials Physics Center*](https://cfm.ehu.es/eu/), and associated researcher at the [*Donostia International Physics Center*](http://dipc.ehu.es/index.php) .
