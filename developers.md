@@ -18,6 +18,7 @@ title: Developers
 [![Marco Cherubini](img/Marco_Cherubini.png)](https://github.com/marcocherubini) [**Marco Cherubini**](https://github.com/marcocherubini) – Università di Roma La Sapienza, Rome, Italy
 
 > PhD student at the [*Università di Roma La Sapienza*](https://www.uniroma1.it/en/pagina-strutturale/home) .
+> 
 >**e-mail:** marco.cherubini@uniroma1.it
 
 [![Ion Errea](img/Ion_Errea.jpg)](https://ionerrea.wordpress.com/) [**Ion Errea**](https://ionerrea.wordpress.com/) – University of the Basque Country, San Sebastian, Spain
