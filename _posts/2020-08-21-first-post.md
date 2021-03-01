@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Test post
+title: The SSCHA code has been released
 comments: true
 ---
 
-This is the first post
+The SSCHA code has been released
