@@ -23,6 +23,7 @@ navbar-links:
   News: "news"
   Donwload and installation: "download"
   Tutorials:
+    - Overview: "tutorials"
     - Lead telluride: "/Tutorials/Tutorial_PbTe"
     - Lead telluride structural instability: "/Tutorials/StructuralInstability"
     - Lead telluride spectral properties: "/Tutorials/tutorial_spectral"
