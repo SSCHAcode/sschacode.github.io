@@ -5,6 +5,12 @@ title: Download and Installation
 
 ## Download
 
+In order to use the SSCHA code you will need to download both the  *CellConstructor* package and the *python-sscha* package. These packages can be downloaded directly from the following github pages:
+
+https://github.com/SSCHAcode/CellConstructor
+
+https://github.com/SSCHAcode/python-sscha
+
 ## Requirements
 
 The requirements of the python-sscha package are:
