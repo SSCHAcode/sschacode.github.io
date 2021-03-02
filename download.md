@@ -7,9 +7,13 @@ title: Download and Installation
 
 In order to use the SSCHA code you will need to download both the  *CellConstructor* package and the *python-sscha* package. These packages can be downloaded directly from the following github pages:
 
-https://github.com/SSCHAcode/CellConstructor
+> [**github.com/SSCHAcode/CellConstructor**](https://github.com/SSCHAcode/CellConstructor)
+>
+> [**github.com/SSCHAcode/python-sscha**](https://github.com/SSCHAcode/python-sscha)
 
-https://github.com/SSCHAcode/python-sscha
+In case you want to use the force field calculator used in the [SnTe tutorial](http://sscha.eu/Tutorials/SnSe/), you will need to download as well the *F3ToyModel* package from this link:
+
+> [**github.com/SSCHAcode/F3ToyModel**](https://github.com/SSCHAcode/F3ToyModel) 
 
 ## Requirements
 
