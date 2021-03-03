@@ -13,10 +13,8 @@ The pseudopotentials used for the DFT calculations are in the pseudo_espresso fo
 
 ## Preparation
 Both ASE and the SSCHA work in python, so we need to import them.
-Moreover, since we want to use quantum-espresso, we also import the Espresso calculation of ASE.
-Indeed, you can replace the Espresso calculator with any ASE calculator that can compute total energy, forces, and the stress tensor (the latter required only for cell relaxation). 
-
-
+Moreover, since we want to use Quantum ESPRESSO, we also import the Quantum ESPRESSO calculator of ASE.
+Indeed, you can replace the Quantum ESPRESSO calculator with any ASE calculator that can compute total energies, forces, and the stress tensors (the latter required only for cell relaxation). 
 
 ```python
 # Load in the notebook all scientific libraries
