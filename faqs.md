@@ -114,7 +114,7 @@ root_representation = "root4"
 ```
 if you are running the SSCHA as a stand-alone program
 
-If yo are using a python script instead, you should setup the following attributes of the sscha.SchaMinimizer.SSCHA_Minimizer class
+If you are using a python script instead, you should setup the following attributes of the sscha.SchaMinimizer.SSCHA_Minimizer class
 ```
 minim.preconditioning = False
 minim.root_representation = "root4"
