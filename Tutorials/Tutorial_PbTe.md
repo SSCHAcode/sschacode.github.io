@@ -278,6 +278,7 @@ Luckily, the SSCHA can deal with systems with imaginary frequencies, even if the
 Note that the presence of imaginary frequencies prevents the application of any harmonic approximation.
 
 # The Self-Consistent Harmonic Approximation
+
 Now we have all the ingredients to start the SSCHA calculation.
 The SSCHA finds the optimal gaussian density matrix that minimizes the free energy of the system:
 $$
@@ -285,21 +286,20 @@ $$
 $$
 where $$\mathcal{R}$$ and $$\Upsilon$$ are, respectively, the average centroid position and the covariance matrix of the gaussian, while $$\alpha,\beta=1\cdots 3N$$ runs on both the atomic and the cartesian coordinates.
 
-In the specific case, the $\rho_{\mathcal R, \Upsilon}(\vec R)$ density matrix can be represented by a positive definite dynamical matrix.
-The equilibrium density matrix of any harmonic Hamiltonian is a gaussian. Our density matrix is related one to one to
-an auxiliary harmonic hamiltonian $\mathcal H_{\mathcal R, \Upsilon}$.
+In the specific case, the $$\rho_{\mathcal R, \Upsilon}(\vec R)$$ density matrix can be represented by a positive definite dynamical matrix.
+The equilibrium density matrix of any harmonic Hamiltonian is a Gaussian. Our density matrix is related one to one to
+an auxiliary harmonic hamiltonian $$\mathcal H_{\mathcal R, \Upsilon}$$.
 $$
 \rho_{\mathcal R, \Upsilon} \longleftrightarrow \mathcal H_{\mathcal R, \Upsilon}
 $$
 
 ## Preparation of the data
-First, we need to obtain a good starting point for our density matrix $\rho$.
+
+First, we need to obtain a good starting point for our density matrix $$\rho$$.
 We can use the harmonic dynamical matrix we computed on the previous step (harmnic_dyn).
 
-There is a problem: a harmonic hamiltonian must be positive definite to generate a density matrix, and the PbTe harmonic hamiltonian is not.
-The CellConstructor can force a dynamical matrix to be positive definite.
-
-
+There is a problem: a harmonic hamiltonian must be positive definite to generate a density matrix, and the PbTe harmonic Hamiltonian is not.
+The *CellConstructor* can force a dynamical matrix to be positive definite.
 
 ```python
 # Load the dynamical matrix 
@@ -366,18 +366,19 @@ print ("\n".join(["{:.4f} cm-1".format(w * CC.Units.RY_TO_CM) for w in  w_s]))
     187.8042 cm-1
 
 
-As you can see, we eliminated the imaginary frequencies. This is no more the harmonic dynamical matrix, however, it is a good starting point for defining the density matrix $\rho_{\mathcal R, \Upsilon}(R)$.
+As you can see, we eliminated the imaginary frequencies. This is no more the harmonic dynamical matrix, however, it is a good starting point for defining the density matrix $$\rho_{\mathcal R, \Upsilon}(R)$$.
 
 ## The stochastic approach
-To solve the self-consistent harmonic approximation we use a stochastic approach: we generate random ionic configurations distributed according to $\rho_{\mathcal R, \Upsilon}$ so that we can compute the free energy as
+
+To solve the self-consistent harmonic approximation we use a stochastic approach: we generate random ionic configurations distributed according to $$\rho_{\mathcal R, \Upsilon}$$ so that we can compute the free energy as
 $$
 F_{\mathcal R, \Upsilon} = F[{\mathcal H}_{\mathcal R, \Upsilon}] + \left<V(R) - \mathcal V(R)\right>_{\rho_{\mathcal R, \Upsilon}}
 $$
 
-Here $F[\mathcal H_{\mathcal R, \Upsilon}]$ is the free energy of the auxiliary harmonic hamiltonian $\mathcal H_{\mathcal R, \Upsilon}$, 
-$V(R)$ is the BO energy landscape, $\mathcal V(R)$ is the harmonic potential of the auxiliary hamiltonian $\mathcal H_{\mathcal R, \Upsilon}$ and $\left<\cdot\right>_{\rho_{\mathcal R, \Upsilon}}$ is the average over the $\rho_{\mathcal R, \Upsilon}$ density matrix.
+Here $$F[\mathcal H_{\mathcal R, \Upsilon}]$$ is the free energy of the auxiliary harmonic hamiltonian $$\mathcal H_{\mathcal R, \Upsilon}$$, 
+$$V(R)$$ is the BO energy landscape, $$\mathcal V(R)$$ is the harmonic potential of the auxiliary hamiltonian $$\mathcal H_{\mathcal R, \Upsilon}$$ and $$\left<\cdot\right>_{\rho_{\mathcal R, \Upsilon}}$$ is the average over the $$\rho_{\mathcal R, \Upsilon}$$ density matrix.
 
-So we need to generate the ensemble randomly distributed according to $\rho_{\mathcal R, \Upsilon}$. This is done as follows:
+So we need to generate the ensemble randomly distributed according to $$\rho_{\mathcal R, \Upsilon}$$. This is done as follows:
 
 
 ```python
@@ -392,7 +393,7 @@ ensemble.generate(N = 10)
 view(ensemble.structures[0].get_ase_atoms())
 ```
 
-To minimize the free energy, we need to compute the quantity $V(R)$ (the energy) and its gradient (the atomic forces) for each ionic configuration generated within the ensemble. 
+To minimize the free energy, we need to compute the quantity $$V(R)$$ (the energy) and its gradient (the atomic forces) for each ionic configuration generated within the ensemble. 
 
 This can be done in many ways. You can do it manually:
 You can save the ensemble as text files with the atomic coordinates and cell, copy that on a cluster, run your DFT calculations, parse the output files and tell the SSCHA code the values of energy and forces for each configuration manually. 
@@ -463,9 +464,9 @@ We will notice files made as:
     u_population1_X.dat  
     scf_population1_X.dat   
 
-Both files represent the ionic configurations. The Xs are the IDs (starting from 1) of the configurations. In the u_population1_X.dat file is stored the atomic displacement of each ion with respect to the centroid position. The scf_population1_X.dat is a file that contains the whole ionic displaced structure. In particular, in the first part, we have the atomic coordinates preceded by the atomic type (in Angstrom), while in the last part we have the lattice vectors (in Angstrom). This is the standard format to be used in quantum-espresso with ibrav=0, however, since it should not have any symmetry (is a randomly displaced configuration) it can be easily converted for input to any calculator.
+Both files represent the ionic configurations. The Xs are the IDs (starting from 1) of the configurations. In the u_population1_X.dat file is stored the atomic displacement of each ion with respect to the centroid position. The scf_population1_X.dat is a file that contains the whole ionic displaced structure. In particular, in the first part, we have the atomic coordinates preceded by the atomic type (in Angstrom), while in the last part we have the lattice vectors (in Angstrom). This is the standard format to be used in Quantum ESPRESSO with ibrav=0, however, since it should not have any symmetry (is a randomly displaced configuration) it can be easily converted for input to any calculator.
 
-So, we will use the scf_population1_X.dat to prepare our input scripts for quantum-espresso.
+So, we will use the scf_population1_X.dat to prepare our input scripts for Quantum ESPRESSO.
 
 After we will get total energies, forces, and stresses for any ionic configurations, we must save the results in the following files:
 
@@ -476,7 +477,7 @@ After we will get total energies, forces, and stresses for any ionic configurati
 
 forces_population1_X.dat for each row must be filled with the force (in Ry/Bohr) on the corresponding atom of the same configuration, pressure_population1_X.dat must be filled with the 3x3 symmetric stress tensor (in Ry/Bohr^3) of the X configuration, and energies_supercell_population1.dat is a one-column file that contains, for each row, the total energy (in Ry) on the supercell of each configuration (in order of ID).
 
-In the following code we will prepare the quantum-espresso pw.x input for each configuration.
+In the following code we will prepare the Quantum ESPRESSO pw.x input for each configuration.
 
 
 
@@ -599,7 +600,7 @@ Either we run the calculation locally or we copied in a cluster and ran there, n
 As written, we must convert the total energy of the supercell in Ry, the forces in Ry/Bohr, and the stress in Ry/Bohr^3.
 Luckily quantum espresso already gives these quantities in the correct units, but be careful when using different calculators.
 This problem does not arise when using automatic calculators, as the SSCHA and ASE will cooperate to convert the units to the correct one.
-Now we will parse the espresso output looking for the energy, the forces, and the stress tensor.
+Now we will parse the Quantum ESPRESSO output looking for the energy, the forces, and the stress tensor.
 
 
 ```python
@@ -668,14 +669,14 @@ ensemble.load("data_ensemble_manual", population = 1, N = 10)
 
 ### The automatic submission to a cluster
 
-The python-sscha code implements also the possibility to send the calculation to a remote cluster.
+The *python-sscha* code implements also the possibility to send the calculation to a remote cluster.
 This option is useful, as installing the full sscha package on a cluster may be cumbersome. 
 
 With this option, we will run all the SSCHA locally, and submit to the cluster only the DFT calculations.
-At the current moment, the cluster automatic submission is compatible only with the SLURM queue system, and for now, only quantum-espresso input file generation has been tested.
+At the current moment, the cluster automatic submission is compatible only with the SLURM queue system, and for now, only Quantum ESPRESSO input file generation has been tested.
 
 First, we need to initialize the cluster, specifying all the relevant variables.
-Here, we use the example of the MARCONI HPC of the CINECA, but can be edited to run on most clusters (tested in the Spanish MARE NOSTRUM, the Franch IRENE, and EKHI at CFM)
+Here, we use the example of the MARCONI HPC of the CINECA, but can be edited to run on most clusters (tested in the Spanish MARE NOSTRUM, the French IRENE, and EKHI at the CFM)
 
 
 
@@ -731,7 +732,7 @@ ensemble.compute_ensemble(espresso_calc, cluster = my_hpc)
 The last line will do the job. It will establish a connection to the cluster, prepare all the input files, send them, submit them through a SLURM queue system, and collect them back. 
 The interesting feature of this procedure is that if some calculation fails, the automatic process will automatically resubmit it up to five times (this number can be changed as it is a property of the cluster, to avoid wasting CPU time if we setup a too low time limit. The variable is my_hpc.max_recalc.
 
-You will need to connect without manually typing your password to use the cluster in this way. This is done by public/private key encryption with ssh, that is the safest way to go. However, some clusters do not allow connection with private/public keys (or the policy to obtain this kind of access requires a painful bureaucratic procedure) and impose the manual typing of the password each time. In this case, you can solve in two ways: by setting up an ssh tunnel to connect (this is also refused by some clusters) or by explicitly telling python the password for the connection when you create the cluster object:
+You will need to connect without manually typing your password to use the cluster in this way. This is done by public/private key encryption with ssh, that is the safest way to go. However, some clusters do not allow connection with private/public keys (or the policy to obtain this kind of access requires a painful bureaucratic procedure) and impose the manual typing of the password each time. In this case, you can act in two ways: by setting up an ssh tunnel to connect (this is also refused by some clusters) or by explicitly telling python the password for the connection when you create the cluster object:
 ```python
 my_hcp = sscha.Cluster.Cluster(pwd="mybeautifullpassword")
 ```
@@ -746,15 +747,15 @@ ensemble.save("data_ensemble_cluster", population = 1)
 ```
 
 # The SSCHA minimization
-In the previous sections, we initialized the starting density matrix $\rho_{\mathcal R,\Upsilon}$, and we generated a randomly distributed ensemble. Then we used quantum-espresso to compute the energies, forces, and the stress from it.
+In the previous sections, we initialized the starting density matrix $$\rho_{\mathcal R,\Upsilon}$$, and we generated a randomly distributed ensemble. Then we used Quantum ESPRESSO to compute the energies, forces, and the stress tensors from it.
 
-In this section we will use this ensemble to optimize the density matrix $\rho_{\mathcal R, \Upsilon}$ to minimize the free energy.
-The minimization will continue until both we converge to a minimum or our ensemble does not describe sufficiently well anymore the updated $\rho_{\mathcal R, \Upsilon}$.
-The ensemble degradation occurs when our updated parameters $\mathcal R$ and $\Upsilon$ changes a lot with respect to the original value used to generate the ensemble.
+In this section we will use this ensemble to optimize the density matrix $$\rho_{\mathcal R, \Upsilon}$$ to minimize the free energy.
+The minimization will continue until both we converge to a minimum or our ensemble does not describe sufficiently well anymore the updated $$\rho_{\mathcal R, \Upsilon}$$.
+The ensemble degradation occurs when our updated parameters $$\mathcal R$$ and $$\Upsilon$$ change a lot with respect to the original value used to generate the ensemble.
 
-This criterion is established by the Kong Liu ratio (see [Monacelli et al, PRB 98 (2), 024106](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.024106) for details on the definition)
+This criterion is established by the Kong Liu ratio (see [Monacelli et al, PRB 98 (2), 024106](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.024106) for details on the definition).
 
-In this case, $\mathcal R$ are fixed by symmetry, so our only degrees of freedom are in the $\Upsilon$ matrix. We force the system to ignore $\mathcal R$ for the minimization convergence.
+In this case, $$\mathcal R$$ are fixed by symmetry, so our only degrees of freedom are in the $$\Upsilon$$ matrix. We force the system to ignore $$\mathcal R$$ for the minimization convergence.
 
 
 ```python
@@ -855,7 +856,7 @@ print("The stocastic error of the free energy instead, was:", minimizer.get_free
 ## Saving the results
 
 We completed the minimization, now we can save the final results.
-In particular, we can save the density matrix $\rho_{\mathcal R, \Upsilon}$ (or rather the dynamical matrix and the centroid positions from which we can obtain the density matrix). 
+In particular, we can save the density matrix $$\rho_{\mathcal R, \Upsilon}$$ (or rather the dynamical matrix and the centroid positions from which we can obtain the density matrix). 
 
 These two quantities are both stored inside the auxiliary dynamical matrix. We can access it through:
 ```python
@@ -942,9 +943,4 @@ There are many ways, you can manually iterate the ensemble generation, simply re
 However, the SSCHA code offers a module (Relax) that can automatize these iterations for you.
 Indeed, in this case, you need to set up an automatic calculator with ASE, locally, or with the cluster option. 
 
-In this tutorial, we initialized the SSCHA calculation and set up manually. If you go to the H3S or the LaH10 tutorials, you will see how we can completely automatize the SSCHA runs.
-
-
-```python
-
-```
+In this tutorial, we initialized the SSCHA calculation and set up manually. If you go to the [H3S](http://sscha.eu/Tutorials/Automatic_Calculations/) or the [LaH10](http://sscha.eu/Tutorials/VariableCellRelaxation/) tutorials, you will see how we can completely automatize the SSCHA runs.
