@@ -2,6 +2,10 @@
 layout: page
 ---
 
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+
 <title>Tutorial_PbTe</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -13102,7 +13106,7 @@ Indeed, you can replace the Espresso calculator with any ASE calculator that can
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load in the notebook all scientific libraries</span>
@@ -13117,29 +13121,10 @@ Indeed, you can replace the Espresso calculator with any ASE calculator that can
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Using matplotlib backend: MacOSX
-Populating the interactive namespace from numpy and matplotlib
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -13174,7 +13159,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Lets define the pseudopotentials</span>
@@ -13210,7 +13195,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">PbTe_atoms</span> <span class="o">=</span> <span class="n">ase</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;PbTe.cif&quot;</span><span class="p">)</span>
@@ -13244,7 +13229,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Initialize a Cellconstructor Structure</span>
@@ -13282,7 +13267,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># We override (or add) the key for the calculation type</span>
@@ -13304,7 +13289,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Ase should have created an input file espresso.pwi that you can check</span>
@@ -13332,7 +13317,7 @@ $$
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Volume before optimization:  63.71002599999998  A^3
-Volume after optimization:  67.90589628214455  A^3
+Volume after optimization:  67.90591056326011  A^3
 </pre>
 </div>
 </div>
@@ -13365,7 +13350,7 @@ We will then save the results in harmonic_dyn filenames.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># We need an input file for phonon calculation in espresso.</span>
@@ -13418,7 +13403,7 @@ In this case, it should be 3.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the dynamical matrices just computed</span>
@@ -13445,54 +13430,54 @@ In this case, it should be 3.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-186.1426 cm-1
--186.1426 cm-1
--186.1426 cm-1
--185.9586 cm-1
--185.9586 cm-1
--185.9586 cm-1
--179.9737 cm-1
--179.9737 cm-1
--179.9737 cm-1
--179.9737 cm-1
--179.9737 cm-1
--179.9737 cm-1
--101.7464 cm-1
--101.7464 cm-1
--101.7464 cm-1
--80.2511 cm-1
--80.2511 cm-1
--80.2511 cm-1
--80.2511 cm-1
--80.2511 cm-1
--80.2511 cm-1
-48.0512 cm-1
-48.0512 cm-1
-48.0512 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-77.3171 cm-1
-77.3171 cm-1
-77.3171 cm-1
-77.3171 cm-1
-99.2504 cm-1
-99.2504 cm-1
-99.2504 cm-1
-99.2504 cm-1
+<pre>-186.1459 cm-1
+-186.1459 cm-1
+-186.1459 cm-1
+-185.9474 cm-1
+-185.9474 cm-1
+-185.9474 cm-1
+-179.9445 cm-1
+-179.9445 cm-1
+-179.9445 cm-1
+-179.9445 cm-1
+-179.9445 cm-1
+-179.9445 cm-1
+-101.7456 cm-1
+-101.7456 cm-1
+-101.7456 cm-1
+-80.2691 cm-1
+-80.2691 cm-1
+-80.2691 cm-1
+-80.2691 cm-1
+-80.2691 cm-1
+-80.2691 cm-1
+48.0931 cm-1
+48.0931 cm-1
+48.0931 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+77.3157 cm-1
+77.3157 cm-1
+77.3157 cm-1
+77.3157 cm-1
+99.2432 cm-1
+99.2432 cm-1
+99.2432 cm-1
+99.2432 cm-1
 </pre>
 </div>
 </div>
@@ -13553,7 +13538,7 @@ The CellConstructor can force a dynamical matrix to be positive definite.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the dynamical matrix </span>
@@ -13584,54 +13569,54 @@ The CellConstructor can force a dynamical matrix to be positive definite.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-0.0000 cm-1
+<pre>0.0000 cm-1
 0.0000 cm-1
 0.0000 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-52.7911 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-55.6748 cm-1
-77.3171 cm-1
-77.3171 cm-1
-77.3171 cm-1
-77.3171 cm-1
-80.2511 cm-1
-80.2511 cm-1
-80.2511 cm-1
-80.2511 cm-1
-80.2511 cm-1
-80.2511 cm-1
-99.2504 cm-1
-99.2504 cm-1
-99.2504 cm-1
-99.2504 cm-1
-101.7464 cm-1
-101.7464 cm-1
-101.7464 cm-1
-179.9737 cm-1
-179.9737 cm-1
-179.9737 cm-1
-179.9737 cm-1
-179.9737 cm-1
-179.9737 cm-1
-186.1426 cm-1
-186.1426 cm-1
-186.1426 cm-1
-187.8175 cm-1
-187.8175 cm-1
-187.8175 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+52.7799 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+55.6362 cm-1
+77.3157 cm-1
+77.3157 cm-1
+77.3157 cm-1
+77.3157 cm-1
+80.2691 cm-1
+80.2691 cm-1
+80.2691 cm-1
+80.2691 cm-1
+80.2691 cm-1
+80.2691 cm-1
+99.2432 cm-1
+99.2432 cm-1
+99.2432 cm-1
+99.2432 cm-1
+101.7456 cm-1
+101.7456 cm-1
+101.7456 cm-1
+179.9445 cm-1
+179.9445 cm-1
+179.9445 cm-1
+179.9445 cm-1
+179.9445 cm-1
+179.9445 cm-1
+186.1459 cm-1
+186.1459 cm-1
+186.1459 cm-1
+187.8042 cm-1
+187.8042 cm-1
+187.8042 cm-1
 </pre>
 </div>
 </div>
@@ -13657,7 +13642,7 @@ $V(R)$ is the BO energy landscape, $\mathcal V(R)$ is the harmonic potential of 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># We setup an ensemble for the SSCHA at T = 100 K using the density matrix  from the dyn dynamical matrix</span>
@@ -13695,14 +13680,14 @@ now for a simple total energy DFT calculation, attach to our ensemble variable a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Lets setup the espresso calculator for ASE</span>
 <span class="c1"># (You can substitute the following two lines with the calculator you prefer)</span>
 <span class="n">input_params</span><span class="p">[</span><span class="s2">&quot;calculation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;scf&quot;</span> <span class="c1"># Setup the simple DFT calculation</span>
 
-<span class="n">espresso_calc</span> <span class="o">=</span> <span class="n">Espresso</span><span class="p">(</span><span class="n">pseudopotentials</span> <span class="o">=</span> <span class="n">pseudos</span><span class="p">,</span> <span class="n">input_data</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">,</span> <span class="n">kspacing</span> <span class="o">=</span> <span class="n">k_spacing</span><span class="p">)</span>
+<span class="n">espresso_calc</span> <span class="o">=</span> <span class="n">Espresso</span><span class="p">(</span><span class="n">pseudopotentials</span> <span class="o">=</span> <span class="n">pseudos</span><span class="p">,</span> <span class="n">input_data</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">,</span> <span class="n">kspacing</span> <span class="o">=</span> <span class="n">k_spacing</span><span class="p">,</span> <span class="n">koffset</span> <span class="o">=</span> <span class="n">k_offset</span><span class="p">)</span>
 
 <span class="c1"># Now we use the espresso calculator to compute all the configurations</span>
 <span class="n">ensemble</span><span class="o">.</span><span class="n">compute_ensemble</span><span class="p">(</span><span class="n">espresso_calc</span><span class="p">)</span>
@@ -13722,31 +13707,16 @@ now for a simple total energy DFT calculation, attach to our ensemble variable a
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Time elapsed to prepare the rho update: 0.142029047012 s
-(of which to update sscha energies and forces: 0.0225 s)
-(of which computing the Upsilon matrix: 0.0614 s)
-Time elapsed to update weights the sscha energies, forces and displacements: 0.0842490196228 s
-(of which to update the weights): 0.000354051589966 s
-Time elapsed to prepare the rho update: 0.137183189392 s
-(of which to update sscha energies and forces: 0.0197 s)
-(of which computing the Upsilon matrix: 0.0587 s)
-Time elapsed to update weights the sscha energies, forces and displacements: 0.0789968967438 s
-(of which to update the weights): 0.000676870346069 s
-Computing configuration 1 / 10
-Computing configuration 2 / 10
-Computing configuration 3 / 10
-Computing configuration 4 / 10
-Computing configuration 5 / 10
-Computing configuration 6 / 10
-Computing configuration 7 / 10
-Computing configuration 8 / 10
-Computing configuration 9 / 10
-Computing configuration 10 / 10
-Time elapsed to prepare the rho update: 0.156900882721 s
-(of which to update sscha energies and forces: 0.0236 s)
-(of which computing the Upsilon matrix: 0.0733 s)
-Time elapsed to update weights the sscha energies, forces and displacements: 0.0975270271301 s
-(of which to update the weights): 0.000720977783203 s
+<pre>conf 0 / 10
+conf 1 / 10
+conf 2 / 10
+conf 3 / 10
+conf 4 / 10
+conf 5 / 10
+conf 6 / 10
+conf 7 / 10
+conf 8 / 10
+conf 9 / 10
 </pre>
 </div>
 </div>
@@ -13757,7 +13727,7 @@ Time elapsed to update weights the sscha energies, forces and displacements: 0.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Now we can save the ensemble, to reload it in any later moment</span>
@@ -13781,7 +13751,7 @@ In this example, we will use the standard pw.x executable of quantum espresso fo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># We save the ensemble as it is, before computing the forces</span>
@@ -13824,7 +13794,7 @@ energies_supercell_population1.dat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Ok now we will use python to to parse the ensemble and generate input files for the ab-initio run</span>
