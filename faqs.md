@@ -4,7 +4,6 @@ title: Frequently Asked Questions (FAQs)
 ---
 
 1. [How do I start a calculation if the dynamical matrices have imaginary frequencies?](#How-do-I-start-a-calculation-if-the-dynamical-matrices-have-imaginary-frequencies?)
-
 2. [What are the reasonable values for the steps (lambda_a, lambda_w, min_step_dyn and min_step_struc)?](#What-are-the-reasonable-values-for-the-steps-(lambda_a,-lambda_w,-min_step_dyn-and-min_step_struc)?)
 
 3. [In a variable cell optimization, what is a reasonable value for the bulk modulus?](#In-a-variable-cell-optimization,-what-is-a-reasonable-value-for-the-bulk-modulus?)
