@@ -1,21 +1,15 @@
 ---
 layout: page
+title: PbTe tutorial
 ---
 
-# Pb Te
+In this tutorial, we will set up, from scratch, a calculation of lead telluride (PbTe), a thermoelectric material with high thermoelectric efficiency. All the files needed for the calculation are in the directory Tutorials/PbTe of the *python-sscha* package.
 
-In this tutorial, we will set up, from scratch, a calculation of Lead Telluride (PbTe), a thermoelectric material with high thermoelectric efficiency. All the files needed for the calculation are in the directory Tutorials/PbTe of the python-sscha package.
+Here, for carrying out the calculations, we will use Quantum ESPRESSO, ASE, and the SSCHA for thermodynamic properties. To setup ASE to work with espresso, please refer to the official [guide](https://wiki.fysik.dtu.dk/ase/ase/calculators/espresso.html).
 
-Here, for carrying out the calculations, we will use quantum-espresso, ASE, and the SSCHA for thermodynamical properties.
-To setup ASE to work with espresso, please refer to the official guide:
-https://wiki.fysik.dtu.dk/ase/ase/calculators/espresso.html
-
-We prepared the tutorial with the experimental structure in the CIF format. You can download the starting CIF files from online databases or use ASE to build your structure.
-In this case, we downloaded the structure "PbTe.cif"  from the American Mineralogist Crystal Structure Database
-http://rruff.geo.arizona.edu/AMS/amcsd.php
-The pseudo-potentials used for the DFT calculation are in pseudo_espresso, a full list of pseudos is available on the espresso 
-website.
-
+We prepared the tutorial with the experimental structure in CIF format. You can download the starting CIF files from online databases or use ASE to build your structure.
+In this case, we downloaded the structure "PbTe.cif"  from the [American Mineralogist Crystal Structure Database](http://rruff.geo.arizona.edu/AMS/amcsd.php).
+The pseudopotentials used for the DFT calculations are in the pseudo_espresso folder. A full list of pseudopotentials is available on the [Quantum ESPRESSO website](https://www.quantum-espresso.org/pseudopotentials).
 
 ## Preparation
 Both ASE and the SSCHA work in python, so we need to import them.
