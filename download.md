@@ -15,60 +15,46 @@ In case you want to use the force field calculator used in the [SnTe tutorial](h
 
 > [**github.com/SSCHAcode/F3ToyModel**](https://github.com/SSCHAcode/F3ToyModel) 
 
-## Requirements
+## Requirements for installation
 
-The requirements of the python-sscha package are:
-1. python >= 2.7 and < 3
+In order to install both *CellConstructor* and *python-sscha* packages, you need to install previously python and several python packages. As *python-sscha* depends on *CellConstructor*, the former will not work unless the latter is installed. As the SSCHA code also is partly written in Fortran, you will aslo need a Fortran compiler as well as Lapack and Blas librearies. 
+
+The full list of dependencies to install *CellConstructor* and *python-sscha* packages is:
+1. python
 2. numpy
 3. matplotlib
 3. Lapack
 4. Blas
 5. gfortran (or any fortran compiler)
-6. CellConstructor
+6. Atomic Simulation Environment (ASE)
+7. SPGLIB
 
-Recommended packages:
-1. Atomic Simulation Environment (ASE)
-2. SPGLIB
-
-These packages are fundamental. In particular CellConstructor is the shoulder on
-which python-sscha is builded on. You can find the last development version on
-GitHub
-
-The ASE (Atomic Simulation Environment) is another dependency, since CellConstructor
-relies on it.
-
-To install all the dependences, simply run
-
+All the needed python dependencies can be easily installed for *CellConstructor* or *python-sscha* by simply running
 ```
 pip install -r requirements.txt
 ```
+in the folder of each package.
+
 
 ## Installation
 
-To install the package it is recommended the last version of anaconda-python2,
-that cames with all the updated numpy and matplotlib, already compiled to work
-in parallel.
-Moreover the last version of matplotlib will allow the user to modify the plots
-after they are produced.
+To install the *CellConstructor* and *python-sscha* packages it is recommended to use the last version of anaconda-python2, which cames with all the updated numpy and matplotlib packages already compiled to work in parallel. Moreover the last version of matplotlib will allow the user to modify the plots after they are produced.
 
-It can be simply installed from command line:
-
+Once all the dependencies have been installed, the *CellConstructor* and *python-sscha* codes can be easily installed from the command line as:
 ```
 python setup.py install
 ```
+This command must be executed in the directory where the setup.py script is, insice the *CellConstructor* and *python-sscha* folders. If you installed python in a system directory, administration rights may be requested (add a sudo before the command). 
 
-This command must be executed in the same directory as the setup.py script.
-Note, if you installed python in a system directory, administration rights may be
-requested (add a sudo before the command).
-Please, consider adopting anaconda-python to install the software on clusters where you do not have
-administration rights.
+Installing *CellConstructor* and *python-sscha* in clusters may me more tricky and one needs to adapt the setup.py to the cluster characteristics. For instance, if you use the intel compiler, you need to delete the lapack linking from the setup.py and include -mkl. Note that you must force to use the same linker as the one used for the compilation. For example, specific setup.py scripts are provided with the distribution to install *CellConstructor* easily in FOSS or INTEL clusters. 
 
-Installation on clusters:
+## Installation through pip
 
-It is suggested to install the package with the anaconda distribution.
-
-Please, remember that if you use the intel compiler, you need to delete the lapack linking from the
-setup.py and include the -mkl (as done for cellconstructor).
-Note that you must force to use the same liker compiler as the one used for the compilation.
-
-A specific setup.py script is provided to install it easily in FOSS clusters.
+Alternatively, both *CellConstructor* and *python-sscha* can be installed through pip simply as:
+```
+pip install CellConstructor
+``` 
+and
+```
+pip install python-sscha 
+```
