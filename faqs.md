@@ -5,43 +5,24 @@ title: Frequently Asked Questions (FAQs)
 
 1. [How do I start a calculation if the dynamical matrices have imaginary frequencies?](#How-do-I-start-a-calculation-if-the-dynamical-matrices-have-imaginary-frequencies?)
 2. [What are the reasonable values for the steps (lambda_a, lambda_w, min_step_dyn and min_step_struc)?](#What-are-the-reasonable-values-for-the-steps-(lambda_a,-lambda_w,-min_step_dyn-and-min_step_struc)?)
-
 3. [In a variable cell optimization, what is a reasonable value for the bulk modulus?](#In-a-variable-cell-optimization,-what-is-a-reasonable-value-for-the-bulk-modulus?)
-
 4. [The code stops saying it has found imaginary frequencies, how do I fix it?](#The-code-stops-saying-it-has-found-imaginary-frequencies,-how-do-I-fix-it?)
-
 5. [Why the gradient sometimes increases during a minimization?](#Why-the-gradient-sometimes-increases-during-a-minimization?)
-
 6. [The gradients on my simulations are increasing a lot, why is this happening?](#The-gradients-on-my-simulations-are-increasing-a-lot,-why-is-this-happening?)
-
 7. [How do I check if my calculations are well converged?](#How-do-I-check-if-my-calculations-are-well-converged?)
-
 8. [What is the final error on the structure or the dynamical matrix of a SCHA minimization?](#What-is-the-final-error-on-the-structure-or-the-dynamical-matrix-of-a-SCHA-minimization?)
-
 9. [How does the error over the gradients scale with the number of configurations?](#How-does-the-error-over-the-gradients-scale-with-the-number-of-configurations?)
-
 10. [When I relax the cell, is it necessary for the gradients to reach zero before making a step with the new cell?](#When-I-relax-the-cell,-is-it-necessary-for-the-gradients-to-reach-zero-before-making-a-step-with-the-new-cell?)
-
 11. [I cannot remove the pressure anisotropy after relaxing the cell, what is happening?](#I-cannot-remove-the-pressure-anisotropy-after-relaxing-the-cell,-what-is-happening?)
-
 12. [How may I run a calculation neglecting symmetries?](#How-may-I-run-a-calculation-neglecting-symmetries?)
-
 13. [In which units are the lattice vectors, the atomic positions, and the mass of the atoms in the dynamical matrix file?](#In-which-units-are-the-lattice-vectors,-the-atomic-positions,-and-the-mass-of-the-atoms-in-the-dynamical-matrix-file?)
-
 14. [What is the difference between the different kind of minimization (preconditioning and root_representation)?](#What-is-the-difference-between-the-different-kind-of-minimization-(preconditioning-and-root_representation)?)
-
 15. [How do I lock modes from m to n in the minimization?](#How-do-I-lock-modes-from-m-to-n-in-the-minimization?)
-
 16. [How do I lock a special atom in the minimization?](#How-do-I-lock-a-special-atom-in-the-minimization?)
-
 17. [How do I understand if I have to generate a new population or the minimization converged?](#How-do-I-understand-if-I-have-to-generate-a-new-population-or-the-minimization-converged?)
-
 18. [How do I choose the appropriate value of Kong-Liu effective sample size or ratio?](#How-do-I-choose-the-appropriate-value-of-Kong-Liu-effective-sample-size-or-ratio?)
-
 19. [How do I understand if the free energy hessian calculation is converged?](#How-do-I-understand-if-the-free-energy-hessian-calculation-is-converged?)
-
 20. [How can I add more configurations to an existing ensembe?](#How-can-I-add-more-configurations-to-an-existing-ensembe?)
-
 21. [How do I fix the random number generator seed to make a calculation reproducible?](#How-do-I-fix-the-random-number-generator-seed-to-make-a-calculation-reproducible?) 
 
 <a name="How-do-I-start-a-calculation-if-the-dynamical-matrices-have-imaginary-frequencies?"></a>
