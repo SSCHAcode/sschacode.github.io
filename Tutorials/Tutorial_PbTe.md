@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Pb Te
 
 In this tutorial, we will set up, from scratch, a calculation of Lead Telluride (PbTe), a thermoelectric material with high thermoelectric efficiency. All the files needed for the calculation are in the directory Tutorials/PbTe of the python-sscha package.
