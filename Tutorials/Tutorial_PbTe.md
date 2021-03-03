@@ -44,8 +44,7 @@ import cellconstructor.Phonons
 import sscha, sscha.Ensemble, sscha.SchaMinimizer, sscha.Relax
 ```
 
-We will now set up the espresso calculator for ASE.  For now, we will use it to relax the original structure within a simple DFT calculation (this is an experimental structure). Then, we will feed this calculator into the SSCHA code to perform the SSCHA minimization.
-
+We will now set up the Quantum ESPRESSO calculator for ASE.  For now on, we will use it to relax the original structure within a simple DFT calculation (this is an experimental structure). Then, we will feed this calculator into the SSCHA code to perform the SSCHA minimization.
 
 ```python
 # Lets define the pseudopotentials
@@ -78,9 +77,9 @@ view(PbTe_atoms)
 
 As you may have noticed, this structure is in the conventional cell.
 While it is useful for visualization purposes, it makes the SSCHA calculation harder, as more atoms are in the unit cell.
-So we redefine the primitive cell with the CellConstructor package.
-From an easy check on the structure, it is possible to recognize that the primitive vectors $\vec{v'}$ 
-can be obtained from the conventional vectors $v$ as follows:
+So we redefine the primitive cell with the *CellConstructor* package.
+From an easy check on the structure, it is possible to recognize that the primitive vectors $$\vec{v'}$$ 
+can be obtained from the conventional vectors $$v$$ as follows:
 
 $$
 \vec {v'}_1 = \frac 12 \left(\vec v_1 + \vec v_2\right)
