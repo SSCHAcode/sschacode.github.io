@@ -79,7 +79,7 @@ As you may have noticed, this structure is in the conventional cell.
 While it is useful for visualization purposes, it makes the SSCHA calculation harder, as more atoms are in the unit cell.
 So we redefine the primitive cell with the *CellConstructor* package.
 From an easy check on the structure, it is possible to recognize that the primitive vectors $$\vec{v'}$$ 
-can be obtained from the conventional vectors $$v$$ as follows:
+can be obtained from the conventional vectors $$\vec{v}$$ as follows:
 
 $$
 \vec {v'}_1 = \frac 12 \left(\vec v_1 + \vec v_2\right)
@@ -114,9 +114,7 @@ view(PbTe_primitive)
 
 You can see that the new unit cell is much smaller than the previous one, and we have only two atoms per cell, as expected from a rock salt structure.
 
-We can relax the volume at ambient pressure with a variable cell relaxation in quantum espresso. For this purpose, we will employ the ASE Espresso calculator to get familiar with it. Indeed the same operation can be performed using a standard espresso input or your favorite DFT program.
-
-
+We can relax the volume at ambient pressure with a variable cell relaxation in Quantum ESPRESSO. For this purpose, we will employ the ASE Espresso calculator to get familiar with it. Indeed the same operation can be performed using a standard espresso input or your favorite DFT program.
 
 ```python
 # We override (or add) the key for the calculation type
@@ -151,10 +149,11 @@ Now we have a structure in the primitive unit cell and relaxed.
 We remark that the convergence parameters chosen for the minimization are too low to get accurate results, especially for the variable cell relaxation. Here the value of the pressure is overestimated by about 5 GPa; increase the wave-function cutoff to 70 Ry and the density cutoff to 280 Ry to get a more accurate result. We selected under converged parameters just to run very fast on a single processor as a demonstration. 
 
 ### Harmonic calculation
-Now we need to perform a harmonic calculation to get the spectra.
-This can be done with perturbation theory with quantum espresso, directly with the ASE library, if we want to use the finite displacement approach, or with phonopy, if you want to correctly exploit the symmetries of the crystal.
 
-In this example, we will show how to do this by exploiting quantum-espresso perturbation theory on DFT.
+Now we need to perform a harmonic calculation to get the spectra.
+This can be done with perturbation theory with Quantum ESPRESSO, directly with the ASE library, if we want to use the finite displacement approach, or with phonopy, if you want to correctly exploit the symmetries of the crystal.
+
+In this example, we will show how to do this by exploiting Quantum ESPRESSO perturbation theory on DFT.
 We will compute the dynamical matrix on a 2x2x2 q mesh (the equivalent of using a 2x2x2 supercell with the finite displacement approach)
 and we will also compute effective charges as the system is an insulator.
 We will then save the results in harmonic_dyn filenames.
@@ -192,10 +191,10 @@ You can see that espresso generated several files:
  * harmonic_dyn1 
  * ...
  
-We import them with CellConstructor.
+We import them with *CellConstructor*.
 
 We need only to know the number of total q independent points by symmetries, that is,
-the total number of dynamical matrix printed by espresso (harmonic_dyn0 does not count).
+the total number of dynamical matrix printed by Quantum ESPRESSO (harmonic_dyn0 does not count).
 In this case, it should be 3.
 
 
@@ -266,13 +265,13 @@ We do not even have the acoustic frequencies at gamma equal to zero.
 This is due to two reasons:
 
 1. We have not converged parameters for the ab-initio simulation, so some of them may be an artifact.
-2. PbTe may have a ferroelectric material, so the system could be unstable.
+2. PbTe may have a ferroelectric instability, so the system could be unstable.
 
-If the system has a structural phase transition, the high-symmetry structure at $T=0$ K wants to distort the cell to break the symmetries, so no matter how well we converge the phonon calculations,
+If the system has a structural phase transition, the high-symmetry structure at $$T=0$$ K wants to distort the cell to break the symmetries, so no matter how well we converge the phonon calculations,
 some imaginary frequencies will not be removed. 
 
-In this case, The structure is in a saddle-point of the Born-Oppenheimer (BO) energy landscape. 
-Many materials similar to PbTe are ferroelectric and have a structural phase transition (as SnSe, SnTe, etc.). PbTe is an exception, as it exhibits only an incipient ferroelectric transition but the structure is stable at harmonic level (therefore, all the imaginary frequencies we found are just due to under converged parameters in the calculations).
+In this case, the structure is in a saddle-point of the Born-Oppenheimer (BO) energy landscape. 
+Many materials similar to PbTe are ferroelectric and have a structural phase transition (as SnSe, SnTe, etc.). PbTe is an exception, as it exhibits only an incipient ferroelectric transition but the structure is stable at the harmonic level (therefore, all the imaginary frequencies we found are just due to under converged parameters in the calculations).
 
 Luckily, the SSCHA can deal with systems with imaginary frequencies, even if they are physically meaningful (instability).
 
@@ -284,7 +283,7 @@ The SSCHA finds the optimal gaussian density matrix that minimizes the free ener
 $$
 \rho_{\mathcal R, \Upsilon}(\vec R) = \sqrt{\det(\Upsilon / 2\pi)} \exp \left[ -\frac 12 \sum_{\alpha\beta} (R_\alpha - \mathcal{R}_\alpha)\Upsilon_{\alpha\beta}(R_\beta - \mathcal{R}_\beta)\right]
 $$
-where $\mathcal{R}$ and $\Upsilon$ are, respectively, the average centroid position and the covariance matrix of the gaussian, while $\alpha,\beta=1\cdots 3N$ runs on both the atomic and the cartesian coordinates.
+where $$\mathcal{R}$$ and $$\Upsilon$$ are, respectively, the average centroid position and the covariance matrix of the gaussian, while $$\alpha,\beta=1\cdots 3N$$ runs on both the atomic and the cartesian coordinates.
 
 In the specific case, the $\rho_{\mathcal R, \Upsilon}(\vec R)$ density matrix can be represented by a positive definite dynamical matrix.
 The equilibrium density matrix of any harmonic Hamiltonian is a gaussian. Our density matrix is related one to one to
