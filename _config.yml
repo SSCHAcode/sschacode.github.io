@@ -22,7 +22,8 @@ baseurl: "/"
 navbar-links:
   News: "news"
   Donwload and installation: "download"
-  Tutorials: 
+  Tutorials:
+  url: tutorials
     - Overview: "tutorials"
     - 1. Lead telluride: "/Tutorials/Tutorial_PbTe"
     - 2. Lead telluride structural instability: "/Tutorials/StructuralInstability"
