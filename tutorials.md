@@ -19,7 +19,7 @@ We suggest that you start to run the tutorials in the following order:
 
 3. [**Lead Telluride spectral properties**](http://sscha.eu/Tutorials/tutorial_spectral/)
 
-    Bla
+    Here you will learn how to run the SSCHA minimization as an stand-alone program, and also how to calculate the phonon spectral functions, which are in the end what experiments probe. Several approached to calculate the spectral function are exemplified.   
 
 4. [**Tin Telluride with force fields**](http://sscha.eu/Tutorials/SnSe/)
 
