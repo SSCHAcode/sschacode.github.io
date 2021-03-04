@@ -16,3 +16,19 @@ It is illustrated how the ASE package can be used to prepare the input files to 
 2. [**Lead Telluride structural instability**](http://sscha.eu/Tutorials/StructuralInstability/)
 
 In this tutorial you will understand how to calculate the free energy Hessian used to determine the stability of the system in the free energy landscape, valid to determine second-order phase transitions such as charge-density wave of ferroelectric transitions.
+
+3. [**Lead Telluride spectral properties**](http://sscha.eu/Tutorials/tutorial_spectral/)
+
+Bla
+
+4. [**Tin Telluride with force fields**](http://sscha.eu/Tutorials/SnSe/)
+
+Bla
+
+5. [**Sulfur hydride**](http://sscha.eu/Tutorials/Automatic_Calculations/)
+
+Bla
+
+6. [**Lanthanum hydride**](http://sscha.eu/Tutorials/VariableCellRelaxation/)
+
+Bla
