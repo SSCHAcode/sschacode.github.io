@@ -1,8 +1,3 @@
----
-layout: page
-title: PbTe spectral properties tutorial
----
-
 In this tutorial we will learn how to perform static (free energy Hessian) and dynamic (spectral function) SSCHA phonon calculations. We will perform the calculations on PbTe in the rock-salt structure ([Ribeiro et al.,Phys. Rev. B 97, 014306](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.014306)) and, in order to speed-up the calculation, we will emply a force-field model based on the work of [Ai at al, Phys. Rev. B 90, 014308](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.90.014308). The force-field model can be downloaded and installed from [here](https://github.com/mesonepigreco/F3ToyModel). The material to run the example (dynamical matrices and path file) can be downloaded from [here](https://). Unless otherwise specified, the equations and the sections we will refer to are in the paper [name_paper](https://) describing the SSCHA program.
 
 
@@ -242,7 +237,7 @@ dyn_hessian.save_qe(SAVE_PREFIX)
 print("Done.")
 ```
 
-The matrices PbTe.Hessian.dyn#q are a generalization of the standard harmonic dynamical matrices that include quantum and thermal effects on a static level, Eqs.(24), (25). As long as only the "bubble" term is included, Eqs.(26), (27), the SSCHA code is able to employ the Fourier interpolation technique to obtain the free energy Hessian on a generic __q__ , integrating on a generic **k** grid (Sec.3.6). In order to perform such a calculations, we have to follow several preliminary steps (see Section 3.7):
+The matrices PbTe.Hessian.dyn#q are a generalization of the standard harmonic dynamical matrices that include quantum and thermal effects on a static level, Eq.(61). As long as only the "bubble" term is included, Eq.(63), the SSCHA code is able to employ the Fourier interpolation technique to obtain the free energy Hessian on a generic __q__ , integrating on a generic **k** grid (Sec. IV-B, Eq. (66)). In order to perform such a calculations, we have to follow several preliminary steps (see Appendix E.2):
 
 1. We "center" the 3rd order FCs (a step necessary to perform the Fourier interpolation)
 
@@ -341,7 +336,7 @@ After we have the SSCHA frequencies and the Hessian frequencies. They must coinc
 frequencies that we have already calculated in PbTe.SSCHA.dyn#q and PbTe.Hessian.dyn#q. 
 
 Up to now, we have not really used the Fourier interpolation ( the **q** and the __k__ grid points are commensurate with the supercell calculation) and, as a matter of fact, the centering+ASR imposition was not necessary. However, we can now compute the Hessian dynamical matrices and frequencies along a generic path, integrating on an arbitrary finer grid. We consider the path $X-\Gamma-X$ in the *"XGX_path.dat"* file
-and we integrate on a $20\times 20\times 20$ grid (the path in *"XGX_path.dat"* is made of 1000 points. To speed up the calculations a path with less points can be used).S
+and we integrate on a $20\times 20\times 20$ grid (the path in *"XGX_path.dat"* is made of 1000 points. To speed up the calculations a path with less points can be used).
 
 
 ```python
@@ -378,10 +373,10 @@ The result can be plotted to display the Hessian frequency dispersion along the 
 
 ![Hessian.png](attachment:Hessian.png)
 
-Notice in this plot the LO-TO splitting, which is calculated by the SSHCA code using the effective charges and the electronic permittivity tensor printed in the center zone dynamical matrix file (Sec. 3.8 ).
+Notice in this plot the LO-TO splitting, which is calculated by the SSHCA code using the effective charges and the electronic permittivity tensor printed in the center zone dynamical matrix file (see Appendix E.3).
 
 The static calculation is essentially devoted to identify the presence of structural instabilities (in this case, as we can see, we do not have instabilities along $\Gamma-X$).
-To properly compute the phonon spectrum a dynamical calculation has to be performed. As a first thing, let us do a double-check calculation. Let us compute the spectral function $\sigma(\Omega)$ in $X$ and $\Gamma$ obtained in the static approximation Eqs.(35),(36),(84). The resulting spectral function must be composed of peaks around the Hessian frequencies.
+To properly compute the phonon spectrum a dynamical calculation has to be performed. As a first thing, let us do a double-check calculation. Let us compute the spectral function $\sigma(\Omega)$ in $X$ and $\Gamma$ obtained in the static approximation Eqs.(72)-(74). The resulting spectral function must be composed of peaks around the Hessian frequencies.
 
 
 ```python
@@ -410,19 +405,19 @@ points=[[-0.1525326,  0.0,  0.0],
 CC.Spectral.get_full_dynamic_correction_along_path(dyn=dyn, 
                                                    tensor3=tensor3, 
                                                    k_grid=k_grid,  
-                                                   e1=100, de=0.1, e0=0,
-                                                   sm1=1.0, sm0=1.0, 
-                                                   sm1_id=0.1, sm0_id=0.1,
-                                                   nsm=1,
+                                                   e1=100, de=0.1, e0=0,     # energy grid
+                                                   sm1=1.0, sm0=1.0,  nsm=1, # smearing values
                                                    T=300,
                                                    q_path=points,                                                                                     
-                                                   static_limit = True, 
+                                                   static_limit = True, #static approximation
                                                    notransl = True,  # projects out the acoustic zone center modes
                                                    filename_sp='static_spectral_func')
 ```
 
+The input values e1,e0,de define the energy grid where the spectral function will be computed: initial, final and spacing value of the energy grid in cm${}^{-1}$, respectively. The input values sm0,sm1, nsm define the values used for $\delta_{\text{se}}$ of Eq. (75), the smearing used to compute the self-energy: initial, final and number of intermediate values between them, in cm${}^{-1}$ (however, as long as we consider the static approximation, the value of $\delta_{\text{se}}$ is immaterial). 
+
 We decided to project out the part of the spectral function due to the pure translation modes (since they convey
-a trivial information). The result is in the *"static_spectral_func_0.1_1.0.dat"* file. 
+a trivial information). The result is in the *"static_spectral_func_1.0.dat"* file. 
 The first column is the distance of the followed reciprocal space path in $2\pi$/Å (an information that we are not going to use now). For each point we have the values $\Omega$ of the used energy grid (second column) and the spectral function $\sigma(\Omega)$ ( third column).
 
 Here we plot $\sigma(\Omega)$ for the two points with black line. The colored vertical lines are the Hessian frequency values previosuly calculated in $X$ and $\Gamma$. Note that the higher peaks correspond to double degenerate frequencies.
@@ -431,7 +426,7 @@ Here we plot $\sigma(\Omega)$ for the two points with black line. The colored ve
 
 ![spec.png](attachment:spec.png)
 
-Now we perform a full spectral calculation in $\Gamma$, Eq. (39), with the input
+Now we perform a full spectral calculation in $\Gamma$, Eq. (76), with the input
 
 
 ```python
@@ -461,22 +456,19 @@ CC.Spectral.get_full_dynamic_correction_along_path(dyn=dyn,
                                            tensor3=tensor3, 
                                            k_grid=k_grid,  
                                            e1=145, de=0.1, e0=0,
-                                           sm1=1, sm0=1, 
-                                           sm1_id=0.1, sm0_id=0.1,
-                                           nsm=1,
+                                           sm1=1, sm0=1,nsm=1,
                                            T=300,
                                            q_path=G,                                           
                                            notransl = True,
                                            filename_sp='full_spectral_func')
-
 ```
 
-and plot the result (second and third column of the *"full_spectral_func_0.1_1.0.dat"* file). 
+and plot the result (second and third column of the *"full_spectral_func_1.0.dat"* file). 
 
 ![spec.png](attachment:spec.png)
 
 In this calculation we have calculated the full self-energy. We can also employ the no-mode-mixing approximation, 
-Eqs. (40-42), discarding the off-diagonal elements of the  self-energy in the SSCHA mode basis set with the input 
+Eqs. (78)-(80), discarding the off-diagonal elements of the  self-energy in the SSCHA mode basis set with the input 
 
 
 ```python
@@ -509,12 +501,11 @@ CC.Spectral.get_diag_dynamic_correction_along_path(dyn=dyn,
                                                    T = 300.0, 
                                                    e1=145, de=0.1, e0=0,
                                                    sm1=1.0, nsm=1, sm0=1.0,
-                                                   sm1_id=0.1, sm0_id=0.1
                                                    filename_sp = 'nomm_spectral_func')
 
 ```
 
-The result is printed in the *"nomm_spectral_func_0.1_1.0.dat"* file. As before, the first column gives the distance along the path in reciprocal space (here inessential, we are doing a single point calculation), the second column the energy grid values, the third column the spectral function, and subsequently a column for each single mode contribution to the spectral function. Here we are interested in the modes 4,5,6 (the first three modes are the acoustic ones).
+The result is printed in the *"nomm_spectral_func_1.0.dat"* file. As before, the first column gives the distance along the path in reciprocal space (here inessential, we are doing a single point calculation), the second column the energy grid values, the third column the spectral function, and subsequently a column for each single mode contribution to the spectral function. Here we are interested in the modes 4,5,6 (the first three modes are the acoustic ones).
 
 If we consider the sum of the spectral function of these three modes we essentially obtain the same result obtined with the full self-energy calculation. Therefore, we can safely use the no-mode-mixing approximation.
 We can perform a spectral analysis mode by mode: 
@@ -522,7 +513,7 @@ We can perform a spectral analysis mode by mode:
 ![spec.diag.png](attachment:spec.diag.png)
 
 The modes 4 and 5 are degenerate (their sum gives the corresponding part of the spectral function showed in the previous figure).  As it is evident, while the mode 6 seems to have a Lorentzian character (with precise
-center and linewidth), for the modes 4 and 5 there is a clear no-Lorentzian character. This is evident if we plot the Lorentzian spectral functions for these modes, using for example the "one-shot" approach, Eqs. (43), (46), (47), that we find in the file *"nomm_spectral_func_lorentz_one_shot_0.1_1.0.dat"*.
+center and linewidth), for the modes 4 and 5 there is a clear no-Lorentzian character. This is evident if we plot the Lorentzian spectral functions for these modes, using for example the "one-shot" approach, Eqs. (81), (84), (85), that we find in the file *"nomm_spectral_func_lorentz_one_shot_1.0.dat"*.
 As we can see, the spectral function for the mode 6 is well described in the Lorentzian approximation, whereas modes 4 and 5 have a strong non-Lorentzian character.
 
 ![spec.diag.lorentz.png](attachment:spec.diag.lorentz.png)
@@ -558,11 +549,10 @@ CC.Spectral.get_diag_dynamic_correction_along_path(dyn=dyn,
                                                    T = 300.0, 
                                                    e1=145, de=0.1, e0=0,
                                                    sm1=1.0, nsm=1, sm0=1.0,
-                                                   sm1_id=0.1, sm0_id=0.1
                                                    filename_sp = 'nomm_spectral_func')
 ```
 
-We plot the first three columns of *"nomm_spectral_func_0.1_1.0.dat"* with a colormap plot (the spectral function plotted as a color function)
+We plot the first three columns of *"nomm_spectral_func_1.0.dat"* with a colormap plot (the spectral function plotted as a color function)
 
 ![total_spectr_path.png](attachment:total_spectr_path.png)
 
