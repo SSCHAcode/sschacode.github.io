@@ -12,3 +12,7 @@ We suggest that you start to run the tutorials in the following order:
 In this tutorial you will learn how you can set up a calculation from scratch starting from a CIF file. 
 
 It is illustrated how the ASE package can be used to prepare the input files to run the initial Born-Oppenheimer structural relaxation and harmonic phonon calculation. It is also illustrated how the output of these calculations can be used to start the SSCHA free energy minimization by creating first the ensemble and, second, calculating the energies, forces, and stress tensors for them. It is described how the latter calculations can be performed in three different ways: by using ASE to perform the calculations locally, by running the DFT calculations manually locally or in a cluster, and setting up an automatic submission to a cluster.
+
+2. [**Lead Telluride structural instability**](http://sscha.eu/Tutorials/StructuralInstability/)
+
+In this tutorial you will understand how to calculate the free energy Hessian used to determine the stability of the system in the free energy landscape, valid to determine second-order phase transitions such as charge-density wave of ferroelectric transitions.
