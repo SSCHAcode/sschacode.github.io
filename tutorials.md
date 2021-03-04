@@ -9,26 +9,26 @@ We suggest that you start to run the tutorials in the following order:
 
 1. [**Lead Telluride**](http://sscha.eu/Tutorials/Tutorial_PbTe/)
 
-In this tutorial you will learn how you can set up a calculation from scratch starting from a CIF file. 
+    In this tutorial you will learn how you can set up a calculation from scratch starting from a CIF file. 
 
-It is illustrated how the ASE package can be used to prepare the input files to run the initial Born-Oppenheimer structural relaxation and harmonic phonon calculation. It is also illustrated how the output of these calculations can be used to start the SSCHA free energy minimization by creating first the ensemble and, second, calculating the energies, forces, and stress tensors for them. It is described how the latter calculations can be performed in three different ways: by using ASE to perform the calculations locally, by running the DFT calculations manually locally or in a cluster, and setting up an automatic submission to a cluster.
+    It is illustrated how the ASE package can be used to prepare the input files to run the initial Born-Oppenheimer structural relaxation and harmonic phonon calculation. It is also illustrated how the output of these calculations can be used to start the SSCHA free energy minimization by creating first the ensemble and, second, calculating the energies, forces, and stress tensors for them. It is described how the latter calculations can be performed in three different ways: by using ASE to perform the calculations locally, by running the DFT calculations manually locally or in a cluster, and setting up an automatic submission to a cluster.
 
 2. [**Lead Telluride structural instability**](http://sscha.eu/Tutorials/StructuralInstability/)
 
-In this tutorial you will understand how to calculate the free energy Hessian used to determine the stability of the system in the free energy landscape, valid to determine second-order phase transitions such as charge-density wave of ferroelectric transitions.
+    In this tutorial you will understand how to calculate the free energy Hessian used to determine the stability of the system in the free energy landscape, valid to determine second-order phase transitions such as charge-density wave of ferroelectric transitions.
 
 3. [**Lead Telluride spectral properties**](http://sscha.eu/Tutorials/tutorial_spectral/)
 
-Bla
+    Bla
 
 4. [**Tin Telluride with force fields**](http://sscha.eu/Tutorials/SnSe/)
 
-Bla
+    Bla
 
 5. [**Sulfur hydride**](http://sscha.eu/Tutorials/Automatic_Calculations/)
 
-Bla
+    Bla
 
 6. [**Lanthanum hydride**](http://sscha.eu/Tutorials/VariableCellRelaxation/)
 
-Bla
+    Bla
