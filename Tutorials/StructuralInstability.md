@@ -59,5 +59,13 @@ dyn_hessian.save_qe("free_energy_hessian")
 
 This code will do the trick. We can then print the frequencies of the hessian. If an imaginary frequency is present, then the system wants to spontaneously break the high symmetry phase. The frequencies in the free energy hessian are temperature dependent. Tracking the temperature at which an imaginary frequency appears the temperature at which the second-order phase transition occurs can be determined.
 
+It is important to mention that by default the *bubble* approximation is assumed by the SSCHA code, meaning that in the equation above it is assumed that $$\stackrel{(4)}{\Phi}$$. This is an approximation that it is usually good, but needs to be checked. In order to include the $$\stackrel{(4)}{\Phi}$$ term the call to compute the Hessian needs to be modified as
 
+```python
+# ----------- COMPUTE THE FREE ENERGY HESSIAN -----------
+dyn_hessian = ensemble.get_free_energy_hessian(include_v4 = True)
+# -------------------------------------------------------
+``` 
+
+Including the $$\stackrel{(4)}{\Phi}$$ term for large supercells is time and memory consuming.
 
