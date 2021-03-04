@@ -469,7 +469,7 @@ CC.Spectral.get_full_dynamic_correction_along_path(dyn=dyn,
 
 and plot the result (second and third column of the *"full_spectral_func_1.0.dat"* file). 
 
-![spec.png](attachment:spec.png)
+![](specG_full.png)
 
 In this calculation we have calculated the full self-energy. We can also employ the no-mode-mixing approximation, 
 Eqs. (78)-(80), discarding the off-diagonal elements of the  self-energy in the SSCHA mode basis set with the input 
@@ -509,21 +509,21 @@ CC.Spectral.get_diag_dynamic_correction_along_path(dyn=dyn,
 
 ```
 
-The result is printed in the *"nomm_spectral_func_1.0.dat"* file. As before, the first column gives the distance along the path in reciprocal space (here inessential, we are doing a single point calculation), the second column the energy grid values, the third column the spectral function, and subsequently a column for each single mode contribution to the spectral function. Here we are interested in the modes 4,5,6 (the first three modes are the acoustic ones).
+The result is printed in the *"nomm_spectral_func_1.0.dat"* file. As before, the first column gives the distance along the path in reciprocal space (here inessential, we are doing a single point calculation), the second column the energy grid values, the third column the spectral function, and subsequently a column for each single mode contribution to the spectral function. Here we are interested in the modes 4, 5, 6 (the first three modes are the acoustic ones).
 
 If we consider the sum of the spectral function of these three modes we essentially obtain the same result obtined with the full self-energy calculation. Therefore, we can safely use the no-mode-mixing approximation.
 We can perform a spectral analysis mode by mode: 
 
-![spec.diag.png](attachment:spec.diag.png)
+![](specG_modes.png)
 
 The modes 4 and 5 are degenerate (their sum gives the corresponding part of the spectral function showed in the previous figure).  As it is evident, while the mode 6 seems to have a Lorentzian character (with precise
 center and linewidth), for the modes 4 and 5 there is a clear no-Lorentzian character. This is evident if we plot the Lorentzian spectral functions for these modes, using for example the "one-shot" approach, Eqs. (81), (84), (85), that we find in the file *"nomm_spectral_func_lorentz_one_shot_1.0.dat"*.
 As we can see, the spectral function for the mode 6 is well described in the Lorentzian approximation, whereas modes 4 and 5 have a strong non-Lorentzian character.
 
-![spec.diag.lorentz.png](attachment:spec.diag.lorentz.png)
+![](specG_lorentzian.png)
 
 To have a more complete picture we can compute the spectral function (in no-mode-mixing approximation)
-along the $X-G-X$ path.
+along the $$X-\Gamma-X$$ path.
 
 
 ```python
@@ -558,6 +558,6 @@ CC.Spectral.get_diag_dynamic_correction_along_path(dyn=dyn,
 
 We plot the first three columns of *"nomm_spectral_func_1.0.dat"* with a colormap plot (the spectral function plotted as a color function)
 
-![total_spectr_path.png](attachment:total_spectr_path.png)
+![](spec_path.png)
 
-We clearly see a satellite in $\Gamma$, which well reproduces what is seen in experiments ([Ribeiro et al.,Phys. Rev. B 97, 014306](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.014306)).
+We clearly see a satellite in $$\Gamma$$, which well reproduces what is seen in experiments ([Ribeiro et al.,Phys. Rev. B 97, 014306](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.014306)).
