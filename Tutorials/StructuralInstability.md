@@ -1,3 +1,10 @@
+---
+layout: page
+title: PbTe structural instability tutorial
+---
+
+
+
 ```python
 %pylab
 ```
