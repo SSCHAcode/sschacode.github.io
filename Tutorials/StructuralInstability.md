@@ -3,15 +3,39 @@ layout: page
 title: PbTe structural instability tutorial
 ---
 
+One of the main features of the SSCHA is that it provides a complete theoretical framework to study second-order phase transitions for structural instabilities. Examples of those are materials undergoing a charge-density wave, ferroelectric, or simply a structural transition. An example application for each one of this case with the SSCHA can be found in these papers:
+1. [Bianco et. al. Nano Lett. 2019, 19, 5, 3098-3103](https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.9b00504)
+2. [Aseguinolaza et. al. Phys. Rev. Lett. 122, 075901](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.075901)
+3. [Bianco et. al. Phys. Rev. B 97, 214101](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.214101)
 
+According to Landau's theory of second-order phase transitions, a phase transition occurs when the free energy curvature around the high-symmetry structure on the direction of the order parameter becomes negative:
+![](second_order.png)
+
+For structural phase transitions, the order parameter is associated to phonon atomic displacements. So we just need to calculate the Free energy Hessian, as:
+
+$$
+\frac{\partial^2 F}{\partial R_a \partial R_b}.
+$$
+
+Here, $$a$$ and $$b$$ encode both atomic and Cartesian coordinates.
+This quantity is very hard to compute with a finite difference approach, as it would require a SSCHA calculation for all possible atomic displacements (keeping atoms fixed). Also because finite difference approaches are hindered by the stochastic noise in the Free energy. Luckily, the SSCHA provides an analytical equation for the free energy Hessian, derived by Raffaello Bianco in the work [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111).
+The free energy curvature can be written in matrix form as:
+$$
+\frac{\partial^2 F}{\partial {R_a}\partial {R_b}} = \Phi_{ab} + \sum_{cdef} \stackrel{(3)}{\Phi}_{acd}[1 - \Lambda\stackrel{(4)}{\Phi}]^{-1}_{cdef} \stackrel{(3)}{\Phi}_{efb}
+$$
+
+Here, $$\Phi$$ is the SCHA auxiliar force constant matrix obtained by the auxiliary harmonic hamiltonian, $\stackrel{(3,4)}{\Phi}$ are the average of the 3rd and 4th derivative of the Born-Oppenheimer energy landscape on the SCHA density matrix, while the $\Lambda$ tensor is a function of the frequencies of the auxiliary harmonic hamiltonian.
+
+Fortunately, this complex equation can be evaluated from the ensemble with a simple function call:
+```python
+ensemble.get_free_energy_hessian()
+```
+
+Lets see a practical example:
 
 ```python
 %pylab
 ```
-
-    Using matplotlib backend: MacOSX
-    Populating the interactive namespace from numpy and matplotlib
-
 
 # Second order phase transitions and structural instabilities
 
