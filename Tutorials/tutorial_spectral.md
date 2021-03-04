@@ -379,8 +379,8 @@ The result can be plotted to display the Hessian frequency dispersion along the 
 
 Notice in this plot the LO-TO splitting, which is calculated by the SSHCA code using the effective charges and the electronic permittivity tensor printed in the center zone dynamical matrix file (see Appendix E.3).
 
-The static calculation is essentially devoted to identify the presence of structural instabilities (in this case, as we can see, we do not have instabilities along $\Gamma-X$).
-To properly compute the phonon spectrum a dynamical calculation has to be performed. As a first thing, let us do a double-check calculation. Let us compute the spectral function $\sigma(\Omega)$ in $X$ and $\Gamma$ obtained in the static approximation Eqs.(72)-(74). The resulting spectral function must be composed of peaks around the Hessian frequencies.
+The static calculation is essentially devoted to identify the presence of structural instabilities (in this case, as we can see, we do not have instabilities along $$\Gamma-X$$).
+To properly compute the phonon spectrum a dynamical calculation has to be performed. As a first thing, let us do a double-check calculation. Let us compute the spectral function $$\sigma(\Omega)$$ in $$X$$ and $$\Gamma$$ obtained in the static approximation Eqs.(72)-(74). The resulting spectral function must be composed of peaks around the Hessian frequencies.
 
 
 ```python
@@ -418,19 +418,19 @@ CC.Spectral.get_full_dynamic_correction_along_path(dyn=dyn,
                                                    filename_sp='static_spectral_func')
 ```
 
-The input values e1,e0,de define the energy grid where the spectral function will be computed: initial, final and spacing value of the energy grid in cm${}^{-1}$, respectively. The input values sm0,sm1, nsm define the values used for $\delta_{\text{se}}$ of Eq. (75), the smearing used to compute the self-energy: initial, final and number of intermediate values between them, in cm${}^{-1}$ (however, as long as we consider the static approximation, the value of $\delta_{\text{se}}$ is immaterial). 
+The input values e1, e0, de define the energy grid where the spectral function will be computed: initial, final and spacing value of the energy grid in cm$${}^{-1}$$, respectively. The input values sm0, sm1, nsm define the values used for $$\delta_{\text{se}}$$ of Eq. (75), the smearing used to compute the self-energy: initial, final and number of intermediate values between them, in cm$${}^{-1}$$ (however, as long as we consider the static approximation, the value of $\delta_{\text{se}}$ is immaterial). 
 
 We decided to project out the part of the spectral function due to the pure translation modes (since they convey
 a trivial information). The result is in the *"static_spectral_func_1.0.dat"* file. 
-The first column is the distance of the followed reciprocal space path in $2\pi$/Å (an information that we are not going to use now). For each point we have the values $\Omega$ of the used energy grid (second column) and the spectral function $\sigma(\Omega)$ ( third column).
+The first column is the distance of the followed reciprocal space path in $$2\pi$$/Å (an information that we are not going to use now). For each point we have the values $$\Omega$$ of the used energy grid (second column) and the spectral function $$\sigma(\Omega)$$ ( third column).
 
-Here we plot $\sigma(\Omega)$ for the two points with black line. The colored vertical lines are the Hessian frequency values previosuly calculated in $X$ and $\Gamma$. Note that the higher peaks correspond to double degenerate frequencies.
+Here we plot $$\sigma(\Omega)$$ for the two points with black line. The colored vertical lines are the Hessian frequency values previously calculated in $$X$$ and $$\Gamma$$. Note that the higher peaks correspond to double degenerate frequencies.
 
-![spec.png](attachment:spec.png)
+![](specX.png)
 
-![spec.png](attachment:spec.png)
+![](specG.png)
 
-Now we perform a full spectral calculation in $\Gamma$, Eq. (76), with the input
+Now we perform a full spectral calculation in $$\Gamma$$, Eq. (76), with the input
 
 
 ```python
