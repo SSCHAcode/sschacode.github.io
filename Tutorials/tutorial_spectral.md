@@ -97,7 +97,7 @@ ens.get_energy_forces(ff_calculator , compute_stress = False)
 ens.save(ens_savedir, population)
 ```
 
-Once the population ensamble has been generated, the minimization has to be performed. The input file to perform the minimization is
+Once the population ensamble has been generated, the minimization has to be performed. The input file to perform the minimization as stand-alone code, without python scripting, is
 
 
 ```python
@@ -335,12 +335,12 @@ we launch it with
 $: mpirun -np NPROC python input.py > output
 
 In the file *"v2_v2+d3static_freq.dat"* we have 8 rows (one for each q point).
-The first column is the length of the path followed along these 8 points in $2\pi$/Å units.
+The first column is the length of the path followed along these 8 points in $$2\pi$$/Å units.
 After we have the SSCHA frequencies and the Hessian frequencies. They must coincide with the
 frequencies that we have already calculated in PbTe.SSCHA.dyn#q and PbTe.Hessian.dyn#q. 
 
-Up to now, we have not really used the Fourier interpolation ( the **q** and the __k__ grid points are commensurate with the supercell calculation) and, as a matter of fact, the centering+ASR imposition was not necessary. However, we can now compute the Hessian dynamical matrices and frequencies along a generic path, integrating on an arbitrary finer grid. We consider the path $X-\Gamma-X$ in the *"XGX_path.dat"* file
-and we integrate on a $20\times 20\times 20$ grid (the path in *"XGX_path.dat"* is made of 1000 points. To speed up the calculations a path with less points can be used).
+Up to now, we have not really used the Fourier interpolation ( the **q** and the __k__ grid points are commensurate with the supercell calculation) and, as a matter of fact, the centering+ASR imposition was not necessary. However, we can now compute the Hessian dynamical matrices and frequencies along a generic path, integrating on an arbitrary finer grid. We consider the path $$X-\Gamma-X$$ in the *"XGX_path.dat"* file
+and we integrate on a $$20\times 20\times 20$$ grid (the path in *"XGX_path.dat"* is made of 1000 points. To speed up the calculations a path with less points can be used).
 
 
 ```python
@@ -375,7 +375,7 @@ CC.Spectral.get_static_correction_along_path(dyn=dyn,
 
 The result can be plotted to display the Hessian frequency dispersion along the path.
 
-![Hessian.png](attachment:Hessian.png)
+![](Hessian.png)
 
 Notice in this plot the LO-TO splitting, which is calculated by the SSHCA code using the effective charges and the electronic permittivity tensor printed in the center zone dynamical matrix file (see Appendix E.3).
 
