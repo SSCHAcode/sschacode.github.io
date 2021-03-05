@@ -27,7 +27,7 @@ We suggest that you start to run the tutorials in the following order:
 
 5. [**Sulfur hydride**](http://sscha.eu/Tutorials/Automatic_Calculations/)
 
-    Bla
+    In this tutorial you can learn how to automatize a SSCHA minimization. The example works with the H$$_3$$S superconducting compound.
 
 6. [**Lanthanum hydride**](http://sscha.eu/Tutorials/VariableCellRelaxation/)
 
