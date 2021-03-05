@@ -11,6 +11,9 @@ The SSCHA program is described in details in the following publication:
 If you use any part of the SSCHA code, you should cite it in your publications.
 
 As the theory of the SSCHA work has been previously published, we would also kindly ask you to cite the following papers that develop the SSHCA theory in all works making use of it:
+- [*First-Principles Theory of Anharmonicity and the Inverse Isotope Effect in Superconducting Palladium-Hydride Compounds*](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.177002). 
+  Ion Errea, Matteo Calandra, and Francesco Mauri. 
+  Physical Review Letters 111, 177002 (2013). 
 - [*Anharmonic free energies and phonon dispersions from the stochastic self-consistent harmonic approximation: Application to platinum and palladium hydrides*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.064302). 
   Ion Errea, Matteo Calandra, and Francesco Mauri. 
   Physical Review B 89, 064302 (2014). 
