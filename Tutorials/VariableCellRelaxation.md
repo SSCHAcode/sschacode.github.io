@@ -156,7 +156,7 @@ print ("The original spacegroup is:", spglib.get_spacegroup(dyn.structure.get_as
 
 We create a custom function to print the spacegroup after each iteration of the minimization.
 In this way we can follow the evolution of the dynamical matrix as it evolves.
-We use a threshold for symmetries of 0.05 $$\AA$$. Remember that the SSCHA is a stochastic method, the atomic position is affected by stochastic noise.
+We use a threshold for symmetries of 0.05 Å. Remember that the SSCHA is a stochastic method, the atomic position is affected by stochastic noise.
 If you want to increase your accuracy in the identification of the spacegroup, you should accordingly increase the number of configurations, remember that the stochastic noise scales as $1/\sqrt{N_{configs}}$.
 
 
