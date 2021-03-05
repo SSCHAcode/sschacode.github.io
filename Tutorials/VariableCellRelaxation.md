@@ -157,7 +157,7 @@ print ("The original spacegroup is:", spglib.get_spacegroup(dyn.structure.get_as
 We create a custom function to print the spacegroup after each iteration of the minimization.
 In this way we can follow the evolution of the dynamical matrix as it evolves.
 We use a threshold for symmetries of 0.05 Å. Remember that the SSCHA is a stochastic method, the atomic position is affected by stochastic noise.
-If you want to increase your accuracy in the identification of the spacegroup, you should accordingly increase the number of configurations, remember that the stochastic noise scales as $1/\sqrt{N_{configs}}$.
+If you want to increase your accuracy in the identification of the space group, you should accordingly increase the number of configurations, remember that the stochastic noise scales as $$1/\sqrt{N_{configs}}$$.
 
 
 ```python
@@ -179,7 +179,7 @@ relax.setup_custom_functions(custom_function_post = print_spacegroup)
 We are ready to start a variable cell relaxation. There are two different variable cell relaxations implemented in the SSCHA code: target pressure or fixed volume.
 In the target pressure calculation, the SSCHA adapts the cell until the stress stress tensor is uniform and reproduces the pressure we want. In this calculation the volume changes. In the fixed volume, instead, the SSCHA optimizes the cell parameters keeping the overall volume unchanged.
 
-We will use the latter in this example, but feel free to experiment by selecting fix_volume to false, and manually change the target_pressure argument. I prepared another command (commented) to perform a variable cell relaxation with target pressure.
+We will use the latter in this example, but feel free to experiment by selecting fix_volume to false, and manually change the target_pressure argument. We prepared another command (commented) to perform a variable cell relaxation with target pressure.
 
 The advantage of keeping the volume fixed is that we reduce the number of degrees of freedom in the cell optimization.
 
@@ -199,7 +199,7 @@ relax.vc_relax(fix_volume = True, static_bulk_modulus = 120, ensemble_loc = "ens
 ```
 
 ## Results
-The minimization is done, now we can study the evolution of the Rombohedral angle in subsequent populations
+The minimization is done, now we can study the evolution of the rhombohedral angle in subsequent populations
 ![Rombohedral angle](romb_ang.png)
 
 As you can see, the angle is getting close to 60 degrees. 
@@ -291,10 +291,3 @@ relax.minim.dyn.structure.unit_cell
     array([[ 1.79783817e+00, -1.03798235e+00,  2.91372421e+00],
            [-2.43331324e-15,  2.07596470e+00,  2.91372421e+00],
            [-1.79783817e+00, -1.03798235e+00,  2.91372421e+00]])
-
-
-
-
-```python
-
-```
