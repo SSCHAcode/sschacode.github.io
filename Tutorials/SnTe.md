@@ -1,22 +1,20 @@
 ---
-title: SnTe example with force fields
+title: SnTe tutorial with force fields
 ---
 
-# SnTe example
 In this tutorial we are going to study the thermoelectric transition in SnTe.
-To speedup the calculations, we will use a force-field that correctly reproduces the physics of ferroelectric transition in Fcc lattice.
+To speedup the calculations, we will use a force-field that can mimic the physics of ferroelectric transitions in FCC lattices.
 
 We will replicate the calculations performed in the paper by [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111).
 
-The force field can be downloaded and installed from [here](https://github.com/mesonepigreco/F3ToyModel). 
+The force field can be downloaded and installed from [here](https://github.com/SSCHAcode/F3ToyModel). 
 
 ## Initialization
+
 As always, we need to initialize the working space.
 This time we will initialize first the force field.
-This force field needs the harmonic dynamical matrix to be initialized, and the higher parameters.
-We will initialize it in order to reproduce the same as in [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111).
-
-
+This force field needs the harmonic dynamical matrix to be initialized, and the higher order parameters.
+We will initialize it in order to reproduce the results in [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111). The dynamical matrices needed for the harmonic part of the force field can be found in python-sscha/Tutorials/SnTe_ToyModel.
 
 ```python
 # Import the cellconstructor stuff
@@ -42,14 +40,13 @@ ff_calculator.p4 = -0.022
 ff_calculator.p4x = -0.014
 ```
 
-We initialized a force field, for a detailed explanations of the parameters, refer to the [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111) paper.
-Now ff_calculator behaves like any [ASE](https://wiki.fysik.dtu.dk/ase/) calculator, and can be used to compute forces and energies for our SSCHA. 
-Note: this force field is not able to compute stress, as it is defined only at fixed volume, so we cannot use it for a variable cell relaxation.
+We initialized a force field. For a detailed explanations of the parameters, refer to the [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111) paper.
+Now ff_calculator behaves like any [ASE](https://wiki.fysik.dtu.dk/ase/) calculator, and can be used to compute forces and energies for our SSCHA minimization. Note: this force field is not able to compute stress, as it is defined only at fixed volume, so we cannot use it for a variable cell relaxation.
 
 Now it is the time to initialize the SSCHA. 
 We can start from the harmonic dynamical matrix we got for the force field. Remember, SSCHA dynamical matrices must be positive definite.
 Since we are studying a system that has a spontaneous symmetry breaking at low temperature, the harmonic dynamical matrices will have imaginary phonons.
-We must enforce phonons to be positive definite to start a SSCHA.
+We must enforce phonons to be positive definite to start a SSCHA minimization.
 
 
 ```python
@@ -62,7 +59,7 @@ dyn_sscha.Symmetrize()
 ```
 
 We must now prepare the sscha ensemble for the minimization. 
-We will start with a $T= 0K$ simulation
+We will start with a $$T= 0K$$ simulation.
 
 
 ```python
@@ -70,17 +67,17 @@ ensemble = sscha.Ensemble.Ensemble(dyn_sscha, T0 = 0, supercell = dyn_sscha.GetS
 ```
 
 We can now proceed with the sscha minimization.
-Since we start from a dynamical matrix that is very far from the correct result, it is convenient to use a safer minimization scheme.
-We will use the fourth root minimization, in which, instead of optimizing the dynamical matrix itself, we will optimize its fourth root.
-Then the dynamical matrix $\Phi$ will be obtained as:
+Since we start from auxiliary dynamical matrices that are very far from the correct result, it is convenient to use a safer minimization scheme.
+We will use the fourth root minimization, in which, instead of optimizing the auxiliary dynamical matrices themself, we will optimize their fourth root.
+Then the dynamical matrix $$\Phi$$ will be obtained as:
 
 $$
-\Phi = \left(\sqrt[4]{\Phi}\right)^4
+\Phi = \left(\sqrt[4]{\Phi}\right)^4.
 $$
 
-This constrains $\Phi$ to be positive definite during the minimization. Moreover, this minimization is more stable than the standard one. If you want further details, please look at [Monacelli et. al. Phys. Rev. B 98, 024106](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.024106).
+This constrains $$\Phi$$ to be positive definite during the minimization. Moreover, this minimization is more stable than the standard one. If you want further details, please look at [Monacelli et. al. Phys. Rev. B 98, 024106](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.024106).
 
-We also change the Kong-Liu effective sample size threshold. This is a value tha decrease during the minimization, as the parameters gets far away from the starting point. It estimates how the original ensemble is good to describe the new parameters. If this value goes below a give threshold, the minimization is stopped, and a new ensemble is extracted.
+We also change the Kong-Liu effective sample size threshold. This is a value that decrease during the minimization, as the parameters gets far away from the starting point. It estimates how the original ensemble is good to describe the new parameters. If this value goes below a given threshold, the minimization is stopped, and a new ensemble is extracted.
 
 
 ```python
@@ -134,7 +131,8 @@ relax.minim.dyn.save_qe("final_sscha_T0_")
 ```
 
 ## Plotting the results
-We can plot the evolution of the frequencies, as well as the Free energy and the gradient to see if the minimization ended correctly.
+
+We can plot the evolution of the frequencies, as well as the free energy and the gradient to see if the minimization ended correctly.
 
 
 
@@ -166,11 +164,11 @@ relax.minim.plot_results()
 ![png](output_13_3.png)
 
 
-As you can see, the free energy always decreases, and reaches a plateaux. The gradient at the beginning increases, then it goes to zero very fast close to convergence.
-To have an idea on how good is the ensemble, check the Kong-Liu effective sample size (the last plot). We can see that we went two times below the convergence threshold of 0.2 (200 out of 1000 configuration), this means that the we required three calculations.
+As you can see, the free energy always decreases, and reaches a plateau. The gradient at the beginning increases, then it goes to zero very fast close to convergence.
+To have an idea on how good is the ensemble, check the Kong-Liu effective sample size (the last plot). We can see that we went two times below the convergence threshold of 0.2 (200 out of 1000 configuration), this means that the we required three populations.
 We have at the end 500 good configurations out of the original 1000. This means that the ensemble is still at its 50 % of efficiency.
 
-Lets have a look on how the frequencies evolve now, by loading the frequencies.dat file that we created.
+Let's have a look on how the frequencies evolve now, by loading the frequencies.dat file that we created.
 
 
 ```python
@@ -191,22 +189,24 @@ plt.tight_layout()
 ![png](output_15_0.png)
 
 
-While at the beginning the frequencies was changing a lot, in the last population they changed more smoothly. 
-This is a good sign that they are converged. One frequency has a very small value. 
-The cusps in the frequencies is the point in which we changed the ensemble. In the minimization we provided, this happened once sligtly above step 100, in correspondance with the change of the ensemble into the last one.
+While at the beginning the frequencies were changing a lot, in the last population they changed more smoothly. 
+This is a good sign of convergence. One frequency has a very small value. 
+The cusps in the frequencies is the point in which we changed the ensemble. In the minimization we provided, this happened once slightly above step 100, in correspondence with the change of the ensemble into the last one.
 We reached the final results with only 3 ensembles (3000 configurations energy/forces calculations).
 
 # The instability
-From the frequencies, we can see that we have one SSCHA frequency that is very low, below 10 cm-1.
-This is probabily a sign of instability.
-We remark: the sscha frequencies are not the real frequencies observed in experiments, but rather are linked to the average displacements of atoms along that mode:
-In particular the average displacements of atoms can be computed from sscha frequencies as (includes both thermal and quantum fluctuations):
+
+From the frequencies, we can see that we have one SSCHA frequency that is very low, below 10 cm$$^{-1}$$.
+This is probably a sign of instability.
+We remark: the sscha auxiliary frequencies are not the real frequencies observed in experiments, but rather are linked to the average displacements of atoms along that mode. In particular the average displacements of atoms can be computed from the SSCHA auxiliary frequencies as (includes both thermal and quantum fluctuations):
+
 $$
 \sigma_\mu = \sqrt{ \frac{1 + 2n_\mu}{2\omega_\mu}}
 $$
-where $n_\mu$ is the boson occupation number and $\omega_\mu$ is the SSCHA frequency.
 
-It is clear, that $\omega_\mu$ will always be positive, even if we have an instability. Since we have a very small mode in the SCHA frequencies, it means that associated to that mode we have huge fluctuations. This can indicate an instability.
+where $$n_\mu$$ is the boson occupation number and $\omega_\mu$ is the SSCHA auxiliary frequency.
+
+It is clear, that $$\omega_\mu$$ will always be positive, even if we have an instability. Since we have a very small mode in the SSCHA frequencies, it means that associated to that mode we have huge fluctuations. This can indicate an instability.
 However, to test this we need to compute the free energy curvature along this mode. This can be obtained in one shot thanks to the theory developed in [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111). 
 
 First of all, we generate a new ensemble with more configurations. To compute the hessian we will use an ensemble of 10000 configurations.
@@ -227,11 +227,11 @@ ensemble.generate(10000)
 ensemble.get_energy_forces(ff_calculator, compute_stress = False)
 ```
 
-Now we can proceed to compute the Free energy hessian. 
-We can choose if neglect or not in the calculation four phonon scattering process at higher order. Four phonon scattering processes require a huge memory allocation for big systems, that scales as $(3 \cdot N)^4$ with $N$ the number of atoms in the supercell. Moreover, it requires also more configurations to converge.
+Now we can compute the free energy hessian. 
+We can choose if we neglect or not in the calculation the four phonon scattering process. Four phonon scattering processes require a huge memory allocation for big systems, that scales as $$(3 \cdot N)^4$$ with $$N$$ the number of atoms in the supercell. Moreover, it may require also more configurations to converge.
 
-In almost all the systems we studied up to now, we found this four phonon scattering at high order to be neglectable.
-We remark, that the SSCHA minimization already includes four phonon scattering at the lowest order perturbation theory, thus neglecting this term only affects combinations of one or more four phonon scattering with two three phonon scatterings (high order dyagrams).
+In almost all the systems we studied up to now, we found this four phonon scattering at high order to be negligible.
+We remark, that the SSCHA minimization already includes four phonon scattering at the lowest order perturbation theory, thus neglecting this term only affects combinations of one or more four phonon scattering with two three phonon scatterings (high order diagrams).
 For more details, see [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111). 
 
 
@@ -303,13 +303,13 @@ print("\n".join(["{:16.4f} cm-1".format(w * CC.Units.RY_TO_CM) for w in w_hessia
             102.3613 cm-1
 
 
-Yes we have an immaginary phonons! We found an instability! You can check what happens if you include the fourth order.
+Yes we have  imaginary phonons! We found an instability! You can check what happens if you include the fourth order.
 
 # The phase transition
 
-Up to now we studied the system at $T = 0K$ and we found that there is an instability. However, we can repeat the minimization at many temperatures, and track the phonon frequency to see which is the temperature at which the system becomes stable.
+Up to now we studied the system at $$T = 0K$$ and we found that there is an instability. However, we can repeat the minimization at many temperatures, and track the phonon frequency to see which is the temperature at which the system becomes stable.
 
-We can exploit the fact that our sscha package is a python library, and write a small script to automatize the calculation.
+We can exploit the fact that our *python-sscha* package is a python library, and write a small script to automatize the calculation.
 
 We will simulate the temperatures up to room temperature (300 K) with steps of 50 K.
 Note, this will perform all the steps above 6 times, so it may take some minutes, depending on the PC (on a i3 from 2015, with one core, it took 2 hours).
@@ -407,18 +407,18 @@ plt.tight_layout()
 
 From the previous plot we can easily see that the phase transition occurs at about 170 K.
 It is worth noting, as pointed out, that the SSCHA frequency is always positive definite, and no divergency is present in correspondance of the transition.
-Moreover, the Free energy curvature is more noisy than the SSCHA one. Mainly because the error is bigger on small frequencies for the fact that:
+Moreover, the Free energy curvature is more noisy than the SSCHA one. Mainly because the error is bigger on small frequencies for the fact that
 $$
-\omega \sim \sqrt{\Phi}
+\omega \sim \sqrt{\Phi}.
 $$
-But this is also due to the computation of the free energy curvature itself, that requires the third order force constant tensor, that requires more configurations to converge.
+But this is also due to the computation of the free energy curvature itself, which requires the third order force constant tensor that requires more configurations to converge.
 
 Be aware, if you study phase transition in charge density waves, like [NbS2](https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.9b00504) or [TiSe2](https://arxiv.org/abs/1910.12709),
-or thermoelectric materials like [SnSe](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.075901) or [SnS](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.214307) usually the transition temperature depends strongly on the supercell shape.
+or thermoelectric materials like [SnSe](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.075901) or [SnS](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.214307) usually the transition temperature depends strongly on the supercell size.
 
-For the Landau theory of phase transition, since the SSCHA is a mean-field approach, we expect that around the transition the critical exponent of the temperature
+For the Landau theory of phase transition, since the SSCHA is a mean-field approach, we expect that around the transition the critical exponent of the temperature goes as
 $$
-\omega \sim T^\frac 1 2
+\omega \sim T^\frac 1 2.
 $$
 
 Thus it is usually better to plot the temperature versus the square of the frequency:
