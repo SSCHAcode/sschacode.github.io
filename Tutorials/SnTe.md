@@ -1,4 +1,5 @@
 ---
+layout: page
 title: SnTe tutorial with force fields
 ---
 
