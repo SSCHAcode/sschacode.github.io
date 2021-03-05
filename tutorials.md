@@ -31,4 +31,4 @@ We suggest that you start to run the tutorials in the following order:
 
 6. [**Lanthanum hydride**](http://sscha.eu/Tutorials/VariableCellRelaxation/)
 
-    In this tutorial, which deals with LaH10, you can learn how to automatize a SSCHA relaxation also considering the lattice degrees of freedom. 
+    In this tutorial, which deals with LaH$$_{10}$$, you can learn how to automatize a SSCHA relaxation also considering the lattice degrees of freedom. 
