@@ -1,10 +1,13 @@
-# Quantum variable cell relaxation of LaH10
+---
+layout: page
+title: Tutorial for quantum variable cell relaxation of LaH10 
+---
 
-In this tutorial we will replicate the results of the work [Errea et. al, Nature 578, 66–69(2020)](https://www.nature.com/articles/s41586-020-1955-z), where they show how the rombohedral structure R-3m of LaH10, global minimum of the Born-Oppenheimer (BO) energy landscape, to collapse into the higher symmetry Fm-3m at low pressure, where this phase is unstable within the harmonic approximation. 
+In this tutorial we will replicate the results of the work [Errea et. al, Nature 578, 66–69(2020)](https://www.nature.com/articles/s41586-020-1955-z), where they show how the rhombohedral structure $$R-3m$$ of LaH10, local minimum of the Born-Oppenheimer (BO) energy landscape,  collapses into the higher symmetry $$Fm-3m$$ at low pressure, where this phase is unstable within the harmonic approximation. 
 
-*Note*: We will use underconverged parameters to be able run the calculation on a local computer, for production runs you must study the convergence, especially with K point sampling and the supercell size.
+**Note**: We will use underconverged parameters to be able run the calculation on a local computer, for production runs you must study the convergence, especially with the k point sampling and the supercell size.
 
-For this tutorial, we provide a dynamical matrix, obtained by a sscha relaxation at fixed cell (see tutorial on H3S for example). 
+For this tutorial, we provide a dynamical matrix, obtained by a sscha relaxation at fixed cell (see tutorial on [H3S](http://sscha.eu/Tutorials/Automatic_Calculations/) for example). Also the pseudopotentials used are provided. These input files can be found in python-sscha/Tutorials/LaH10.  
 
 
 ```python
@@ -12,12 +15,9 @@ For this tutorial, we provide a dynamical matrix, obtained by a sscha relaxation
 from __future__ import print_function
 ```
 
-    Using matplotlib backend: Qt5Agg
-    Populating the interactive namespace from numpy and matplotlib
-
-
 ## The ab-initio parameters
-Here we setup the calculator to compute the energy, forces and pressures of the BO energy landscape. Please, refer to [Espresso pw.x guide](https://www.quantum-espresso.org/Doc/INPUT_PW.html) for the detailed description on the input parameters, and [ASE Espresso calculator](https://wiki.fysik.dtu.dk/ase/ase/calculators/espresso.html) for a description on how to properly setup an Espresso calculator suited for your application.
+
+Here we setup the calculator to compute the energy, forces, and pressures of the BO energy landscape. Please, refer to [Espresso pw.x guide](https://www.quantum-espresso.org/Doc/INPUT_PW.html) for the detailed description on the input parameters, and [ASE Espresso calculator](https://wiki.fysik.dtu.dk/ase/ase/calculators/espresso.html) for a description on how to properly setup an Espresso calculator suited for your application.
 
 
 ```python
@@ -76,7 +76,7 @@ minim.meaningful_factor = 0.2 # How much small the gradient should be before I s
 We setup the standard sscha minimiztion. Now we must prepare the calculator for the automatic relaxation exactly like we did for the H3S example.
 Remember you can always specify a cluster for the automatic calculation:
 
-*In the case you want to use this cluster, please remember to upload the pseudos on the cluster working directory!*
+*In case you want to use a cluster, please remember to upload the pseudos on the cluster working directory!*
 
 Skip the following cell if you do not want to setup a cluster, and run the calculation locally.
 
@@ -156,7 +156,7 @@ print ("The original spacegroup is:", spglib.get_spacegroup(dyn.structure.get_as
 
 We create a custom function to print the spacegroup after each iteration of the minimization.
 In this way we can follow the evolution of the dynamical matrix as it evolves.
-We use a threshold for symmetries of 0.05 A. Remember that the SSCHA is a stochastic method, the atomic position is affected by stochastic noise.
+We use a threshold for symmetries of 0.05 $$\AA$$. Remember that the SSCHA is a stochastic method, the atomic position is affected by stochastic noise.
 If you want to increase your accuracy in the identification of the spacegroup, you should accordingly increase the number of configurations, remember that the stochastic noise scales as $1/\sqrt{N_{configs}}$.
 
 
