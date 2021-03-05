@@ -27,7 +27,7 @@ navbar-links:
     - 1. Lead telluride: "/Tutorials/Tutorial_PbTe"
     - 2. Lead telluride structural instability: "/Tutorials/StructuralInstability"
     - 3. Lead telluride spectral properties: "/Tutorials/tutorial_spectral"
-    - 4. Tin telluride with force fields: "/Tutorials/SnSe"
+    - 4. Tin telluride with force fields: "/Tutorials/SnTe"
     - 5. Sulfur hydride: "/Tutorials/Automatic_Calculations"
     - 6. Lanthanum hydride: "/Tutorials/VariableCellRelaxation"
   Faqs: "faqs"
