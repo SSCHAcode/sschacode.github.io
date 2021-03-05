@@ -19,11 +19,11 @@ We suggest that you start to run the tutorials in the following order:
 
 3. [**Lead Telluride spectral properties**](http://sscha.eu/Tutorials/tutorial_spectral/)
 
-    Here you will learn how to run the SSCHA minimization as an stand-alone program, and also how to calculate the phonon spectral functions, which are in the end what experiments probe. Several approached to calculate the spectral function are exemplified.   
+    Here you will learn how to run the SSCHA minimization as an stand-alone program, and also how to calculate the phonon spectral functions, which are in the end what experiments probe. Several approaches to calculate the spectral function are exemplified.   
 
-4. [**Tin Telluride with force fields**](http://sscha.eu/Tutorials/SnSe/)
+4. [**Tin Telluride with force fields**](http://sscha.eu/Tutorials/SnTe/)
 
-    Bla
+    In this tutorial you will learn how to automatize a calculation with a python script using a force field. Also how to calculate the with a force field the free energy Hessian at different temperatures by scripting all the calculations. 
 
 5. [**Sulfur hydride**](http://sscha.eu/Tutorials/Automatic_Calculations/)
 
