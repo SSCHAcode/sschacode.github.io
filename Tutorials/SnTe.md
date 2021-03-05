@@ -204,7 +204,7 @@ $$
 \sigma_\mu = \sqrt{ \frac{1 + 2n_\mu}{2\omega_\mu}}
 $$
 
-where $$n_\mu$$ is the boson occupation number and $\omega_\mu$ is the SSCHA auxiliary frequency.
+where $$n_\mu$$ is the boson occupation number and $$\omega_\mu$$ is the SSCHA auxiliary frequency.
 
 It is clear, that $$\omega_\mu$$ will always be positive, even if we have an instability. Since we have a very small mode in the SSCHA frequencies, it means that associated to that mode we have huge fluctuations. This can indicate an instability.
 However, to test this we need to compute the free energy curvature along this mode. This can be obtained in one shot thanks to the theory developed in [Bianco et. al. Phys. Rev. B 96, 014111](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111). 
