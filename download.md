@@ -35,6 +35,13 @@ pip install -r requirements.txt
 ```
 in the folder of each package.
 
+To install the code, a fortran compiler is required. We recommend gfortran. 
+For example, on Ubuntu 20.04, the fortran prerequisites may be installed with:
+```
+sudo apt-get install libblas-dev liblapack-dev liblapacke-dev gfortran
+```
+
+
 
 ## Installation
 
@@ -48,7 +55,7 @@ This command must be executed in the directory where the setup.py script is, ins
 
 Installing *CellConstructor* and *python-sscha* in clusters may me more tricky and one needs to adapt the setup.py to the cluster characteristics. For instance, if you use the intel compiler, you need to delete the lapack linking from the setup.py and include -mkl. Note that you must force to use the same linker as the one used for the compilation. For example, specific setup.py scripts are provided with the distribution to install *CellConstructor* easily in FOSS or INTEL clusters. 
 
-## Installation through pip
+### Installation through pip
 
 Alternatively, both *CellConstructor* and *python-sscha* can be installed through pip simply as:
 ```
@@ -58,3 +65,39 @@ and
 ```
 pip install python-sscha 
 ```
+
+
+### Installation through docker
+If you are not able to compile the code, or you want to use it on a cluster, where compilation could be cumbersome, we provide a docker container with the SSCHA code already compiled and installed.
+
+You can download it from the docker hub. To run the docker command you need Docker already installed.
+```
+docker pull mesonepigreco/python-sscha
+```
+If you get an error of permissions, you need to add your user to the docker group. 
+
+This can be done with the commands:
+```
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+Most clusters provide docker through a module load command, please, ask the cluster maintainer how to run a docker container on your favorite HPC system.
+
+Once the container is installed, you can access it with
+
+```
+docker run -it mesonepigreco/python-sscha
+```
+
+the previous command opens a new shell with the python-sscha code installed.
+To share the content of the current directory with the container, execute the command with
+
+```
+docker run -it -v $PWD:/root mesonepigreco/python-sscha
+```
+
+This loads the content of the local directory inside the home (/root) of the container with python-sscha.
+
+
+
