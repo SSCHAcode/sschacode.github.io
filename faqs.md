@@ -10,20 +10,21 @@ title: Frequently Asked Questions (FAQs)
 5. [Why the gradient sometimes increases during a minimization?](#Why-the-gradient-sometimes-increases-during-a-minimization?)
 6. [The gradients on my simulations are increasing a lot, why is this happening?](#The-gradients-on-my-simulations-are-increasing-a-lot,-why-is-this-happening?)
 7. [How do I check if my calculations are well converged?](#How-do-I-check-if-my-calculations-are-well-converged?)
-8. [What is the final error on the structure or the dynamical matrix of a SCHA minimization?](#What-is-the-final-error-on-the-structure-or-the-dynamical-matrix-of-a-SCHA-minimization?)
-9. [How does the error over the gradients scale with the number of configurations?](#How-does-the-error-over-the-gradients-scale-with-the-number-of-configurations?)
-10. [When I relax the cell, is it necessary for the gradients to reach zero before making a step with the new cell?](#When-I-relax-the-cell,-is-it-necessary-for-the-gradients-to-reach-zero-before-making-a-step-with-the-new-cell?)
-11. [I cannot remove the pressure anisotropy after relaxing the cell, what is happening?](#I-cannot-remove-the-pressure-anisotropy-after-relaxing-the-cell,-what-is-happening?)
-12. [How may I run a calculation neglecting symmetries?](#How-may-I-run-a-calculation-neglecting-symmetries?)
-13. [In which units are the lattice vectors, the atomic positions, and the mass of the atoms in the dynamical matrix file?](#In-which-units-are-the-lattice-vectors,-the-atomic-positions,-and-the-mass-of-the-atoms-in-the-dynamical-matrix-file?)
-14. [What is the difference between the different kind of minimization (preconditioning and root_representation)?](#What-is-the-difference-between-the-different-kind-of-minimization-(preconditioning-and-root_representation)?)
-15. [How do I lock modes from m to n in the minimization?](#How-do-I-lock-modes-from-m-to-n-in-the-minimization?)
-16. [How do I lock a special atom in the minimization?](#How-do-I-lock-a-special-atom-in-the-minimization?)
-17. [How do I understand if I have to generate a new population or the minimization converged?](#How-do-I-understand-if-I-have-to-generate-a-new-population-or-the-minimization-converged?)
-18. [How do I choose the appropriate value of Kong-Liu effective sample size or ratio?](#How-do-I-choose-the-appropriate-value-of-Kong-Liu-effective-sample-size-or-ratio?)
-19. [How do I understand if the free energy hessian calculation is converged?](#How-do-I-understand-if-the-free-energy-hessian-calculation-is-converged?)
-20. [How can I add more configurations to an existing ensembe?](#How-can-I-add-more-configurations-to-an-existing-ensembe?)
-21. [How do I fix the random number generator seed to make a calculation reproducible?](#How-do-I-fix-the-random-number-generator-seed-to-make-a-calculation-reproducible?) 
+8. [How do I plot the frequencies of the dynamical matrix during the minimization?](#How-do-I-plot-the-frequencies-of-the-dynamical-matrix?)
+9. [What is the final error on the structure or the dynamical matrix of a SCHA minimization?](#What-is-the-final-error-on-the-structure-or-the-dynamical-matrix-of-a-SCHA-minimization?)
+10. [How does the error over the gradients scale with the number of configurations?](#How-does-the-error-over-the-gradients-scale-with-the-number-of-configurations?)
+11. [When I relax the cell, is it necessary for the gradients to reach zero before making a step with the new cell?](#When-I-relax-the-cell,-is-it-necessary-for-the-gradients-to-reach-zero-before-making-a-step-with-the-new-cell?)
+12. [I cannot remove the pressure anisotropy after relaxing the cell, what is happening?](#I-cannot-remove-the-pressure-anisotropy-after-relaxing-the-cell,-what-is-happening?)
+13. [How may I run a calculation neglecting symmetries?](#How-may-I-run-a-calculation-neglecting-symmetries?)
+14. [In which units are the lattice vectors, the atomic positions, and the mass of the atoms in the dynamical matrix file?](#In-which-units-are-the-lattice-vectors,-the-atomic-positions,-and-the-mass-of-the-atoms-in-the-dynamical-matrix-file?)
+15. [What is the difference between the different kind of minimization (preconditioning and root_representation)?](#What-is-the-difference-between-the-different-kind-of-minimization-(preconditioning-and-root_representation)?)
+16. [How do I lock modes from m to n in the minimization?](#How-do-I-lock-modes-from-m-to-n-in-the-minimization?)
+17. [How do I lock a special atom in the minimization?](#How-do-I-lock-a-special-atom-in-the-minimization?)
+18. [How do I understand if I have to generate a new population or the minimization converged?](#How-do-I-understand-if-I-have-to-generate-a-new-population-or-the-minimization-converged?)
+19. [How do I choose the appropriate value of Kong-Liu effective sample size or ratio?](#How-do-I-choose-the-appropriate-value-of-Kong-Liu-effective-sample-size-or-ratio?)
+20. [How do I understand if the free energy hessian calculation is converged?](#How-do-I-understand-if-the-free-energy-hessian-calculation-is-converged?)
+21. [How can I add more configurations to an existing ensembe?](#How-can-I-add-more-configurations-to-an-existing-ensembe?)
+22. [How do I fix the random number generator seed to make a calculation reproducible?](#How-do-I-fix-the-random-number-generator-seed-to-make-a-calculation-reproducible?) 
 
 <a name="How-do-I-start-a-calculation-if-the-dynamical-matrices-have-imaginary-frequencies?"></a>
 # How do I start a calculation if the dynamical matrices have imaginary frequencies? 
@@ -121,18 +122,45 @@ In general, if the gradient goes to zero and the Kong Liu ratio is above 0.5 pro
 There are some cases (especially in systems with many atoms) in which it is difficult to have an ensemble sufficiently big to reach this condition.
 In these cases, you can look at the history of the frequencies in the last populations and see whether they are changing or not. 
 
-In the stand-alone code, within the &utils namespace, including the following line
+To plot the frequencies look at [this answer](#How-do-I-plot-the-frequencies-of-the-dynamical-matrix?).
+
+
+
+
+<a name="How-do-I-plot-the-frequencies-of-the-dynamical-matrix?"></a>
+# How do I plot the frequencies of the dynamical matrix during the optimization?
+To check if the SSCHA is converging, you should plot the dynamical matrix's frequencies during the minimization.
+In particular, you should look if, between different populations, the evolution of each frequency is consistent. If it seems that frequencies are evolving randomly from a population to the next one, you should increase the number of configurations, otherwise, you can keep the number fixed.
+
+The code can print the frequencies at each step.
+If you run the code with an input script, you should provide in the &utils tag the filename for the frequencies:
+
 ```
-&utils
-      save_freq_filename = "frequencies_popX.dat"
-&end
+       &utils
+           save_frequencies = "freqs.dat"
+       &utils
 ```
-you can get the evolution of the auxiliary SSCHA frequencies during the minimization. You can after the minimization use the plotting program to see the frequencies as they evolve during the minimizations:
+
+You can use the same function from the python script by calling a custom function that saves the frequencies after each optimization step. The Utilities module of the SSCHA offers this function:
+
 ```
-plot_frequencies_new.pyx frequencies_pop*.dat
+IO_freq = sscha.Utilities.IOInfo()
+IO_freq.SetupSaving("freqs.dat")
+
+# Initialize the minimizer as minim [...]
+minim.run(custom_function_post = IO_freq.CFP_SaveFrequencies)
 ```
-This will plot all the files *frequencies_popX.dat* in the directory. You can see all the history of the frequency minimization.
-If between different populations (that you will distinguish by kink in the frequency evolutions) the frequencies will fluctuate due to the stochastic nature of the algorithm, with no general drift, then the algorithm reached its maximum accuracy with the given number of configurations available. You may either stop the minimization, or increase the ensemble to improve the accuracy.
+
+The code here is providing the SSCHA code a function (IO_freq.CFP_SaveFrequencies) that is called after each minimization step. This function saves all the frequencies of the current dynamical matrix in the file specified by IO_freq.SetupSaving("freqs.dat").
+
+To plot the results, the SSCHA offers an executable script, installed together with the code. Just run:
+
+```
+plot_frequencies.py freqs.dat
+```
+
+And the code will plot all the frequencies. You can also pass more than one file. In this case, the frequencies are concatenated.Plotting the frequencies of the dynamical matrix is a very good way to check if the algorithm is converging correctly.
+
 
 <a name="What-is-the-final-error-on-the-structure-or-the-dynamical-matrix-of-a-SCHA-minimization?"></a>
 # What is the final error on the structure or the dynamical matrix of a SCHA minimization?
