@@ -33,7 +33,7 @@ title: Developers
 >
 >**e-mail:** francesco.mauri@uniroma1.it
 
-[![Lorenzo Monacelli](img/Lorenzo_Monacelli.jpg)](www.lafisicadimonacelli.it) [**Lorenzo Monacelli**](www.lafisicadimonacelli.it) – Università di Roma La Sapienza, Rome, Italy
+[![Lorenzo Monacelli](img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=it) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=it) – Università di Roma La Sapienza, Rome, Italy
 
 > Postdoctoral researcher at [*Università di Roma La Sapienza*](https://www.uniroma1.it/en/pagina-strutturale/home) .
 >
