@@ -3,7 +3,7 @@ layout: page
 title: Developers
 ---
 
-[![Raffaello Bianco](img/Raffaello_Bianco.jpg)](https://scholar.google.com/citations?user=YtXgXCAAAAAJ&hl=it) [**Raffaello Bianco**](https://scholar.google.com/citations?user=YtXgXCAAAAAJ&hl=it) – Materials Physics Center, San Sebastian, Spain
+[![Raffaello Bianco](img/Raffaello_Bianco.jpg)](https://scholar.google.com/citations?user=YtXgXCAAAAAJ&hl=en) [**Raffaello Bianco**](https://scholar.google.com/citations?user=YtXgXCAAAAAJ&hl=en) – Materials Physics Center, San Sebastian, Spain
 
 > Postdoctoral researcher at the [*Materials Physics Center*](https://cfm.ehu.es/eu/) .
 >
@@ -33,7 +33,7 @@ title: Developers
 >
 >**e-mail:** francesco.mauri@uniroma1.it
 
-[![Lorenzo Monacelli](img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=it) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=it) – Università di Roma La Sapienza, Rome, Italy
+[![Lorenzo Monacelli](img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) – Università di Roma La Sapienza, Rome, Italy
 
 > Postdoctoral researcher at [*Università di Roma La Sapienza*](https://www.uniroma1.it/en/pagina-strutturale/home) .
 >
