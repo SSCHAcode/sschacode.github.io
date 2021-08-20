@@ -6,7 +6,7 @@ title: References and how to cite
 The SSCHA program is described in details in the following publication:
 - [*The stochastic self-consistent harmonic approximation: calculating vibrational properties of materials with full quantum and anharmonic effects*](https://iopscience.iop.org/article/10.1088/1361-648X/ac066b/meta). 
   Lorenzo Monacelli, Raffaello Bianco, Marco Cherubini, Matteo Calandra, Ion Errea, and Francesco Mauri.
-  Journal of Physics: Condensed Matter 33, 363001 (2021) (2021).
+  Journal of Physics: Condensed Matter 33, 363001 (2021).
 
 If you use any part of the SSCHA code, you should cite it in your publications.
 
