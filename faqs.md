@@ -25,6 +25,8 @@ title: Frequently Asked Questions (FAQs)
 20. [How do I understand if the free energy hessian calculation is converged?](#How-do-I-understand-if-the-free-energy-hessian-calculation-is-converged?)
 21. [How can I add more configurations to an existing ensembe?](#How-can-I-add-more-configurations-to-an-existing-ensembe?)
 22. [How do I fix the random number generator seed to make a calculation reproducible?](#How-do-I-fix-the-random-number-generator-seed-to-make-a-calculation-reproducible?) 
+23. [When I try to start a sscha calculation or import cellconstructor I get ModuleNotFoundError: No module named 'symph'
+](#symph-not-found) 
 
 <a name="How-do-I-start-a-calculation-if-the-dynamical-matrices-have-imaginary-frequencies?"></a>
 # How do I start a calculation if the dynamical matrices have imaginary frequencies? 
@@ -356,3 +358,12 @@ As for version 1.0, this can be achieved only by using the python script.
     np.random.seed(seed = X)
 ```
 where `X` is the integer used as a seed. By default, if not specified, it is initialized with None that it is equivalent of initializing with the current local time.
+
+
+<a name="symph-not-found"></a>
+# When I try to start a sscha calculation or import cellconstructor I get ModuleNotFoundError: No module named 'symph'
+
+
+This error is spotting that the symph module is missing. Symph is an extention built and installed toghether with cellconstructor. Try to reinstall cellconstructor and look for errors in the output. Note that symph is not compiled correctly if you do not have BLAS and LAPACK libraries. Follow the installation guide for further details on how to properly install CellConstructor and python-sscha. 
+
+
