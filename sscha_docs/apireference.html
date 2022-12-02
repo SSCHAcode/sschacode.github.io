@@ -1,0 +1,1585 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>THE API &#8212; python-sscha 1.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Frequently Asked Questions (FAQs)" href="faq.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQs)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index1.html">python-sscha 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">THE API</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-api">
+<h1>THE API<a class="headerlink" href="#the-api" title="Permalink to this headline">¶</a></h1>
+<p>This chapter contains the documentation for the main methods of the python-sscha code.
+It can be used both by advanced users, that wants to exploit python-sscha as a library,
+or developers, willing to add new features to the code (or adapt existing ones for their purposes).</p>
+<p>The API is divided into Modules.</p>
+<section id="the-ensemble-module">
+<h2>The Ensemble Module<a class="headerlink" href="#the-ensemble-module" title="Permalink to this headline">¶</a></h2>
+<p>This module deals with the ensembles of configurations.
+It is used to generate random configurations from the dynamical matrix, to compute observables on the ensemble used in the SSCHA optimization.
+These include the average force on atoms, the gradient of the SSCHA minimization, the quantum-thermal stress tensor, as well as properties of
+the ensemble, like reweighting.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.Ensemble.</span></span><span class="sig-name descname"><span class="pre">Ensemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supercell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.compute_ensemble">
+<span class="sig-name descname"><span class="pre">compute_ensemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calculator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress_numerical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.compute_ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.compute_ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the generic function to compute forces and stresses.
+It can be used both with clusters, and with simple ase calculators</p>
+<blockquote>
+<div><dl class="simple">
+<dt>calculator:</dt><dd><p>The ase calculator</p>
+</dd>
+<dt>compute_stress: bool</dt><dd><p>If true compute the stress</p>
+</dd>
+<dt>stress_numerical<span class="classifier">bool</span></dt><dd><p>Compute the stress tensor with finite difference,
+this is not possible with clusters</p>
+</dd>
+<dt>cluster: Cluster, optional</dt><dd><p>The cluster in which to send the calculation.
+If None the calculation is performed on the same computer of
+the sscha code.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.convert_units">
+<span class="sig-name descname"><span class="pre">convert_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_units</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.convert_units"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.convert_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to jump between several unit of measurement.
+You should always call this function before processing data assuming
+a particular kind of units.</p>
+<dl class="simple">
+<dt>Supported units are:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>“default” :</dt><dd><p>This is the default units. Here the forces are Ry/A displacements and structure are in A
+Dynamical matrix is in Ry/bohr^2. Mass is in Ry units</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“hartree” :</dt><dd><p>Here, everything is stored in Ha units.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>new_units<span class="classifier">string</span></dt><dd><p>The target units</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evenodd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_on_modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scramble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine generates the ensemble from dyn0 and T0 setted when this
+class is created.
+You still need to generate the forces for the configurations.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>N<span class="classifier">int</span></dt><dd><p>The number of random configurations to be extracted</p>
+</dd>
+<dt>evenodd<span class="classifier">bool, optional</span></dt><dd><p>If true for each configuration also the opposite is extracted</p>
+</dd>
+<dt>project_on_modes<span class="classifier">ndarray(size=(3*nat_sc, nproj)), optional</span></dt><dd><p>If different from None the displacements are projected on the
+given modes.</p>
+</dd>
+<dt>sobol<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Defines if the calculation uses random Gaussian generator or Sobol Gaussian generator.</p>
+</dd>
+<dt>sobol_scramble<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Set the optional scrambling of the generated numbers taken from the Sobol sequence.</p>
+</dd>
+<dt>sobol_scatter<span class="classifier">real (0.0 to 1) (Deafault = 0.0)</span></dt><dd><p>Set the scatter parameter to displace the Sobol positions randommly.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_average_energy">
+<span class="sig-name descname"><span class="pre">get_average_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtract_sscha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_average_energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_average_energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the average of the energy</p>
+<div class="math notranslate nohighlight">
+\[\left&lt; E\right&gt; = \frac{1}{N} \sum_{i = 1}^{N} E_i \rho_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_i\)</span> is the ratio between the probability of extracting the configuration $i$
+with the current dynamical matrix and with the dynamical matrix used to extract the ensemble.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>subtract_sscha<span class="classifier">bool, optional, default False</span></dt><dd><p>If true, the average difference of energy respect to the sscha one is returned. This
+is good, because you can compute analytically the sscha energy and sum it on an infinite
+ensembe. Do in this way to suppress the stochastic noise.</p>
+</dd>
+<dt>return_error<span class="classifier">bool, optional, default False</span></dt><dd><p>If true also the error is returned as a second value</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Example where ensemble is a correctly initialized self variable</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">energy</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">get_average_energy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The following example return also the stochastic error
+&gt;&gt;&gt; energy, error_on_energy = ensemble.get_average_energy(return_error = True)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_average_forces">
+<span class="sig-name descname"><span class="pre">get_average_forces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_unit_cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_average_forces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_average_forces" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the average of the forces that acts on the atoms</p>
+<div class="math notranslate nohighlight">
+\[\left&lt; \vec F\right&gt; = \frac{1}{N} \sum_{i = 1}^{N}\vec F_i \rho_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_i\)</span> is the ratio between the probability of extracting the configuration <span class="math notranslate nohighlight">\(i\)</span>
+with the current dynamical matrix and with the dynamical matrix used to extract the ensemble.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>get_error<span class="classifier">bool</span></dt><dd><p>If true the error is also returned (as get_free_energy).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>in_unit_cell<span class="classifier">bool, optional</span></dt><dd><p>If True (default True) the mean force is averaged on all the atoms in the supercell,
+then it returns the forces that acts on the unit cell atoms only.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_average_stress">
+<span class="sig-name descname"><span class="pre">get_average_stress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_average_stress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_average_stress" title="Permalink to this definition">¶</a></dt>
+<dd><p>This gets only the ab-initio average of the stress tensor</p>
+<div class="math notranslate nohighlight">
+\[P_{\alpha\beta} = \left&lt;P_{\alpha\beta}\right&gt;\]</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_covmat_from_ensemble">
+<span class="sig-name descname"><span class="pre">get_covmat_from_ensemble</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_covmat_from_ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_covmat_from_ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is for testing, allows to use the ensemble to
+evaluate the covariance matrix stochastically. It should be equal
+to the matrix Upsilon^-1 that is obtained with the GetUpsilonMatrix method
+from the Phonons package.</p>
+<div class="math notranslate nohighlight">
+\[\Upsilon^{-1}_{ab} = \left&lt; u_a u_b\right&gt;\]</div>
+<blockquote>
+<div><dl class="simple">
+<dt>cov_mat<span class="classifier">3nat x 3nat, ndarray</span></dt><dd><p>A numpy matrix of the covariance matrix.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_effective_sample_size">
+<span class="sig-name descname"><span class="pre">get_effective_sample_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_effective_sample_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_effective_sample_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Kong-Liu effective sample size with the given importance sampling.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_energy_forces">
+<span class="sig-name descname"><span class="pre">get_energy_forces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ase_calculator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress_numerical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_computed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_energy_forces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_energy_forces" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine uses the ase calculator to compute the abinitio energies and forces
+of the self ensemble.
+This subroutine requires to have ASE installed and properly configured to
+interface with your favourite ab-initio software.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>ase_calculator<span class="classifier">ase.calculator</span></dt><dd><p>The ASE interface to the calculator to run the calculation.
+also a CellConstructor calculator is accepted</p>
+</dd>
+<dt>compute_stress<span class="classifier">bool</span></dt><dd><p>If true, the stress is requested from the ASE calculator. Be shure
+that the calculator you provide supports stress calculation</p>
+</dd>
+<dt>stress_numerical<span class="classifier">bool</span></dt><dd><p>If the calculator does not support stress, it can be computed numerically
+by doing finite differences.</p>
+</dd>
+<dt>skip_computed<span class="classifier">bool</span></dt><dd><p>If true the configurations already computed will be skipped.
+Usefull if the calculation crashed for some reason.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_fc_from_self_consistency">
+<span class="sig-name descname"><span class="pre">get_fc_from_self_consistency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtract_sscha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_fc_from_self_consistency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_fc_from_self_consistency" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>This function evaluate the self consistent scha equation. This can be used
+to evaluate the goodness of the minimization procedure, as well as an
+independent minimizer.</p>
+<div class="math notranslate nohighlight">
+\[\Phi_{ab} = \frac 12 \sum_c \Upsilon_{ac} \left&lt; u_c f_a\right&gt;_{\Phi}\]</div>
+<p>The previous equation is true only if the <span class="math notranslate nohighlight">\(\Phi\)</span> matrix is the solution
+of the SCHA theory. Here :math:<a href="#id1"><span class="problematic" id="id2">`</span></a></p>
+</div></blockquote>
+<dl>
+<dt>ec u` are the displacements of the configurations</dt><dd><p>and <span class="math notranslate nohighlight">\(f\)</span> are the forces of the real system acting on the simulation.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>subtract_sscha<span class="classifier">bool, optional</span></dt><dd><p>This is an optional parameter, if true the forces used to evaluate the
+new force constant matrix are subtracted by the sscha forces.
+This means that the result is a gradient of the new matrix with respect
+to the old one.</p>
+</dd>
+<dt>return_error<span class="classifier">bool, optional</span></dt><dd><p>If true also the stochastic error is returned.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>fc<span class="classifier">ndarray (3*nat x 3*nat)</span></dt><dd><p>The real space force constant matrix obtained by the
+self-consistent equation.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_free_energy">
+<span class="sig-name descname"><span class="pre">get_free_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_free_energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_free_energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain the SSCHA free energy for the system.
+This is done by integrating the free energy along the hamiltonians, starting
+from current_dyn to the real system.</p>
+<p>The result is in Rydberg</p>
+<div class="math notranslate nohighlight">
+\[\mathcal F = \mathcal F_0 + \int_0^1 \frac{d\mathcal F_\lambda}{d\lambda} d\lambda\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\lambda\)</span> is the parameter for the adiabatic integration of the hamiltonian.</p>
+<div class="math notranslate nohighlight">
+\[H(\lambda) = H_0 + (H - H_0) \lambda\]</div>
+<p>here <span class="math notranslate nohighlight">\(H_0\)</span> is the sscha harmonic hamiltonian, while <span class="math notranslate nohighlight">\(H_1\)</span> is the real hamiltonian
+of the system.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>return_error<span class="classifier">bool, optional, default False</span></dt><dd><p>If true also the error is returned as a second value.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>float</dt><dd><p>The free energy in the current dynamical matrix and at the ensemble temperature</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_free_energy_hessian">
+<span class="sig-name descname"><span class="pre">get_free_energy_hessian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_v4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_full_hessian</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_symmetries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_d3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_free_energy_hessian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_free_energy_hessian" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutines computes the odd correction
+to the free energy hessian using the fortran subroutines, as describe in the
+Bianco paper …</p>
+<p>The calculation is performed in the supercell</p>
+<blockquote>
+<div><dl class="simple">
+<dt>include_v4<span class="classifier">bool</span></dt><dd><p>If True we include the fourth order force constant matrix.
+This requires a lot of memory</p>
+</dd>
+<dt>get_full_hessian<span class="classifier">bool</span></dt><dd><p>If True the full hessian matrix is returned, if false, only the correction to
+the SSCHA dynamical matrix is returned.</p>
+</dd>
+<dt>verbose<span class="classifier">bool</span></dt><dd><p>If true, the third order force constant tensor is written in output [Ha/bohr^3 units].
+This can be used to interpolate the result on a bigger mesh with cellconstructor.</p>
+</dd>
+<dt>use_symmetries<span class="classifier">bool</span></dt><dd><p>If true, the d3 and d4 are symmetrized in real space.
+It requires that spglib is installed to detect symmetries in the supercell correctly.</p>
+</dd>
+<dt>return_d3<span class="classifier">bool</span></dt><dd><p>If true, returns also the tensor of three phonon scattering.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>phi_sc<span class="classifier">Phonons()</span></dt><dd><p>The dynamical matrix of the free energy hessian in (Ry/bohr^2)</p>
+</dd>
+<dt>d3<span class="classifier">ndarray (size = (3*nat_sc, 3*nat_sc, 3*nat_sc), Optional</span></dt><dd><p>Return the three-phonon-scattering tensor (in Ry atomic units).
+Only if return_d3 is True.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_free_energy_interpolating">
+<span class="sig-name descname"><span class="pre">get_free_energy_interpolating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_supercell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">support_dyn_coarse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">support_dyn_fine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_on_imaginary_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_free_energy_interpolating"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_free_energy_interpolating" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a trick to interpolate the free energy in the
+infinite volume limit.</p>
+<p>Note, this function report the free eenrgy in the primitive cell, while the method get_free_energy
+returns the energy in the supercell.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>target_supercell<span class="classifier">list (N, N, N)</span></dt><dd><p>A list of three indices, where N is the dimension
+of the target supercell on which you want to interpolate.</p>
+</dd>
+<dt>support_dyn[coarse/fine]<span class="classifier">Phonons() Optional</span></dt><dd><p>The harmonic dynamical matrix in the current/target_supercell
+This is optional, it can be used to achieve a better
+interpolation. If provided only the difference between
+the harmonic dyn and the current dyn is interpolated.</p>
+</dd>
+<dt>error_on_imaginary_frequency<span class="classifier">bool</span></dt><dd><p>If Fase (default True) it will ignore imaginary frequencies
+arising from the interpolation. Otherwise an exception will
+be raised.</p>
+</dd>
+<dt>return_error<span class="classifier">bool</span></dt><dd><p>As the normal get_free_energy, if this flag is True, the stochastic error is returned.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>free_energy<span class="classifier">float</span></dt><dd><p>The free energy in the unit_cell volume [in Ry]. Note.
+This free energy is rescaled on the unit cell volume,
+it is a different behaviour with respect to get_free_energy.</p>
+</dd>
+<dt>error_on free energy<span class="classifier">float</span></dt><dd><p>The stochastic error, it is returned only if requested.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_noncomputed">
+<span class="sig-name descname"><span class="pre">get_noncomputed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_noncomputed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_noncomputed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get another ensemble with only the non computed configurations.
+This may be used to resubmit only the non computed values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_odd_realspace">
+<span class="sig-name descname"><span class="pre">get_odd_realspace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_odd_realspace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_odd_realspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a testing function to compute the odd3 correction
+using the real space v3 (similar to the raffaello first implementation)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_preconditioned_gradient">
+<span class="sig-name descname"><span class="pre">get_preconditioned_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtract_sscha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ups_supercell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preconditioned</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fast_grad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_preconditioned_gradient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_preconditioned_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function evaluate the self consistent scha equation. This can be used
+to evaluate the goodness of the minimization procedure, as well as an
+independent minimizer. This is the same as get_fc_from_self_consistency,
+but works also with supercell</p>
+<div class="math notranslate nohighlight">
+\[\Phi_{ab} = \sum_c \upsilon_{ac} \left&lt; u_c f_a\right&gt;_{\Phi}\]</div>
+<p>The previous equation is true only if the <span class="math notranslate nohighlight">\(\Phi\)</span> matrix is the solution
+of the SCHA theory. Here <span class="math notranslate nohighlight">\(\vec u\)</span> are the displacements of the configurations
+and <span class="math notranslate nohighlight">\(f\)</span> are the forces of the real system acting on the simulation.</p>
+<p>NOTE: It does not takes into account for the symmetrization.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>subtract_sscha<span class="classifier">bool, optional</span></dt><dd><p>This is an optional parameter, if true the forces used to evaluate the
+new force constant matrix are subtracted by the sscha forces.
+This means that the result is a gradient of the new matrix with respect
+to the old one.</p>
+</dd>
+<dt>return_error<span class="classifier">bool, optional</span></dt><dd><p>If true also the stochastic error is returned.</p>
+</dd>
+<dt>use_ups_supercell<span class="classifier">bool, optional</span></dt><dd><p>If true the gradient is computed enterely in real space, and then transformed
+with fourier in q space. This is computationally heavier, but can be used
+to test if everything is working correctly. For now this flag
+is ignored and always True.</p>
+</dd>
+<dt>preconitioned<span class="classifier">int, optional</span></dt><dd><p>If 1 (default) the gradient is returned multiplied by the preconditioned,
+otherwise it is returned as it should be.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>fc<span class="classifier">ndarray (nq x 3*nat x 3*nat)</span></dt><dd><p>The real space force constant matrix obtained by the
+self-consistent equation.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.get_stress_tensor">
+<span class="sig-name descname"><span class="pre">get_stress_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_centroid_contrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_spglib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.get_stress_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.get_stress_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The following subroutine computes the anharmonic stress tensor
+calling the fortran code get_stress_tensor.
+Note that the stress tensor is symmetrized to satisfy the cell constraint.</p>
+<p>NOTE: unit of measure is Ry/bohr^3 to match the quantum espresso one</p>
+<blockquote>
+<div><dl class="simple">
+<dt>offset_stress<span class="classifier">3x3 matrix, optional</span></dt><dd><p>An offset stress to be subtracted to the real stress tensor.
+Usefull if you want to compute just the anharmonic contribution.</p>
+</dd>
+<dt>add_centroid_contrib<span class="classifier">bool, optional</span></dt><dd><p>If true the contribution of the centroid is added. This is always zero when
+the system is relaxed.</p>
+</dd>
+<dt>use_spglib<span class="classifier">bool</span></dt><dd><p>If true use the spglib library to perform the symmetrization</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>stress_tensor<span class="classifier">3x3 matrix</span></dt><dd><p>The anharmonic stress tensor obtained by averaging both the ab-initio
+stresses and correcting with the sscha non-linearity.</p>
+</dd>
+<dt>err_stress<span class="classifier">3x3 matrix</span></dt><dd><p>The matrix of the error on the stress tensor.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.init_from_structures">
+<span class="sig-name descname"><span class="pre">init_from_structures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">structures</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.init_from_structures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.init_from_structures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the ensemble from the given list of structures</p>
+<blockquote>
+<div><dl class="simple">
+<dt>structures<span class="classifier">list of structures</span></dt><dd><p>The list of structures used to initialize the ensemble</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_displacements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_error_on_not_found</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_noncomputed_ensemble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function load the ensemble from a standard calculation.</p>
+<p>The files need to be organized as follows</p>
+<p>data_dir / scf_populationX_Y.dat
+data_dir / energies_supercell_populationX.dat
+data_dir / forces_populationX_Y.dat
+data_dir / pressures_populationX_Y.dat
+data_dir / u_populationX_Y.dat</p>
+<p>X = population
+Y = the configuration id (starting from 1 to N included, fortran convention)</p>
+<p>The files scf_population_X_Y.dat must contain the scf file of the structure.
+It should be in alat units, matching the same alat defined in the starting
+dynamical matrix.</p>
+<p>The energies_supercell.dat file must contain the total energy in Ry for
+each configuration.</p>
+<p>The forces_populationX_Y contains the</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data_dir<span class="classifier">str</span></dt><dd><p>The path to the directory containing the ensemble. If you used
+the fortran sscha.x code it should match the data_dir option of the
+input file.</p>
+</dd>
+<dt>population<span class="classifier">int</span></dt><dd><p>The info to distinguish between several ensembles generated in the
+same data_dir. This also should match the correspective property
+of the fortran sscha.x input file.</p>
+</dd>
+<dt>N<span class="classifier">int</span></dt><dd><p>The dimension of the ensemble. This should match the n_random
+variable from the fortran sscha.x input file.</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>If true (default false) prints the real timing of the different part
+during the loading.</p>
+</dd>
+<dt>load_displacement: bool</dt><dd><p>If true the structures are loaded from the u_populationX_Y.dat files,
+otherwise they are loaded from the scf_populationX_Y.dat files.</p>
+</dd>
+<dt>raise_error_on_not_found<span class="classifier">bool</span></dt><dd><p>If true, raises an error if one force file is missing</p>
+</dd>
+<dt>load_noncomputed_ensemble: bool</dt><dd><p>If True, it allows for loading an ensemble where some of the configurations forces and stresses are missing.
+Note that it must be compleated before running a SCHA minimization</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.load_bin">
+<span class="sig-name descname"><span class="pre">load_bin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_loading_dyn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.load_bin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.load_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function loads the ensemble saved with save_bin(…)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data_dir<span class="classifier">string</span></dt><dd><p>The directory containing the ensemble</p>
+</dd>
+<dt>population_id<span class="classifier">int</span></dt><dd><p>The esnemble population identifier.</p>
+</dd>
+<dt>avoid_loading_dyn<span class="classifier">bool</span></dt><dd><p>If true, the dynamical matrix is not loaded.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.load_from_calculator_output">
+<span class="sig-name descname"><span class="pre">load_from_calculator_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.pwo'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.load_from_calculator_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.load_from_calculator_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine allows to directly load the ensemble from the output files
+of a calculation. This works and has been tested for quantum espresso,
+however in principle any output file from an ase supported format
+should be readed.</p>
+<p>NOTE: This subroutine requires ASE to be correctly installed.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>directory<span class="classifier">string</span></dt><dd><p>Path to the directory that contains the output of the calculations</p>
+</dd>
+<dt>out_ext<span class="classifier">string</span></dt><dd><p>The extension of the files that will be readed.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.merge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will merge two ensembles together.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>other<span class="classifier">Ensemble()</span></dt><dd><p>Another ensemble to be merge with. It must be generated by the same dynamical matrix
+as this one, otherwise wired things will happen.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.remove_noncomputed">
+<span class="sig-name descname"><span class="pre">remove_noncomputed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.remove_noncomputed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.remove_noncomputed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removed all the incomplete calculation from the ensemble.
+It may be used to run a minimization even if the ensemble was not completely calculated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_alat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function saves the ensemble in a way the original fortran SSCHA code can read it.
+Look at the load function documentation to see clearely how it is saved.</p>
+<p>NOTE: This method do not save the dynamical matrix used to generate the ensemble (i.e. self.dyn_0)
+remember to save it separately to really save all the info about the ensemble.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data_dir<span class="classifier">string</span></dt><dd><p>Path to the directory in which the data will be saved. If it does not exists, it will be created</p>
+</dd>
+<dt>population<span class="classifier">int</span></dt><dd><p>The id of the population, usefull if you want to save more ensemble in the same data_dir without overwriting
+the data.</p>
+</dd>
+<dt>use_alat<span class="classifier">bool</span></dt><dd><p>If true the scf_populationX_Y.dat files will be saved in alat units, as specified by the dynamical matrix.
+Also the unit cell will be omitted. This is done to preserve retrocompatibility with ensembles generated by
+older versions of the sscha code</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.save_bin">
+<span class="sig-name descname"><span class="pre">save_bin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.save_bin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.save_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is a fast way of saving the ensemble.
+It is faster and make use of less disk space than the save.
+The drawback is that can only be opened with numpy</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data_dir<span class="classifier">string</span></dt><dd><p>path to the folder in which the ensemble is saved</p>
+</dd>
+<dt>population_id<span class="classifier">int</span></dt><dd><p>The id of the population. This can be used to save
+several ensembles in the same data_dir</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.save_enhanced_xyz">
+<span class="sig-name descname"><span class="pre">save_enhanced_xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'virial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'force'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'energy'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.save_enhanced_xyz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.save_enhanced_xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the ensemble as an enhanced xyz.</p>
+<p>This is the default format for training the GAP potentials with quippy.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>filename<span class="classifier">string</span></dt><dd><p>Path to the xyz file in which to save.</p>
+</dd>
+<dt>append_mode<span class="classifier">bool</span></dt><dd><p>If true, does not overwrite the previous existing file, but append the ensemble on the bottom.
+This is the way to concatenate easily more ensembles.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.save_extxyz">
+<span class="sig-name descname"><span class="pre">save_extxyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.save_extxyz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.save_extxyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>ASE extxyz format is used for build the training set for the nequip and allegro neural network potentials.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>The path to the .extxyz file containing the ensemble</p>
+</dd>
+<dt>append_mode: bool</dt><dd><p>If true the ensemble is appended</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.save_raw">
+<span class="sig-name descname"><span class="pre">save_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.save_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.save_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the ensemble as a set of raw files.</p>
+<p>This is the default format for training with deepmd</p>
+<blockquote>
+<div><dl class="simple">
+<dt>filename<span class="classifier">string</span></dt><dd><p>The directory on which to save the ensemble. If it does not exist, it is create.
+NOTE: this will overwrite any other ensemble saved in raw format in that directory</p>
+</dd>
+<dt>type_dict<span class="classifier">dict</span></dt><dd><p>The dictionary between integers and atomic types. If not provided, it is generated on the spot and returned.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>type_dict<span class="classifier">dict</span></dt><dd><p>The dictionary of the parameters</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">split_mask</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will return an ensemble with only the configurations matched by the split_mask array.
+NOTE: The original ensemble will remain untouched.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>split_mask<span class="classifier">ndarray(size = self.N, dtype = bool)</span></dt><dd><p>A mask array. It must be of the same size of the number of configurations,
+and contain a True or False if you want that the corresponding configuration to be included in the
+splitted ensemble</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>splitted_ensemble<span class="classifier">Ensemble()</span></dt><dd><p>An ensemble tath will contain only the configurations in the split mask.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Ensemble.Ensemble.update_weights">
+<span class="sig-name descname"><span class="pre">update_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_dynamical_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Ensemble.html#Ensemble.update_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Ensemble.Ensemble.update_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function updates the importance sampling for the given dynamical matrix.
+The result is written in the self.rho variable</p>
+<blockquote>
+<div><dl class="simple">
+<dt>new_dynamical_matrix<span class="classifier">CC.Phonons.Phonons()</span></dt><dd><p>The new dynamical matrix on which you want to compute the averages.</p>
+</dd>
+<dt>new_T<span class="classifier">float</span></dt><dd><p>The new temperature.</p>
+</dd>
+<dt>update_q<span class="classifier">bool</span></dt><dd><p>If false the q_vectors are not updated. This is required for some
+methods and application, but not for standard minimization.
+Since it is the most time consuming part, it can be safely avoided.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="the-schaminimizer-module">
+<h2>The SchaMinimizer Module<a class="headerlink" href="#the-schaminimizer-module" title="Permalink to this headline">¶</a></h2>
+<p>This module is the main SSCHA minimizer. It allows us to set up a single (one population) minimization.
+In this module, the minimization algorithm is introduced, as well as stopping conditions and all the parameters
+usually located in the &amp;inputscha name list are read.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.SchaMinimizer.</span></span><span class="sig-name descname"><span class="pre">SSCHA_Minimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_representation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'normal'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kong_liu_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meaningful_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimization_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sdes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.check_imaginary_frequencies">
+<span class="sig-name descname"><span class="pre">check_imaginary_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.check_imaginary_frequencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.check_imaginary_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The following subroutine check if the current matrix has imaginary frequency. In this case
+the minimization is stopped.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.check_stop">
+<span class="sig-name descname"><span class="pre">check_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.check_stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.check_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the stopping criteria and returns True if the stopping
+condition is satisfied</p>
+<blockquote>
+<div><dl class="simple">
+<dt>bool :</dt><dd><p>True if the minimization must be stopped, False otherwise</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.finalize">
+<span class="sig-name descname"><span class="pre">finalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.finalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method finalizes the minimization, and prints on stdout the
+results of the current minimization.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>verbose<span class="classifier">int, optional</span></dt><dd><p>The verbosity level. If 0 only the final free energy and gradient is printed.
+If 1 the stress tensor is also printed. If 2 also the final structure and frequencies
+are printed.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.get_free_energy">
+<span class="sig-name descname"><span class="pre">get_free_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.get_free_energy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.get_free_energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain the SSCHA free energy per unit cell for the system. This is done through thermodynamic integration.
+Note that for the SSCHA this integration is performed analytically, so evaluating this function
+is almost immediate.</p>
+<p>The result is in Rydberg.</p>
+<div class="math notranslate nohighlight">
+\[\mathcal F = \mathcal F_0 + \int_0^1 \frac{d\mathcal F_\lambda}{d\lambda} d\lambda\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\lambda\)</span> is the parameter for the adiabatic integration of the hamiltonian.</p>
+<div class="math notranslate nohighlight">
+\[H(\lambda) = H_0 + (H - H_0) \lambda\]</div>
+<p>here <span class="math notranslate nohighlight">\(H_0\)</span> is the sscha harmonic hamiltonian, while <span class="math notranslate nohighlight">\(H_1\)</span> is the real hamiltonian
+of the system.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>float</dt><dd><p>The free energy in the current dynamical matrix and at the ensemble temperature</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.get_stress_tensor">
+<span class="sig-name descname"><span class="pre">get_stress_tensor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.get_stress_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.get_stress_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a full documentation, please refer to the same function of the
+Ensemble class.
+This subroutine just link to that one. A stress offset is added if defined
+in the input variable of the current class.</p>
+<p>NOTE: if the ensemble has not the stress tensors, an exception will be raised</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_previous_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine initialize the variables needed by the minimization.
+Call this before the first time you invoke the run function.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>verbosity<span class="classifier">bool</span></dt><dd><p>If true prints some debugging information</p>
+</dd>
+<dt>delete_previous_data<span class="classifier">bool</span></dt><dd><p>If true, it will clean previous minimizations from the free energies, gradients…</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.is_converged">
+<span class="sig-name descname"><span class="pre">is_converged</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.is_converged"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.is_converged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple method to check if the simulation is converged or
+requires a new population to be runned.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>bool :</dt><dd><p>True if the simulation ended for converging.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.minimization_step">
+<span class="sig-name descname"><span class="pre">minimization_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">custom_function_gradient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.minimization_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.minimization_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the single minimization step.
+This modify the self.dyn matrix and updates the ensemble</p>
+<blockquote>
+<div><dl class="simple">
+<dt>custom_function_gradient<span class="classifier">pointer to function ( ndarray(nq x 3nat x 3nat), ndarray(nat, 3))</span></dt><dd><p>A function that can be used both to print particular component of the gradient
+or to impose some constraints on the minimization (like lock the position of some atoms).
+It takes as input the two gradient (the dynamical matrix one and the structure one), and
+modifies them (or does some I/O on it).</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.plot_results">
+<span class="sig-name descname"><span class="pre">plot_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.plot_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.plot_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>This usefull methods uses matplotlib to generate a plot of the
+minimization.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>save_filename<span class="classifier">optional, string</span></dt><dd><p>If present the plotted data will be saved in
+a text file specified by input.</p>
+</dd>
+<dt>plot<span class="classifier">optiona, bool</span></dt><dd><p>If false no plot is performed. This allows only to save result
+even if you do not have any access in a X server.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.print_info">
+<span class="sig-name descname"><span class="pre">print_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.print_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.print_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine is for debugging purposes, it will print the settings about
+the minimizer on the standard output.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_function_pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_function_post</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_function_gradient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses all the setted up parameters to run the minimization</p>
+<p>The minimization is stopped only when one of the stopping criteria are met.</p>
+<p>The verbose level can be chosen.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>verbose<span class="classifier">int</span></dt><dd><dl class="simple">
+<dt>The verbosity level.</dt><dd><ul class="simple">
+<li><p>0 : Noting is printed</p></li>
+<li><dl class="simple">
+<dt>1<span class="classifier">For each step only the free energy, the modulus of the gradient and</span></dt><dd><p>the Kong-Liu effective sample size is printed.</p>
+</dd>
+</dl>
+</li>
+<li><p>2 : The dynamical matrix at each step is saved on output with a progressive integer</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>custom_function_pre<span class="classifier">pointer to function (self)</span></dt><dd><p>It is a custom function that takes as an input the current
+structure. At each step this function is invoked. This allows
+to print particular analysis during the minimization that
+the user want to define to better control what is it happening
+to the system.
+This function is called before the minimization step has been performed.
+The info on the system saved in the self minimization reguards the previous step.</p>
+</dd>
+<dt>custom_function_post<span class="classifier">pointer to function(self)</span></dt><dd><p>The same as the previous argument, but this function is invoked after
+the minimization step has been perfomed. The data about free energy,
+gradient and effective sample size have been updated.</p>
+</dd>
+<dt>custom_function_gradient<span class="classifier">pointer to function (ndarray(NQ, 3*nat, 3*nat), ndarray(nat, 3))</span></dt><dd><p>A pointer to a function that takes as an input the two gradients, and modifies them.
+It is called after the two gradients have been computed, and it is used to
+impose some constraint on the minimization.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.set_ensemble">
+<span class="sig-name descname"><span class="pre">set_ensemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.set_ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.set_ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide an ensemble to the minimizer object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.set_minimization_step">
+<span class="sig-name descname"><span class="pre">set_minimization_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.set_minimization_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.set_minimization_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an uniform minimization step for both the dynamical matrix and the structure minimization.</p>
+<p>Try to always use this function unless you specifically want two difference speed between the structure and the dynamical matrix minimization.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.setup_from_namelist">
+<span class="sig-name descname"><span class="pre">setup_from_namelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.setup_from_namelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.setup_from_namelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function setups all the parameters of the minimization using a namelist.
+It is compatible with the old sscha code, and very usefull to save the
+input parameters in a simple input filename.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>line_list<span class="classifier">list of string</span></dt><dd><p>List of strings obtained from the method readlines.
+The content must match the Quantum ESPRESSO file format</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.SchaMinimizer.SSCHA_Minimizer.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/SchaMinimizer.html#SSCHA_Minimizer.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.SchaMinimizer.SSCHA_Minimizer.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods makes the self.dyn coincide with self.ensemble.current_dyn, and overwrites the stochastic
+weights of the current_dyn.</p>
+<p>Call this method each time you modify the dynamical matrix of the minimization to avoid errors.</p>
+<p>NOTE: it is equivalent to call self.ensemble.update_weights(self.dyn, self.ensemble.current_T)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="the-relax-module">
+<h2>The Relax Module<a class="headerlink" href="#the-relax-module" title="Permalink to this headline">¶</a></h2>
+<p>This module deals with relaxations that are iterated over more populations. It includes the variable cell optimization algorithm.
+Here the parameters read in the &amp;relax name list are read and setup.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.Relax.SSCHA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.Relax.</span></span><span class="sig-name descname"><span class="pre">SSCHA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ase_calculator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_configs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_ensemble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Relax.html#SSCHA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Relax.SSCHA" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.Relax.SSCHA.relax">
+<span class="sig-name descname"><span class="pre">relax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restart_from_ens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensemble_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scramble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Relax.html#SSCHA.relax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Relax.SSCHA.relax" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function performs the costant volume SCHA relaxation, by submitting several populations
+until the minimization converges (or the maximum number of population is reached)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>restart_from_ens<span class="classifier">bool, optional</span></dt><dd><p>If True the ensemble is used to start the first population, without recomputing
+energies and forces. If False (default) the first ensemble is overwritten with
+a new one, and the minimization starts.</p>
+</dd>
+<dt>get_stress<span class="classifier">bool, optional</span></dt><dd><p>If true the stress tensor is calculated. This may increase the computational
+cost, as it will be computed for each ab-initio configuration (it may be not available
+with some ase calculator)</p>
+</dd>
+<dt>ensemble_loc<span class="classifier">string</span></dt><dd><p>Where the ensemble of each population is saved on the disk. If none, it will
+use the content of self.data_dir. It is just a way to override the variable self.data_dir</p>
+</dd>
+<dt>start_pop<span class="classifier">int, optional</span></dt><dd><p>The starting index for the population, used only for saving the ensemble and the dynamical
+matrix. If None, the content of self.start_pop will be used.</p>
+</dd>
+<dt>sobol<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Defines if the calculation uses random Gaussian generator or Sobol Gaussian generator.</p>
+</dd>
+<dt>sobol_scramble<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Set the optional scrambling of the generated numbers taken from the Sobol sequence.</p>
+</dd>
+<dt>sobol_scatter<span class="classifier">real (0.0 to 1) (Deafault = 0.0)</span></dt><dd><p>Set the scatter parameter to displace the Sobol positions randommly.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>status<span class="classifier">bool</span></dt><dd><p>True if the minimization converged, False if the maximum number of
+populations has been reached.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Relax.SSCHA.setup_custom_functions">
+<span class="sig-name descname"><span class="pre">setup_custom_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">custom_function_pre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_function_gradient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_function_post</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Relax.html#SSCHA.setup_custom_functions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Relax.SSCHA.setup_custom_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine setup which custom functions should be called during the minimization.
+Look for the SCHA_Minimizer.run() method for other details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Relax.SSCHA.setup_from_namelist">
+<span class="sig-name descname"><span class="pre">setup_from_namelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namelist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Relax.html#SSCHA.setup_from_namelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Relax.SSCHA.setup_from_namelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the SSCHA relaxer from the given namelist.</p>
+<p>Note the calculation will be also started by this method.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>namelist<span class="classifier">dict</span></dt><dd><p>A dictionary that contains the namespaces</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Relax.SSCHA.vc_relax">
+<span class="sig-name descname"><span class="pre">vc_relax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_press</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_bulk_modulus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restart_from_ens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensemble_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress_numerical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_relax_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scramble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sobol_scatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Relax.html#SSCHA.vc_relax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Relax.SSCHA.vc_relax" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function performs a variable cell SCHA relaxation at constant pressure,
+It is similar to the relax calculation, but the unit cell is updated according
+to the anharmonic stress tensor at each new population.</p>
+<p>By default, all the degrees of freedom compatible with the symmetry group are relaxed in the cell.
+You can constrain the cell to keep the same shape by setting fix_cell_shape = True.</p>
+<dl class="simple">
+<dt>NOTE:</dt><dd><p>remember to setup the stress_offset variable of the SCHA_Minimizer,
+because in ab-initio calculation the stress tensor converges porly with the cutoff,
+but stress tensor differences converges much quicker. Therefore, setup the
+stress tensor difference between a single very high-cutoff calculation and a
+single low-cutoff (the one you use), this difference will be added at the final
+stress tensor to get a better estimation of the true stress.</p>
+</dd>
+</dl>
+<blockquote>
+<div><dl>
+<dt>target_press<span class="classifier">float, optional</span></dt><dd><p>The target pressure of the minimization (in GPa). The minimization is stopped if the
+target pressure is the stress tensor is the identity matrix multiplied by the
+target pressure, with a tollerance equal to the stochastic noise. By default
+it is 0 (ambient pressure)</p>
+</dd>
+<dt>static_bulk_modulus<span class="classifier">float (default 100), or (9x9) matrix or string, optional</span></dt><dd><p>The static bulk modulus, expressed in GPa. It is used to initialize the
+hessian matrix on the BFGS cell relaxation, to guess the volume deformation caused
+by the anharmonic stress tensor in the first steps. By default is 100 GPa (higher value
+are safer, since they means a lower change in the cell shape).
+It can be also the whole non isotropic matrix. If you specify a string, it
+can be both:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>“recalc”<span class="classifier">the static bulk modulus is recomputed with finite differences after</span></dt><dd><p>each step</p>
+</dd>
+</dl>
+</li>
+<li><p>“bfgs” : the bfgs algorithm is used to infer the Hessian from previous calculations.</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>restart_from_ens<span class="classifier">bool, optional</span></dt><dd><p>If True the ensemble is used to start the first population, without recomputing
+energies and forces. If False (default) the first ensemble is overwritten with
+a new one, and the minimization starts.</p>
+</dd>
+<dt>ensemble_loc<span class="classifier">string</span></dt><dd><p>Where the ensemble of each population is saved on the disk. You can specify None
+if you do not want to save the ensemble (useful to avoid disk I/O for force fields)</p>
+</dd>
+<dt>start_pop<span class="classifier">int, optional</span></dt><dd><p>The starting index for the population, used only for saving the ensemble and the dynamical
+matrix.</p>
+</dd>
+<dt>stress_numerical<span class="classifier">bool</span></dt><dd><p>If True the stress is computed by finite difference (usefull for calculators that
+does not support it by default)</p>
+</dd>
+<dt>cell_relax_algorithm<span class="classifier">string</span></dt><dd><p>This identifies the stress algorithm. It can be both sd (steepest-descent),
+cg (conjugate-gradient) or bfgs (Quasi-newton).
+The most robust one is SD. Do not change if you are not sure what you are doing.</p>
+</dd>
+<dt>fix_volume<span class="classifier">bool, optional</span></dt><dd><p>If true (default False) the volume is fixed, therefore only the cell shape is relaxed.</p>
+</dd>
+<dt>sobol<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Defines if the calculation uses random Gaussian generator or Sobol Gaussian generator.</p>
+</dd>
+<dt>sobol_scramble<span class="classifier">bool, optional (Default = False)</span></dt><dd><p>Set the optional scrambling of the generated numbers taken from the Sobol sequence.</p>
+</dd>
+<dt>sobol_scatter<span class="classifier">real (0.0 to 1) (Deafault = 0.0)</span></dt><dd><p>Set the scatter parameter to displace the Sobol positions randommly.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>status<span class="classifier">bool</span></dt><dd><p>True if the minimization converged, False if the maximum number of
+populations has been reached.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="the-utilities-module">
+<h2>The Utilities Module<a class="headerlink" href="#the-utilities-module" title="Permalink to this headline">¶</a></h2>
+<p>This module both provides the constrains and the IOinput</p>
+<section id="ioinfo-class">
+<h3>IOInfo class<a class="headerlink" href="#ioinfo-class" title="Permalink to this headline">¶</a></h3>
+<p>Use this class to make the python-sscha print information during the minimization</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.Utilities.</span></span><span class="sig-name descname"><span class="pre">IOInfo</span></span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.CFP_SaveAll">
+<span class="sig-name descname"><span class="pre">CFP_SaveAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minim</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.CFP_SaveAll"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.CFP_SaveAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method saves everithing stored in this class.</p>
+<p>It can be passed as custom_function_post to the run method of the SchaMinimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.CFP_SaveFrequencies">
+<span class="sig-name descname"><span class="pre">CFP_SaveFrequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minim</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.CFP_SaveFrequencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.CFP_SaveFrequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>This custom method stores the total frequencies updating an exeternal file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.Reset">
+<span class="sig-name descname"><span class="pre">Reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.Reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the data to empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.Save">
+<span class="sig-name descname"><span class="pre">Save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.Save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.Save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the data on a file</p>
+<blockquote>
+<div><dl class="simple">
+<dt>fname<span class="classifier">string, optional</span></dt><dd><p>If given, the file will be saved in the specified location.
+Otherwise the default one is used (must be initialized by SetupSaving)</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.SetupAtomicPositions">
+<span class="sig-name descname"><span class="pre">SetupAtomicPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_each_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.SetupAtomicPositions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.SetupAtomicPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the saving of the data on atomic position along with the minimization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.SetupSaving">
+<span class="sig-name descname"><span class="pre">SetupSaving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_each_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.SetupSaving"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.SetupSaving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the system to save the data each time the function is called.</p>
+<p>By default, the system will save frequencies and minimization info (like free energy, gradients and kong liu)
+The files are
+.freqs   for the frequencies
+.dat     for the minimization info</p>
+<blockquote>
+<div><dl class="simple">
+<dt>fname<span class="classifier">string </span></dt><dd><p>path to the file to save the files</p>
+</dd>
+<dt>save_each_step<span class="classifier">bool</span></dt><dd><p>If true the file is saved (and updated) each time step.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.IOInfo.SetupWeights">
+<span class="sig-name descname"><span class="pre">SetupWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_each_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#IOInfo.SetupWeights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.IOInfo.SetupWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the weights saving</p>
+<blockquote>
+<div><dl class="simple">
+<dt>fname<span class="classifier">string</span></dt><dd><p>Path to the file to which save the frequencies.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="constraints">
+<h3>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h3>
+<p>The constrains are a member of the Utilities module.
+To implement constrains on phonon modes, use the ModeProjection class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.Utilities.ModeProjection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.Utilities.</span></span><span class="sig-name descname"><span class="pre">ModeProjection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#ModeProjection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.ModeProjection" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.ModeProjection.CFG_ProjectDyn">
+<span class="sig-name descname"><span class="pre">CFG_ProjectDyn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn_grad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">struct_grad</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#ModeProjection.CFG_ProjectDyn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.ModeProjection.CFG_ProjectDyn" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine constrains only the dynamical matrix, leaving the structure
+to minimize on all the possible degrees of freedom.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.ModeProjection.CFG_ProjectOnModes">
+<span class="sig-name descname"><span class="pre">CFG_ProjectOnModes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn_grad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">struct_grad</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#ModeProjection.CFG_ProjectOnModes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.ModeProjection.CFG_ProjectOnModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to be passed to the minimizer as ‘custom_function_gradient’. 
+It project the gradients in the polarization vector subspace.
+As any custom_function_gradient, it takes as input the two gradients.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.ModeProjection.CFG_ProjectStructure">
+<span class="sig-name descname"><span class="pre">CFG_ProjectStructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn_grad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">struct_grad</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#ModeProjection.CFG_ProjectStructure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.ModeProjection.CFG_ProjectStructure" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine constraints only the structure gradient, leaving the
+dynamical matrix to minimize on all the possible degrees of freedom.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Utilities.ModeProjection.SetupFreeModes">
+<span class="sig-name descname"><span class="pre">SetupFreeModes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_mode_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_mode_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select_q_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constrain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Utilities.html#ModeProjection.SetupFreeModes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Utilities.ModeProjection.SetupFreeModes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrain the minimization only in the modes between index_modes_start and
+index_mdoe_end in all the q points. Also the opposite is possible, 
+by setting the constrain flag to True.</p>
+<p>For each q points only modes between these indices will be minimized.
+The select_q_points options allows to select only some q points to be constrained.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>index_mode_start<span class="classifier">int</span></dt><dd><p>The index of the first mode</p>
+</dd>
+<dt>index_mode_end<span class="classifier">int</span></dt><dd><p>The index of the last mode</p>
+</dd>
+<dt>select_q_points<span class="classifier">list of int</span></dt><dd><p>The index of the q points affected. 
+If None (default) all q points are affected.</p>
+</dd>
+<dt>constrain<span class="classifier">bool</span></dt><dd><p>If True, the specified range of modes is constrained while all the other are free.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="the-cluster-module">
+<h2>The Cluster Module<a class="headerlink" href="#the-cluster-module" title="Permalink to this headline">¶</a></h2>
+<p>The Cluster module provides the interface between python-sscha and remote servers to which you submit the energy and forces calculations.
+The input in &amp;cluster namespace is interpreted in this module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sscha.Cluster.</span></span><span class="sig-name descname"><span class="pre">Cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pw.x</span> <span class="pre">-npool</span> <span class="pre">NPOOL</span> <span class="pre">-i</span> <span class="pre">PREFIX.pwi</span> <span class="pre">&gt;</span> <span class="pre">PREFIX.pwo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpi_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'srun</span> <span class="pre">--mpi=pmi2</span> <span class="pre">-n</span> <span class="pre">NPROC'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.CheckCommunication">
+<span class="sig-name descname"><span class="pre">CheckCommunication</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.CheckCommunication"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.CheckCommunication" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function return true if the server respond correctly, 
+false otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.ExecuteCMD">
+<span class="sig-name descname"><span class="pre">ExecuteCMD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.ExecuteCMD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.ExecuteCMD" title="Permalink to this definition">¶</a></dt>
+<dd><p>This subroutine execute the cmd in the cluster,
+with the specified number of attempts.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>cmd: string</dt><dd><p>The whole command, including the ssh/scp.</p>
+</dd>
+<dt>raise_error<span class="classifier">bool, optional</span></dt><dd><p>If True (default) raises an error upon failure.</p>
+</dd>
+<dt>return_output<span class="classifier">bool, optional</span></dt><dd><p>If True (default False) the output of the command is 
+returned as second value.</p>
+</dd>
+<dt>on_cluster<span class="classifier">bool</span></dt><dd><p>If true, the command is executed directly on the cluster through ssh</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>success<span class="classifier">bool</span></dt><dd><p>If True, the command has been executed with success,
+False otherwise</p>
+</dd>
+<dt>output<span class="classifier">string</span></dt><dd><p>Returned only if return_output is True</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.batch_submission">
+<span class="sig-name descname"><span class="pre">batch_submission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_structures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ESP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_togheder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.batch_submission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.batch_submission" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a different kind of submission, it exploits xargs to perform
+a parallel submission of serveral structures in one single job.
+This is very good to avoid overloading the queue system manager, or
+when a limited number of jobs per user are allowed.</p>
+<p>NOTE: the number of structure in the list must be a divisor of the
+total number of processors.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>list_of_structures<span class="classifier">list</span></dt><dd><p>List of the structures to be computed.</p>
+</dd>
+<dt>calc<span class="classifier">ase FileIOCalculator</span></dt><dd><p>The FileIOCalculator to perform the minimization</p>
+</dd>
+<dt>indices<span class="classifier">list(int)</span></dt><dd><p>The indices of the configurations, this avoids interferring with
+other jobs when multiple jobs are lunched togheder.</p>
+</dd>
+<dt>in_extension<span class="classifier">string</span></dt><dd><p>Extension of the input filename</p>
+</dd>
+<dt>out_extension<span class="classifier">string</span></dt><dd><p>Extension of the output filename.</p>
+</dd>
+<dt>label<span class="classifier">string, optional</span></dt><dd><p>The root of the input file.</p>
+</dd>
+<dt>n_togheder<span class="classifier">int, optional (DO NOT USE)</span></dt><dd><p>If present, the job will lunch a new job immediately after the other 
+is ended. This is usefull to further reduce the number of submitted 
+jobs.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>list_of_results.</dt><dd><p>Returns a list of results dicts, one for each structure.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.check_job_finished">
+<span class="sig-name descname"><span class="pre">check_job_finished</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.check_job_finished"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.check_job_finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the job identified by the job_id is finished</p>
+<blockquote>
+<div><dl class="simple">
+<dt>job_id<span class="classifier">string</span></dt><dd><p>The string that identifies uniquely the job</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.clean_localworkdir">
+<span class="sig-name descname"><span class="pre">clean_localworkdir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.clean_localworkdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.clean_localworkdir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.collect_results">
+<span class="sig-name descname"><span class="pre">collect_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.collect_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.collect_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect back all the results from the submitted data.
+This operation needs to be performed in thread safe mode
+(all threads must be locked between this operation and when the results are actually assigned to the ensemble
+to avoid conflicts)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.compute_ensemble">
+<span class="sig-name descname"><span class="pre">compute_ensemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ase_calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.compute_ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.compute_ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><dl class="simple">
+<dt>ensemble :</dt><dd><p>The ensemble to be runned.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.compute_ensemble_batch">
+<span class="sig-name descname"><span class="pre">compute_ensemble_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cellconstructor_calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.compute_ensemble_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.compute_ensemble_batch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.copy_files">
+<span class="sig-name descname"><span class="pre">copy_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_server</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.copy_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.copy_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function copies the input files toward the HPC if to_server is True
+or retrive the output files from the HPC if to_server is False</p>
+<blockquote>
+<div><dl class="simple">
+<dt>list_of_input<span class="classifier">list</span></dt><dd><p>List of the path to the input files to be copied into the server.</p>
+</dd>
+<dt>list_of_output<span class="classifier">list</span></dt><dd><p>List of the output files to be copied from the HPC server.
+It is needed also when submitting the input file from the server,
+as files that are named in the same way will be cleaned.
+(No risk to mistake them with the actual result of the calculation)</p>
+</dd>
+<dt>to_server<span class="classifier">bool</span></dt><dd><p>If true, we copy the input files into the server from the local machine.
+If false, we copy the output files from the server to the local machine.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.create_submission_script">
+<span class="sig-name descname"><span class="pre">create_submission_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.create_submission_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.create_submission_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a function that is general and does not depend on the specific
+calculator. It is usefull to create the header of the submission script.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>labels<span class="classifier">list </span></dt><dd><p>It is a list of the labels of the calculations to be done.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>submission_header<span class="classifier">string</span></dt><dd><p>The text of the submission header.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.get_execution_command">
+<span class="sig-name descname"><span class="pre">get_execution_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.get_execution_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.get_execution_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the command used in the submission script to actually execute the calculation.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>label<span class="classifier">string</span></dt><dd><p>The label of the calculation</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>commnad<span class="classifier">string</span></dt><dd><p>The command to be appended to the submission script</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.get_job_id_from_submission_output">
+<span class="sig-name descname"><span class="pre">get_job_id_from_submission_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.get_job_id_from_submission_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.get_job_id_from_submission_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>GET THE JOB ID</p>
+<p>Retreive the job id from the output of the submission. 
+This depends on the software employed. It works for slurm.</p>
+<p>Returns None if the output contains an error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.get_output_path">
+<span class="sig-name descname"><span class="pre">get_output_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.get_output_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.get_output_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the label of the submission, retrive the path of all the output files of that calculation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.parse_string">
+<span class="sig-name descname"><span class="pre">parse_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.parse_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.parse_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the given string on the cluster. 
+It can be used to resolve environmental variables defined in the cluster.</p>
+<dl class="simple">
+<dt>It will execute on the cluster the command:</dt><dd><p>echo “string”</p>
+</dd>
+</dl>
+<p>and return the result of the cluster.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>string :</dt><dd><p>String to be parsed in the cluster.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>string :</dt><dd><p>The same as input, but with the cluster environmental variables correctly
+parsed.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.prepare_input_file">
+<span class="sig-name descname"><span class="pre">prepare_input_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">structures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.prepare_input_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.prepare_input_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is specific for quantum espresso and must be inherit and replaced for 
+other calculators.</p>
+<p>This crates the input files in the local working directory 
+self.local_workdir and it returns the list of all the files generated.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>structures<span class="classifier">List of cellconstructor.Structure.Structure</span></dt><dd><p>The atomic structures.</p>
+</dd>
+<dt>calc<span class="classifier">the ASE or CellConstructor calculator.</span></dt><dd><p>In this case, it works with quantum espresso</p>
+</dd>
+<dt>labels<span class="classifier">List of strings</span></dt><dd><p>The unique name of this calculation</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>List_of_input<span class="classifier">list</span></dt><dd><p>List of strings containing all the input files</p>
+</dd>
+<dt>List_of_output<span class="classifier">list</span></dt><dd><p>List of strings containing the output files expected
+for the calculation</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.read_results">
+<span class="sig-name descname"><span class="pre">read_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.read_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.read_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary of the computed property for the given calculation label</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.run_atoms">
+<span class="sig-name descname"><span class="pre">run_atoms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ase_calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ase_atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ESP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.pwi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.pwo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_cpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.run_atoms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.run_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function runs the given atoms in the cluster, using the ase_calculator.
+Note: the ase_calc must be a FileIOCalculator. 
+For now it works with quantum espresso.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.set_timeout">
+<span class="sig-name descname"><span class="pre">set_timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.set_timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.set_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a timeout time for each single calculation.
+This is very usefull as sometimes the calculations gets stucked after some times on clusters.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>timeout: int</dt><dd><p>The timeout in seconds after which a single calculation is killed.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.setup_from_namelist">
+<span class="sig-name descname"><span class="pre">setup_from_namelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namelist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.setup_from_namelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.setup_from_namelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method setup the cluster using a custom input file.
+The inputfile must have the same shape of QuantumESPRESSO ones.
+The information about the cluster must be located in a namespace called
+as __CLUSTER_NAMELIST</p>
+<blockquote>
+<div><dl class="simple">
+<dt>namelist: </dt><dd><p>The parsed namelist dictionary.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.setup_workdir">
+<span class="sig-name descname"><span class="pre">setup_workdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.setup_workdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.setup_workdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the line contained in self.workdir in the claster to get working directory.
+It needs that the communication with the cluster has been correctly setted up.</p>
+<p>It will parse correctly environmental variables of the cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sscha.Cluster.Cluster.submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_location</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sscha/Cluster.html#Cluster.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sscha.Cluster.Cluster.submit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit the calculation. Compose the command into a cmd variable, then submit it through:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ExecuteCMD</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">return_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt>script_localtion<span class="classifier">string</span></dt><dd><p>Path to the submission script inside the cluster.</p>
+</dd>
+</dl>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>success<span class="classifier">bool</span></dt><dd><p>Result of the execution of the submission command. 
+It is what returned from self.ExecuteCMD(cmd, False)</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="faq.html"
+                        title="previous chapter">Frequently Asked Questions (FAQs)</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQs)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index1.html">python-sscha 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">THE API</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Lorenzo Monacelli.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+  </body>
+</html>
