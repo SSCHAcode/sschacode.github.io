@@ -5,6 +5,21 @@ subtitle: <span style="color:white">June 26-30, 2023 - Donostia/San Sebastián, 
 bigimg: "../../img/Donostia_Igeldotik.jpg"
 ---
 
+- [Lecturers](#Lecturers)
+- [Program](#Program)
+
+
 Sponsors:
+
+<a name="Lecturers"></a>
+# Lecturers
+
+To be announced soon
+
+<a name="Program"></a>
+# Lecturers
+
+To be announced soon
+
 
 
