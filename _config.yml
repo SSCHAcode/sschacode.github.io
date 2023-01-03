@@ -36,6 +36,7 @@ navbar-links:
   Schools: 
     - 2023:
       - Home: "/Schools/2023/home"
+      - Speakers: "/Schools/2023/speakers"
   Developers: "developers"
   Contact: "contact"
 
