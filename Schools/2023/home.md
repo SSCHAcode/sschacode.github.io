@@ -7,5 +7,6 @@ bigimg: "../../img/Donostia_Igeldotik.jpg"
 
 ![Donostia](../../img/Donostia.jpg)
 
+Sponsors:
 
 
