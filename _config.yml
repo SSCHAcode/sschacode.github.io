@@ -33,6 +33,8 @@ navbar-links:
   Faqs: "faqs"
   Documentation: "documentation"
   References and how to cite: "references"
+  Schools: 
+    - 2023: "/Schools/2023/home"
   Developers: "developers"
   Contact: "contact"
 
