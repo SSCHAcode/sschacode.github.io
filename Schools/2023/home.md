@@ -1,13 +1,15 @@
 ---
 layout: page
-title: <span style="color:white">SSCHA School 2023</span>
-subtitle: <span style="color:white">June 26-30, 2023 - Donostia/San Sebastián, Spain</span>
+title: SSCHA School 2023
+subtitle: June 26-30, 2023 - Donostia/San Sebastián, Spain
 bigimg: "../../img/Donostia_Igeldotik.jpg"
 ---
 
 - [Lecturers](#Lecturers)
 - [Program](#Program)
-
+- [Registration and abstract submission](#Registration)
+- [Venue and travel information](#Travel)
+- [Contact us](#Contact)
 
 Sponsors:
 
@@ -17,7 +19,22 @@ Sponsors:
 To be announced soon
 
 <a name="Program"></a>
-# Lecturers
+# Program
+
+To be announced soon
+
+<a name="Registration"></a>
+# Registration and abstract submission
+
+To be announced soon
+
+<a name="Travel"></a>
+# Venue and travel information
+
+To be announced soon
+
+<a name="Travel"></a>
+# Contact us
 
 To be announced soon
 
