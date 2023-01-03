@@ -34,9 +34,7 @@ navbar-links:
   Documentation: "documentation"
   References and how to cite: "references"
   Schools: 
-    - 2023:
-      - Home: "/Schools/2023/home"
-      - Speakers: "/Schools/2023/speakers"
+    - 2023: "/Schools/2023/home"
   Developers: "developers"
   Contact: "contact"
 
