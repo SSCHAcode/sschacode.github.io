@@ -47,12 +47,12 @@ Institutional sponsors:
 <a name="Program"></a>
 # Program
 
-To be announced soon
+To be announced soon.
 
 <a name="Registration"></a>
 # Registration and abstract submission
 
-To be announced soon
+Registration will open in February 2023.
 
 <a name="Travel"></a>
 # Venue and travel information
