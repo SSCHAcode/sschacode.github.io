@@ -788,3 +788,13 @@ td.gutter {
   font-style: italic;
   font-size: 16px;
 }
+
+#gray-line {
+
+border-top: 1px solid gray;
+
+height: 1px;
+
+width: 10px;
+
+}
