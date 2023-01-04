@@ -62,7 +62,7 @@ The school will take place at the *Centro de Física de Materiales* located in t
  [![CFM](../../img/CFM_portada.jpg)](https://goo.gl/maps/neif5cyRB4UsD5QFA)
 
 
-<ins><b>How to reach San Sebastian</ins></b>:
+<ins><b>How to reach San Sebastian</b></ins>:
 
 By plane:
 - Bilbao airport, Spain (IATA: BIO, 100 km. from the city center): About 1 hour drive from San Sebastian. An international airport with connections to all major cities in Europe (London, Paris, Frankfurt, Brussels, Rome,...). The most convenient one for overseas travellers in terms of connections and air fares. A direct shuttle bus running every hour connects the airport with San Sebastián for about 17 euros. The bus time table is available at [Lurraldebus](http://www.lurraldebus.eus) (search between "AEROPUERTO BILBAO" and "DONOSTIA/SAN SEBASTIAN").
@@ -79,7 +79,7 @@ By bus:
 By car:
 - The city is connected to the rest of Spain by the N-1 (Madrid-Irun highway), AP-8 (Bilbao-Irun highway), and A-15 (Pamplona-San Sebastián highway).
 
- <ins><b>Accommodation</ins></b>:
+ <ins><b>Accommodation</b></ins>:
 
 The registration fee does not include accommodation and participants should make their own bookings separately. Please find here a list of recommended hotels.
 
@@ -104,7 +104,11 @@ Other options:
 <a name="Organizers"></a>
 # Organizers and contact
 
-To be announced soon
+The organizers of the school are:
+ - Ion Errea - *University of the Basque Country, Spain*
+ - Lorenzo Monacelli - *EPFL, Switzerland*
+ - Diego Martínez Gutiérrez -  *Centro de Física de Materiales, Spain*
 
+You may contact us at this email address: codesscha@gmail.com
 
 
