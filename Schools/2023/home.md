@@ -5,6 +5,10 @@ subtitle: June 26-30, 2023 - Donostia/San Sebastián, Spain
 bigimg: "../../img/Donostia_Igeldotik_2.jpeg"
 ---
 
+The first *Summer School on the Calculation of Ionic Quantum and Anharmonic Effects with the Stochastic Self-Consistent Harmonic Approximation* will be held in Donostia/San Sebastián, Spain, from June 26-30, 2023. It will be a fantastic opportunity to learn the fundamental physics behind the SSCHA code and to get hands-on training sessions on its different utilities with lectures given by the developers of the code.
+
+  
+
 - [Lecturers](#Lecturers)
 - [Program](#Program)
 - [Registration and abstract submission](#Registration)
@@ -26,9 +30,9 @@ Sponsors:
 
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *EPFL, Switzerland*
 
-[![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Đorđe Dangić**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *University of the Basque Country, Spain*
+[![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://cfm.ehu.es/errealab/) [**Đorđe Dangić**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
-[![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Diego Martínez Gutiérrez**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *Centro de Física de Materiales, Spain*
+[![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://cfm.ehu.es/errealab/) [**Diego Martínez Gutiérrez**](https://cfm.ehu.es/errealab/) - *Centro de Física de Materiales, Spain*
 
 <a name="Program"></a>
 # Program
