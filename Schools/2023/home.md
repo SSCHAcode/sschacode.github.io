@@ -22,7 +22,8 @@ In this website you can find the following information:
 
 Institutional sponsors:
 
-[![CFM](../../img/CFM.jpg)](https://cfm.ehu.es) [![UPV/EHU](../../img/EHU.jpg)](https://www.ehu.eus/eu/home)
+<a href="https://cfm.ehu.es"><img src="../../img/CFM.jpg" alt="CFM" width="200"/></a>
+<a href="https://www.ehu.eus/eu/home"><img src="../../img/EHU.jpg" alt="UPV/EHU" width="200"/></a>
 
 <a name="Lecturers"></a>
 # Lecturers
