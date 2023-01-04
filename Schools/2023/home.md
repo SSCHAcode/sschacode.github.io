@@ -59,14 +59,14 @@ To be announced soon
 
 The school will take place at the *Centro de Física de Materiales* located in the campus of the University of the Basque Country in San Sebastian, Spain. The exact [address](https://goo.gl/maps/neif5cyRB4UsD5QFA) is *Manuel de Lardizabal Pasealekua 5, 20018 San Sebastian, Spain*.
 
- [![CFM](../../img/CFM_portada.jpg)](https://goo.gl/maps/neif5cyRB4UsD5QFA)]
+ [![CFM](../../img/CFM_portada.jpg)](https://goo.gl/maps/neif5cyRB4UsD5QFA)
 
 
-<ins>How to reach San Sebastian</ins>
+<ins><b>How to reach San Sebastian</ins></b>:
 
 By plane:
-- Bilbao airport, Spain (IATA: BIO, 100 km. from the city center): About 1 hour drive from San Sebastian. An international airport with connections to all major cities in Europe (London, Paris, Frankfurt, Brussels, Rome,...). The most convenient one for overseas travellers in terms of connections and air fares. A direct shuttle bus running every hour connects the airport with San Sebastián for about 17 euros. The bus time table is available at [Luraldebus](http://www.lurraldebus.eus) (search between "AEROPUERTO BILBAO" and "DONOSTIA/SAN SEBASTIAN").
-- San Sebastian airport, Spain (IATA: EAS, 25 km. from the city center). Next to the town of Hondarribia, about 30 minutes drive from San Sebastian. A small airport with domestic connections to Madrid and Barcelona. Iberia flies to this airport. Convenient when a connection through Madrid is possible. A taxi connecting the airport and the city should be around 30 euros. The airport is also connected to the city center with lines E20 and E21 operated by http://www.lurraldebus.eus.
+- Bilbao airport, Spain (IATA: BIO, 100 km. from the city center): About 1 hour drive from San Sebastian. An international airport with connections to all major cities in Europe (London, Paris, Frankfurt, Brussels, Rome,...). The most convenient one for overseas travellers in terms of connections and air fares. A direct shuttle bus running every hour connects the airport with San Sebastián for about 17 euros. The bus time table is available at [Lurraldebus](http://www.lurraldebus.eus) (search between "AEROPUERTO BILBAO" and "DONOSTIA/SAN SEBASTIAN").
+- San Sebastian airport, Spain (IATA: EAS, 25 km. from the city center). Next to the town of Hondarribia, about 30 minutes drive from San Sebastian. A small airport with domestic connections to Madrid and Barcelona. Iberia flies to this airport. Convenient when a connection through Madrid is possible. A taxi connecting the airport and the city should be around 30 euros. The airport is also connected to the city center with lines E20 and E21 operated by [Lurraldebus](http://www.lurraldebus.eus).
 - Biarritz airport, France (IATA: BIQ, 50 km. from the city center). 40 minutes drive from San Sebastian. Air France flies to this airport, and some low-cost airlines such as Ryanair also fly here. Convenient when flying from France or London. Public transportation is complicated between Biarritz and San Sebastian.
 
 By train:
@@ -78,6 +78,28 @@ By bus:
 
 By car:
 - The city is connected to the rest of Spain by the N-1 (Madrid-Irun highway), AP-8 (Bilbao-Irun highway), and A-15 (Pamplona-San Sebastián highway).
+
+ <ins><b>Accommodation</ins></b>:
+
+The registration fee does not include accommodation and participants should make their own bookings separately. Please find here a list of recommended hotels.
+
+Student houses near the conference venue:
+ - [Olarain](https://www.olarain.com)
+ - [Manuel Agid Querol](https://www.resa.es/es/residencias/san-sebastian/residencia-universitaria-manuel-agud-querol/residencia/)
+
+Hotels near the conference venue:
+ - [Hotel NH Collection San Sebastian Aranzazu](https://www.nh-hoteles.es/hotel/nh-collection-san-sebastian-aranzazu)
+ - [Hotel San Sebastián](https://www.ilunionhotels.co.uk/hotel-ilunion-san-sebastian-in-san-sebastian/)
+ - [Codina Sercotel Hotel](https://www.hotelcodina.es/esp/index_esp.html)
+ - [Hotel Antik](http://hotelantiksansebastian.com)
+ - [Hotel Avenida](https://www.hotelavenida.net)
+ - [Barceló Costa Vasca](https://www.barcelo.com/es-es/barcelo-costa-vasca/)
+
+Hostels near the conference venue:
+ - [Koisi Hostel](https://koisihostel.com)
+
+Other options:
+ - San Sebastian offers a great variety of different kinds of accommodation, ranging from 5-star hotels to hostels and flats. In order to make it easier for you to find the accommodation that better suits you, we suggest to have a look at the following link [San Sebastian Tourist Office](https://www.sansebastianturismoa.eus/en/sleep/where-to-sleep).
 
 <a name="Organizers"></a>
 # Organizers and contact
