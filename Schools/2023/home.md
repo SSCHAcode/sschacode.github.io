@@ -22,8 +22,10 @@ In this website you can find the following information:
 
 Institutional sponsors:
 
-<a href="https://cfm.ehu.es"><img src="../../img/CFM.jpg" alt="CFM" width="200"/></a>
-<a href="https://www.ehu.eus/eu/home"><img src="../../img/EHU.jpg" alt="UPV/EHU" width="200"/></a>
+<a href="https://cfm.ehu.es"><img src="/img/CFM.jpg" alt="CFM" height="200"/></a>
+<a href="https://www.ehu.eus/eu/home"><img src="/img/EHU.jpg" alt="UPV/EHU" height="200"/></a>
+<a href="http://dipc.ehu.es"><img src="/img/DIPC.JPG" alt="DIPC" height="200"/></a>
+<a href="https://erc.europa.eu/homepage"><img src="/img/ERC.jpg" alt="ERC" height="200"/></a>
 
 <a name="Lecturers"></a>
 # Lecturers
