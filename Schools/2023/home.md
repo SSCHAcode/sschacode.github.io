@@ -20,7 +20,9 @@ In this website you can find the following information:
 - [Venue and travel information](#Travel)
 - [Organizers and contact](#Organizers)
 
-Sponsors:
+Institutional sponsors:
+
+[![CFM](../../img/CFM.jpg)](https://cfm.ehu.es) [![UPV/EHU](../../img/EHU.jpg)](https://www.ehu.eus/eu/home)
 
 <a name="Lecturers"></a>
 # Lecturers
