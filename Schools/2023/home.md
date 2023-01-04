@@ -26,9 +26,9 @@ Sponsors:
 
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *EPFL, Switzerland*
 
-[![Đorđe Dangić](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Đorđe Dangić**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *University of the Basque Country, Spain*
+[![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Đorđe Dangić**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *University of the Basque Country, Spain*
 
-[![Diego Martínez Gutiérrez](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Diego Martínez Gutiérrez**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *Centro de Física de Materiales, Spain*
+[![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Diego Martínez Gutiérrez**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *Centro de Física de Materiales, Spain*
 
 <a name="Program"></a>
 # Program
