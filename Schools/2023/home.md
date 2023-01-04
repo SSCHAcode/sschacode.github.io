@@ -57,7 +57,9 @@ To be announced soon
 <a name="Travel"></a>
 # Venue and travel information
 
-To be announced soon
+The school will take place at the *Centro de Física de Materiales* located in the campus of the University of the Basque Country in San Sebastian, Spain. The exact [address](https://goo.gl/maps/neif5cyRB4UsD5QFA) is *Manuel de Lardizabal Pasealekua 5, 20018 San Sebastian, Spain*.
+
+ [![CFM](../../img/CFM_portada.jpg)]https://goo.gl/maps/neif5cyRB4UsD5QFA()]
 
 <a name="Organizers"></a>
 # Contact us
