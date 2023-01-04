@@ -59,10 +59,28 @@ To be announced soon
 
 The school will take place at the *Centro de Física de Materiales* located in the campus of the University of the Basque Country in San Sebastian, Spain. The exact [address](https://goo.gl/maps/neif5cyRB4UsD5QFA) is *Manuel de Lardizabal Pasealekua 5, 20018 San Sebastian, Spain*.
 
- [![CFM](../../img/CFM_portada.jpg)]https://goo.gl/maps/neif5cyRB4UsD5QFA()]
+ [![CFM](../../img/CFM_portada.jpg)](https://goo.gl/maps/neif5cyRB4UsD5QFA)]
+
+
+<ins>How to reach San Sebastian</ins>
+
+By plane:
+- Bilbao airport, Spain (IATA: BIO, 100 km. from the city center): About 1 hour drive from San Sebastian. An international airport with connections to all major cities in Europe (London, Paris, Frankfurt, Brussels, Rome,...). The most convenient one for overseas travellers in terms of connections and air fares. A direct shuttle bus running every hour connects the airport with San Sebastián for about 17 euros. The bus time table is available at [Luraldebus](http://www.lurraldebus.eus) (search between "AEROPUERTO BILBAO" and "DONOSTIA/SAN SEBASTIAN").
+- San Sebastian airport, Spain (IATA: EAS, 25 km. from the city center). Next to the town of Hondarribia, about 30 minutes drive from San Sebastian. A small airport with domestic connections to Madrid and Barcelona. Iberia flies to this airport. Convenient when a connection through Madrid is possible. A taxi connecting the airport and the city should be around 30 euros. The airport is also connected to the city center with lines E20 and E21 operated by http://www.lurraldebus.eus.
+- Biarritz airport, France (IATA: BIQ, 50 km. from the city center). 40 minutes drive from San Sebastian. Air France flies to this airport, and some low-cost airlines such as Ryanair also fly here. Convenient when flying from France or London. Public transportation is complicated between Biarritz and San Sebastian.
+
+By train:
+- The Adif train station Estación del Norte is in the center of San Sebastian, close to Urumea river. It offers connections to several Spanish cities, including Madrid and Barcelona.
+- There is also Metro Donostialdea, popularly known as Topo, a narrow-gauge train connecting Donostia with cities along the Basque Coast, from Bilbao and Hendaye (France).
+
+By bus:
+- The San Sebastian bus station, which is located by the Adif train station, has lines to cities troughout Spain. The main company traveling here is [Alsa](https://www.alsa.es/eu/).
+
+By car:
+- The city is connected to the rest of Spain by the N-1 (Madrid-Irun highway), AP-8 (Bilbao-Irun highway), and A-15 (Pamplona-San Sebastián highway).
 
 <a name="Organizers"></a>
-# Contact us
+# Organizers and contact
 
 To be announced soon
 
