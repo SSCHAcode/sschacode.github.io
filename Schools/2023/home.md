@@ -27,8 +27,8 @@ Institutional sponsors:
 <a href="http://dipc.ehu.es"><img src="/img/DIPC.JPG" alt="DIPC" height="65"/></a>
 <a href="https://erc.europa.eu/homepage"><img src="/img/ERC.jpg" alt="ERC" height="90"/></a>
 
-<a name="Lecturers"></a>
 # Lecturers
+<a name="Lecturers"></a>
 
 [![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *University of Modena, Italy*
 
