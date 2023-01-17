@@ -44,18 +44,18 @@ Institutional sponsors:
 
 [![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://cfm.ehu.es/errealab/) [**Diego Martínez Gutiérrez**](https://cfm.ehu.es/errealab/) - *Centro de Física de Materiales, Spain*
 
-<a name="Program"></a>
 # Program
+<a name="Program"></a>
 
 To be announced soon.
 
-<a name="Registration"></a>
 # Registration and abstract submission
+<a name="Registration"></a>
 
 Registration will open in February 2023.
 
-<a name="Travel"></a>
 # Venue and travel information
+<a name="Travel"></a>
 
 The school will take place at the *Centro de Física de Materiales* located in the campus of the University of the Basque Country in San Sebastian, Spain. The exact [address](https://goo.gl/maps/neif5cyRB4UsD5QFA) is *Manuel de Lardizabal Pasealekua 5, 20018 San Sebastian, Spain*.
 
@@ -101,8 +101,8 @@ Hostels near the conference venue:
 Other options:
  - San Sebastian offers a great variety of different kinds of accommodation, ranging from 5-star hotels to hostels and flats. In order to make it easier for you to find the accommodation that better suits you, we suggest to have a look at the following link [San Sebastian Tourist Office](https://www.sansebastianturismoa.eus/en/sleep/where-to-sleep).
 
-<a name="Organizers"></a>
 # Organizers and contact
+<a name="Organizers"></a>
 
 The organizers of the school are:
  - Ion Errea - *University of the Basque Country, Spain*
