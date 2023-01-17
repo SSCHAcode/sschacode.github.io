@@ -27,8 +27,9 @@ Institutional sponsors:
 <a href="http://dipc.ehu.es"><img src="/img/DIPC.JPG" alt="DIPC" height="65"/></a>
 <a href="https://erc.europa.eu/homepage"><img src="/img/ERC.jpg" alt="ERC" height="90"/></a>
 
-# Lecturers
 <a name="Lecturers"></a>
+
+# Lecturers
 
 [![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *University of Modena, Italy*
 
@@ -44,18 +45,21 @@ Institutional sponsors:
 
 [![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://cfm.ehu.es/errealab/) [**Diego Martínez Gutiérrez**](https://cfm.ehu.es/errealab/) - *Centro de Física de Materiales, Spain*
 
-# Program
 <a name="Program"></a>
+
+# Program
 
 To be announced soon.
 
-# Registration and abstract submission
 <a name="Registration"></a>
+
+# Registration and abstract submission
 
 Registration will open in February 2023.
 
-# Venue and travel information
 <a name="Travel"></a>
+
+# Venue and travel information
 
 The school will take place at the *Centro de Física de Materiales* located in the campus of the University of the Basque Country in San Sebastian, Spain. The exact [address](https://goo.gl/maps/neif5cyRB4UsD5QFA) is *Manuel de Lardizabal Pasealekua 5, 20018 San Sebastian, Spain*.
 
@@ -101,8 +105,9 @@ Hostels near the conference venue:
 Other options:
  - San Sebastian offers a great variety of different kinds of accommodation, ranging from 5-star hotels to hostels and flats. In order to make it easier for you to find the accommodation that better suits you, we suggest to have a look at the following link [San Sebastian Tourist Office](https://www.sansebastianturismoa.eus/en/sleep/where-to-sleep).
 
-# Organizers and contact
 <a name="Organizers"></a>
+
+# Organizers and contact
 
 The organizers of the school are:
  - Ion Errea - *University of the Basque Country, Spain*
