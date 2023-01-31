@@ -63,6 +63,7 @@ To be announced soon.
 | 16:00-16:30  |   |   |   |   |   |
 | 16:30-18:00  |   |   |   |   |   |
 | 20:30-23:30  |   |   |   |   |   |
+
 <a name="Registration"></a>
 
 # Registration and abstract submission
