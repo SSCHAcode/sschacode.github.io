@@ -53,13 +53,13 @@ To be announced soon.
 
 |   | Monday, June 26 | Tuesday, June 27 | Wednesday, June 28 | Thursday, June 29  | Friday, June 30 |
 |---|---|---|---|---|---|
-| 9:00-10:30  | Lecture1: **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |  Lecture3: **Raffaello Bianco**, *Second-order phase transitions in the SSCHA* |   |   |   |
+| 9:00-10:30  | Lecture1: **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |  Lecture3: **Raffaello Bianco**, *Second-order phase transitions in the SSCHA* | Hands-on-session4: **Raffaello Bianco**, *Calculation of spectral functions with the SSCHA*  |   |   |
 | 10:30-11:00 | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
-| 11:00-12:30  | Lecture2: **Ion Errea**, *Non-perturbative anharmonicity and the Stochastic Self-Consistent Harmonic Approximation*  | Hands-on-session3: **Diego Martinez**, *Calculations of second-order phase transitions with the SSCHA*  |   |   |   | 
+| 11:00-12:30  | Lecture2: **Ion Errea**, *Non-perturbative anharmonicity and the Stochastic Self-Consistent Harmonic Approximation*  | Hands-on-session3: **Diego Martinez**, *Calculations of second-order phase transitions with the SSCHA*  | Lecture5: **Francesco Mauri**, *Raman and Infrared spectra of strongly anharmonic materials*  |   |   | 
 | 12:30-14:30  | Lunch Break | Lunch Break  | Lunch Break  | Lunch Break  | Lunch Break  | 
-| 14:30-16:00  | Hands-on-session1: **Diego Martinez**, *First SSCHA simulations: free energy and structural relaxations*  | Lecture4: **Raffaello Bianco**, *Spectral functions and spectroscopic properties*  |   |   |   |
+| 14:30-16:00  | Hands-on-session1: **Diego Martinez**, *First SSCHA simulations: free energy and structural relaxations*  | Lecture4: **Raffaello Bianco**, *Spectral functions and spectroscopic properties*  | Hands-on-session5: **Lorenzo Monacelli**, *Raman and Infrared spectra with the SSCHA*  |   |   |
 | 16:00-16:30  | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
-| 16:30-18:00  | Hands-on-session2: **Lorenzo Monacelli**, *Setting up automatic SSCHA simulations on clusters*  | **Oral Contributed Talks**  |   | **Poster Session**  |   |
+| 16:30-18:00  | Hands-on-session2: **Lorenzo Monacelli**, *Setting up automatic SSCHA simulations on clusters*  | **Oral Contributed Talks**  | Hands-on-session6: **Đorđe Dangić**, *The SSCHA with machine learning potentials*  | **Poster Session**  |   |
 | 20:30-23:30  |   |   | Conference Dinner  |   |   |
 
 <a name="Registration"></a>
