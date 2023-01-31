@@ -54,9 +54,9 @@ Institutional sponsors:
 | 9:00-10:30  | Lecture1: **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |  Lecture3: **Raffaello Bianco**, *Second-order phase transitions in the SSCHA* | Hands-on-session4: **Raffaello Bianco**, *Calculation of spectral functions with the SSCHA*  | Lecture6: **Matteo Calandra**, *Theory of the electron-phonon interaction and superconductivity*  | Lecture9: **Đorđe Dangić**, *Thermal conductivity in strongly anharmonic crystals*  |
 | 10:30-11:00 | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
 | 11:00-12:30  | Lecture2: **Ion Errea**, *Non-perturbative anharmonicity and the Stochastic Self-Consistent Harmonic Approximation*  | Hands-on-session3: **Diego Martinez**, *Calculations of second-order phase transitions with the SSCHA*  | Lecture5: **Francesco Mauri**, *Raman and Infrared spectra of strongly anharmonic materials*  | Hands-on-session7: **Ion Errea**, *Calculation of the electron-phonon interaction and superconducting properties with the SSCHA*  | Hands-on-session8: **Đorđe Dangić**, *Thermal conductivity calculations with the SSCHA*  | 
-| 12:30-14:30  | Lunch Break | Lunch Break  | Lunch Break  | Lunch Break  | Lunch Break  | 
+| 12:30-14:30  | Lunch Break | Lunch Break  | Lunch Break  | Lunch Break  | End of School  | 
 | 14:30-16:00  | Hands-on-session1: **Diego Martinez**, *First SSCHA simulations: free energy and structural relaxations*  | Lecture4: **Raffaello Bianco**, *Spectral functions and spectroscopic properties*  | Hands-on-session5: **Lorenzo Monacelli**, *Raman and Infrared spectra with the SSCHA*  | Lecture8: **Lorenzo Monacelli**, *Strengths and limitations of the SSCHA: how does it compare with other approaches?*  |   |
-| 16:00-16:30  | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
+| 16:00-16:30  | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  |   | 
 | 16:30-18:00  | Hands-on-session2: **Lorenzo Monacelli**, *Setting up automatic SSCHA simulations on clusters*  | **Oral Contributed Talks**  | Hands-on-session6: **Đorđe Dangić**, *The SSCHA with machine learning potentials*  | **Poster Session**  |   |
 | 20:30-23:30  |   |   | Conference Dinner  |   |   |
 
