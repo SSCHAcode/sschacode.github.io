@@ -53,16 +53,14 @@ To be announced soon.
 
 |   | Monday, June 26 | Tuesday, June 27 | Wednesday, June 28 | Thursday, June 29  | Friday, June 30 |
 |---|---|---|---|---|---|
-| 9:00-10:30  | Lecture1:  **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |   |   |   |   |
-| 10:30-11:00 |   |   |   |   |   | 
-| 11:00-12:30  |   |   |   |   |   |
-| 11:00-12:30  |   |   |   |   |   |
-| 12:30-14:30  |   |   |   |   |   |
-| 14:30-16:00  |   |   |   |   |   |
-| 14:30-16:00  |   |   |   |   |   |
-| 16:00-16:30  |   |   |   |   |   |
-| 16:30-18:00  |   |   |   |   |   |
-| 20:30-23:30  |   |   |   |   |   |
+| 9:00-10:30  | Lecture1: **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |   |   |   |   |
+| 10:30-11:00 | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
+| 11:00-12:30  | Lecture2: **Ion Errea**, *Non-perturbative anharmonicity and the Stochastic Self-Consistent Harmonic Approximation*  |   |   |   |   | 
+| 12:30-14:30  | Lunch Break | Lunch Break  | Lunch Break  | Lunch Break  | Lunch Break  | 
+| 14:30-16:00  | Hands-on-session1: **Diego Martinez**, *First SSCHA simulations: free energy and structural relaxations*  |   |   |   |   |
+| 16:00-16:30  | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
+| 16:30-18:00  | Hands-on-session2: **Lorenzo Monacelli**, *Setting up automatic SSCHA simulations on clusters*  |   |   |   |   |
+| 20:30-23:30  |   |   | Conference Dinner  |   |   |
 
 <a name="Registration"></a>
 
