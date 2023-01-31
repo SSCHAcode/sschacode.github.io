@@ -49,8 +49,6 @@ Institutional sponsors:
 
 # Program
 
-To be announced soon.
-
 |   | Monday, June 26 | Tuesday, June 27 | Wednesday, June 28 | Thursday, June 29  | Friday, June 30 |
 |---|---|---|---|---|---|
 | 9:00-10:30  | Lecture1: **Francesco Mauri**, *Theory of lattice vibrations and anharmonicity* |  Lecture3: **Raffaello Bianco**, *Second-order phase transitions in the SSCHA* | Hands-on-session4: **Raffaello Bianco**, *Calculation of spectral functions with the SSCHA*  | Lecture6: **Matteo Calandra**, *Theory of the electron-phonon interaction and superconductivity*  | Lecture9: **Đorđe Dangić**, *Thermal conductivity in strongly anharmonic crystals*  |
