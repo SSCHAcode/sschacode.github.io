@@ -51,11 +51,11 @@ Institutional sponsors:
 
 To be announced soon.
 
-| A  |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|   | Monday, June 26 | Tuesday, June 27 | Wednesday, June 28 | Thursday, June 29  | Friday, June 30 |
+|---|---|---|---|---|---|
+| 9:00-10:30  |   |   |   |   |   |
+| 10:30-11:00 |   |   |   |   |   | 
+|   |   |   |   |   |   |
 
 <a name="Registration"></a>
 
