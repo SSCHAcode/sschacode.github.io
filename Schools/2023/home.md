@@ -53,7 +53,7 @@ To be announced soon.
 
 |   | Monday, June 26 | Tuesday, June 27 | Wednesday, June 28 | Thursday, June 29  | Friday, June 30 |
 |---|---|---|---|---|---|
-| 9:00-10:30  | Lecture1: **Francesco Mauri** *Theory of lattice vibrations and anharmonicity* |   |   |   |   |
+| 9:00-10:30  | Lecture1:|   |   |   |   |
 | 10:30-11:00 |   |   |   |   |   | 
 | 11:00-12:30  |   |   |   |   |   |
 | 11:00-12:30  |   |   |   |   |   |
