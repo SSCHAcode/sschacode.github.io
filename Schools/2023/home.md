@@ -51,6 +51,12 @@ Institutional sponsors:
 
 To be announced soon.
 
+| A  |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
 <a name="Registration"></a>
 
 # Registration and abstract submission
