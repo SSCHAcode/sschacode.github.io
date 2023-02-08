@@ -79,8 +79,11 @@ Points to consider in the registration process:
 - Click on the dinner option if you are going to attend. Although it is included in your fee, it is important to click, otherwise we will think you are not coming. Write your food restrictions, if any, in the space provided once you click.
 - You can either pay by credit card or bank transfer:
   - Credit card: you will be able to finish your registration straight away. 
-  - Bank transfer:  You will have to upload a proof of payment on step 5. Your registration will be validated later on.    
+  - Bank transfer:  You will have to upload a proof of payment on step 5. Your registration will be validated later on.  
+- We have arranged some low-budget accommodation possibilities in shared rooms for some students that can be accessed in the registration process. Other possibilities need to be arranged by the students themselves. See [here](#Travel) for suggestions.   
 - If your fee is to be paid by your institution, have in mind that you will have to change the billing address on step 4 by clicking on the tab “Add a new address”, and write your institution’s billing address. Many institutions ask for a pro forma invoice to be able to make the payment. You can also get it on step 4 but remember to change the billing address first. 
+
+ <ins><b>Abstract submission</b></ins>:
 
 <a name="Travel"></a>
 
