@@ -70,9 +70,9 @@ The registration fee includes all the school material, lectures, hands-on sessio
 
 Registration to the conference is done through UIK’s platform: 
 
-https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent
+[https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent)
 
-If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [HERE](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
+If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [here](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
 
 Points to consider in the registration process:
 - It is important to write your affiliation. Even though the field is not compulsory, it will be needed for your badge. 
@@ -80,7 +80,7 @@ Points to consider in the registration process:
 - You can either pay by credit card or bank transfer:
   - Credit card: you will be able to finish your registration straight away. 
   - Bank transfer:  You will have to upload a proof of payment on step 5. Your registration will be validated later on.  
-- We have arranged some low-budget accommodation possibilities in shared rooms for some students that can be accessed in the registration process. Other possibilities need to be arranged by the students themselves. See [here](#Travel) for suggestions.   
+- We have arranged some low-budget accommodation possibilities in shared rooms for some students that can be accessed in the registration process. Other possibilities need to be arranged by the students themselves. See [here](#Accommodation) for suggestions.   
 - If your fee is to be paid by your institution, have in mind that you will have to change the billing address on step 4 by clicking on the tab “Add a new address”, and write your institution’s billing address. Many institutions ask for a pro forma invoice to be able to make the payment. You can also get it on step 4 but remember to change the billing address first. 
 
  <ins><b>Abstract submission</b></ins>:
@@ -89,7 +89,7 @@ The registered students will have the option to send an abstract to the school. 
 
 The asbtracts can be submitted following this link:
 
-https://forms.gle/TjCes3fuZsY9T7nW6
+[https://forms.gle/TjCes3fuZsY9T7nW6](https://forms.gle/TjCes3fuZsY9T7nW6)
 
 Important points about the abstrac submission:
 - Deadline for the abstract submission is April 24, 2023.
@@ -121,9 +121,11 @@ By bus:
 By car:
 - The city is connected to the rest of Spain by the N-1 (Madrid-Irun highway), AP-8 (Bilbao-Irun highway), and A-15 (Pamplona-San Sebastián highway).
 
+<a name="Accommodation"></a>
+
  <ins><b>Accommodation</b></ins>:
 
-The registration fee does not include accommodation and participants should make their own bookings separately. Please find here a list of recommended hotels.
+The registration fee does not include accommodation and participants should make their own bookings separately. Please find here a list of recommended hotels. Note that in the registration process you will also have the option to choose low-budget options in [Livensa](https://www.livensaliving.com/alojamientos-donostia-san-sebastian/alojamiento-livensa-san-sebastian/) and in [Villa Alaidi](https://www.villa-alaidi.com) student houses.
 
 Student houses near the conference venue:
  - [Olarain](https://www.olarain.com)
