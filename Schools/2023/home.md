@@ -153,7 +153,7 @@ The organizers of the school are:
  - Ion Errea - *University of the Basque Country, Spain*
  - Lorenzo Monacelli - *EPFL, Switzerland*
  - Diego Martínez Gutiérrez -  *Centro de Física de Materiales, Spain*
- - Raffaello Bianco - *University of Modena, Italy*
+ - Raffaello Bianco - *Università degli studi di Modena e Reggio Emilia, Italy*
 
 You may contact us at this email address: codesscha@gmail.com
 
