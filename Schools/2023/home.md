@@ -84,6 +84,16 @@ Points to consider in the registration process:
 - If your fee is to be paid by your institution, have in mind that you will have to change the billing address on step 4 by clicking on the tab “Add a new address”, and write your institution’s billing address. Many institutions ask for a pro forma invoice to be able to make the payment. You can also get it on step 4 but remember to change the billing address first. 
 
  <ins><b>Abstract submission</b></ins>:
+ 
+The registered students will have the option to send an abstract to the school. Some of the contributions will be selected for a contributed talk and the rest will be presented in a poster session. The contributions we expect are related to systems where phonons play a crucial and anharmonicity may be important. 
+
+The asbtracts can be submitted following this link:
+
+https://forms.gle/TjCes3fuZsY9T7nW6
+
+Important points about the abstrac submission:
+- Deadline for the abstract submission is April 24, 2023.
+- Only abstracts of registered students will be considered.
 
 <a name="Travel"></a>
 
