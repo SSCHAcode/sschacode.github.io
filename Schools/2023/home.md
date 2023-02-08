@@ -64,7 +64,11 @@ Institutional sponsors:
 
 # Registration and abstract submission
 
-Registration will open in February 2023.
+Registration is now open. Deadline is June 18, 2023.
+
+**Regular Registration Fee: 150€**
+
+The registration fee includes all the school material, lectures, hands-on sessions, coffee breaks, and conference dinner. There is a limited number of students that can be accepted. Registration will be accepted to on a first come, first served basis. So register as soon as possible.
 
 <a name="Travel"></a>
 
