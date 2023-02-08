@@ -70,6 +70,14 @@ The registration fee includes all the school material, lectures, hands-on sessio
 
 Registration to the conference is done through UIK’s platform. If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [HERE](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
 
+Points to consider in the registration process:
+- It is important to write your affiliation. Even though the field is not compulsory, it will be needed for your badge. 
+- Click on the dinner option if you are going to attend. Although it is included in your fee, it is important to click, otherwise we will think you are not coming. Write your food restrictions, if any, in the space provided once you click.
+- You can either pay by credit card or bank transfer:
+  - Credit card: you will be able to finish your registration straight away. 
+  - Bank transfer:  You will have to upload a proof of payment on step 5. Your registration will be validated later on.    
+- If your fee is to be paid by your institution, have in mind that you will have to change the billing address on step 4 by clicking on the tab “Add a new address”, and write your institution’s billing address. Many institutions ask for a pro forma invoice to be able to make the payment. You can also get it on step 4 but remember to change the billing address first. 
+
 <a name="Travel"></a>
 
 # Venue and travel information
