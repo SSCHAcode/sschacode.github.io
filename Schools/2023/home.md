@@ -68,7 +68,11 @@ Registration is now open. Deadline is June 18, 2023. **Regular Registration Fee:
 
 The registration fee includes all the school material, lectures, hands-on sessions, coffee breaks, and conference dinner. There is a limited number of students that can be accepted. Registration will be accepted to on a first come, first served basis. So register as soon as possible. 
 
-Registration to the conference is done through UIK’s platform. If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [HERE](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
+Registration to the conference is done through UIK’s platform: 
+
+https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent
+
+If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [HERE](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
 
 Points to consider in the registration process:
 - It is important to write your affiliation. Even though the field is not compulsory, it will be needed for your badge. 
