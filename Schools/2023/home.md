@@ -70,7 +70,9 @@ The registration fee includes all the school material, lectures, hands-on sessio
 
 Registration to the conference is done through UIK’s platform: 
 
-[https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent)
+[https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent)
+<!-- [https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent) 
+-->
 
 If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [here](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
 
