@@ -94,7 +94,7 @@ The asbtracts can be submitted following this link:
 [https://forms.gle/TjCes3fuZsY9T7nW6](https://forms.gle/TjCes3fuZsY9T7nW6)
 
 Important points about the abstrac submission:
-- Deadline for the abstract submission is April 24, 2023.
+- **Deadline for the abstract submission has been extended. New deadline is May 15, 2023.**
 - Only abstracts of registered students will be considered.
 
 <a name="Travel"></a>
