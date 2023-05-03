@@ -33,7 +33,7 @@ Institutional sponsors:
 
 [![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *University of Modena, Italy*
 
-[![Giovanni Marini](../../img/Giovanni_Marini.jpg)](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini) [**Giovanni Marini**]([https://mcalandra.github.io/](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini)) - *Istituto Italiano di Tecnologia, Italy*
+[![Giovanni Marini](../../img/Giovanni_Marini.jpg)](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini) [**Giovanni Marini**](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini) - *Istituto Italiano di Tecnologia, Italy*
 
 [![Ion Errea](../../img/Ion_Errea.jpg)](https://cfm.ehu.es/errealab/) [**Ion Errea**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
