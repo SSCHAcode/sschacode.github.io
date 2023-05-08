@@ -45,6 +45,8 @@ Institutional sponsors:
 
 [![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://cfm.ehu.es/errealab/) [**Diego Martínez Gutiérrez**](https://cfm.ehu.es/errealab/) - *Centro de Física de Materiales, Spain*
 
+[![Guglielmo Marchese](../../img/Guglielmo_Marchese.jpg)](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) [**Guglielmo Marchese**](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) - *La Sapienza University, Italy*
+
 <a name="Program"></a>
 
 # Program
