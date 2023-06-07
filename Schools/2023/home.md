@@ -59,7 +59,7 @@ Institutional sponsors:
 | 12:30-14:30  | Lunch Break | Lunch Break  | Lunch Break  | Lunch Break  | End of School  | 
 | 14:30-16:00  | Hands-on-session1: <br /> **Diego Martinez** <br /> *First SSCHA simulations: free energy and structural relaxations*  | Lecture4: <br /> **Raffaello Bianco** <br /> *Spectral functions and spectroscopic properties*  | Hands-on-session5: <br /> **Lorenzo Monacelli** <br /> *Raman and Infrared spectra with the SSCHA*  | Hands-on-session8: <br /> **Giovanni Marini** and **Guglielmo Marchese** <br /> *Calculation of the electron-phonon interaction with the SSCHA and Wannier functions: the EPIQ code* |   |
 | 16:00-16:30  | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  |   | 
-| 16:30-18:00  | Hands-on-session2: <br /> **Lorenzo Monacelli** <br /> *Setting up automatic SSCHA simulations on clusters*  | **Oral Contributed Talks**  | Hands-on-session6: <br /> **Đorđe Dangić** <br /> *The SSCHA with machine learning potentials*  | Lecture7: <br /> **Lorenzo Monacelli** <br /> *Strengths and limitations of the SSCHA: how does it compare with other approaches?*  |   |
+| 16:30-18:00  | Hands-on-session2: <br /> **Lorenzo Monacelli** <br /> *Setting up automatic SSCHA simulations on clusters*  | **Oral Contributed Talks**  <br /> 16:30-16:42[Davide Romanin](01_Romanin.pdf)| Hands-on-session6: <br /> **Đorđe Dangić** <br /> *The SSCHA with machine learning potentials*  | Lecture7: <br /> **Lorenzo Monacelli** <br /> *Strengths and limitations of the SSCHA: how does it compare with other approaches?*  |   |
 | 20:30-23:30  |   |   | Conference Dinner  |   |   |
 
 <a name="Registration"></a>
