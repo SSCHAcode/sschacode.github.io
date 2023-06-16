@@ -53,6 +53,7 @@ Institutional sponsors:
 
 |   | Monday, <br /> June 26 | Tuesday, <br /> June 27 | Wednesday, <br /> June 28 | Thursday, <br /> June 29  | Friday, <br /> June 30 |
 |---|---|---|---|---|---|
+| 8:30-9:00 | Registration | | | | |
 | 9:00-10:30  | Lecture1: <br /> **Francesco Mauri** <br /> *Theory of lattice vibrations and anharmonicity* |  Lecture3: <br /> **Raffaello Bianco** <br /> *Second-order phase transitions in the SSCHA* | Hands-on-session4: <br /> **Raffaello Bianco** <br /> *Calculation of spectral functions with the SSCHA*  | Lecture6: <br /> **Giovanni Marini** <br /> *Theory of the electron-phonon interaction and superconductivity*  | Lecture8: <br /> **Đorđe Dangić** <br /> *Thermal conductivity in strongly anharmonic crystals*  |
 | 10:30-11:00 | Coffee Break | Coffee Break  | Coffee Break  | Coffee Break  | Coffee Break  | 
 | 11:00-12:30  | Lecture2: <br /> **Ion Errea** <br /> *Non-perturbative anharmonicity and the SSCHA*  | Hands-on-session3: <br /> **Diego Martinez** <br /> *Calculations of second-order phase transitions with the SSCHA*  | Lecture5: <br /> **Francesco Mauri** <br /> *Raman and Infrared spectra of strongly anharmonic materials*  | Hands-on-session7: <br /> **Ion Errea** <br /> *Calculation of the electron-phonon interaction and superconducting properties with the SSCHA*  | Hands-on-session9: <br /> **Đorđe Dangić** <br /> *Thermal conductivity calculations with the SSCHA*  | 
