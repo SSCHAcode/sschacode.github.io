@@ -39,7 +39,7 @@ Institutional sponsors:
 
 [![Francesco Mauri](../../img/Francesco_Mauri.jpg)](http://www2.phys.uniroma1.it/doc/mauri/) [**Francesco Mauri**](http://www2.phys.uniroma1.it/doc/mauri/) - *La Sapienza University, Italy*
 
-[![Antonio Siciliano](../../img/Antonio_Siciliano.jpg)](https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) [**Antonio Siciliano**(https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) - *La Sapienza University, Italy*
+[![Antonio Siciliano](../../img/Antonio_Siciliano.jpg)](https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) [**Antonio Siciliano**](https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) - *La Sapienza University, Italy*
 
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *EPFL, Switzerland*
 
