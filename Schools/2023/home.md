@@ -49,6 +49,13 @@ Institutional sponsors:
 
 [![Guglielmo Marchese](../../img/Guglielmo_Marchese.jpg)](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) [**Guglielmo Marchese**](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) - *La Sapienza University, Italy*
 
+
+<a name="Hands-On sessions"></a>
+
+# Hands-On sessions
+
+The tutorials for the Hands-On session can be downloaded from <a href="sscha-school-2023.pdf">here</a>
+
 <a name="Program"></a>
 
 # Program
