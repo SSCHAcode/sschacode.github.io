@@ -15,6 +15,7 @@ We wait for you in the beautiful city of San Sebastian this summer.
    
 In this website you can find the following information:
 - [Lecturers](#Lecturers)
+- [Tutorials](#Hands-On sessions)
 - [Program](#Program)
 - [Registration and abstract submission](#Registration)
 - [Venue and travel information](#Travel)
