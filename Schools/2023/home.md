@@ -55,7 +55,7 @@ Institutional sponsors:
 
 # Hands-On sessions
 
-The tutorials for the Hands-On session can be downloaded from <a href="sscha-school-2023.pdf">here</a>
+The tutorials for the Hands-On session can be downloaded from <a href="../sscha-school-2023.pdf">here</a>
 
 <a name="Program"></a>
 
