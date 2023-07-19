@@ -19,11 +19,9 @@ Here we provide several video lectures
 
 Lecture given by Francesco Mauri at the [2023 SSCHA School](http://sscha.eu/Schools/2023/home/):
 
-{% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="https://www.youtube.com/watch?v=Ja1KG6FBPNA" frameborder="0">        </iframe>
-{% endraw %}
+<iframe width="1022" height="575" src="https://www.youtube.com/embed/Ja1KG6FBPNA?list=PLUGVzxx49_SspeWpADPb3ckYOSUrUCKJg" title="Lecture1: Theory of lattice vibrations and anharmonicity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-5
+6
 
 <a name="Non-perturbative-anharmonicity-and-the-SSCHA"></a>
 # Non-perturbative anharmonicity and the SSCHA
