@@ -25,3 +25,5 @@ kk2
 
 <a name="Non-perturbative-anharmonicity-and-the-SSCHA"></a>
 # Non-perturbative anharmonicity and the SSCHA
+
+Lecture given by Ion Errea at the [2023 SSCHA School](http://sscha.eu/Schools/2023/home/):
