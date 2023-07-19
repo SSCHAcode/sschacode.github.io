@@ -1,7 +1,246 @@
 ---
 layout: page
-title: Download and Installation
+title: Installation
 ---
+
+  Software Installation — SSCHA School 2023 documentation        
+
+Software Installation[¶](#software-installation "Permalink to this headline")
+=============================================================================
+
+This installation guide here is valid for Linux machines as well as MacOS with intel processors.
+
+Users of Windows can use the virtual machine provided by Quantum Mobile available [here](https://quantum-mobile.readthedocs.io/en/latest/releases/versions/23.04.03.html). The instructions to install this virtual machine are provided in that link. However, you will need to increase the RAM allocated to the virtual machine to at least 4Gb to be able to run all the tutorials on it. Once you have installed the virtual machine, follow the instructions below to install all the needed software to work on the tutorials.
+
+Requirements[¶](#requirements "Permalink to this headline")
+-----------------------------------------------------------
+
+Most of the codes require a fortran or C compiler and MPI configured. Here we install all the requirements to properly setup the SSCHA code. To properly compile and install the SSCHA code, you need a fortran compiler and LAPACK/BLAS available.
+
+On Debian-based Linux distribution, all the software required is installed with (Tested on Quantum Mobile and ubuntu 20.04):
+
+sudo apt update
+sudo apt install libblas-dev liblapack-dev liblapacke-dev gfortran openmpi-bin
+
+Note that some of the name of the library may change slightly in different linux versions or on MacOS.
+
+### Python installation[¶](#python-installation "Permalink to this headline")
+
+SSCHA is a Python library and program. Most linux distribution come with python already installed, however, for a performance boost, it is usually better to use the python distribution provided by the anaconda environment. The Quantum Mobile virtual machine already comes with anaconda installed. In case you are running on your own machine, anaconda python can be downloaded and installed from \[www.anaconda.com/download\]
+
+Once you installed the software, at the beginning of your terminal you should see a
+
+(base) $
+
+The (base) identify the current anaconda environment. It may be necessary to restart the terminal after the installation to have Anaconda start properly.
+
+If you are **not** using anaconda but the default python from the linux distribution, it may be necessary to install the python header files to correctly compile the SSCHA extension
+
+sudo apt install python-dev
+
+### Install python packages[¶](#install-python-packages "Permalink to this headline")
+
+Most of the code can be easily installed with the following pip command:
+
+pip install ase spglib quippy-ase
+
+The Atomic Simulation Environment (ASE), employed to read and write structure files. SPGLIB is used to recognize the space-group and perform symmetry anaylisys. Quippy is employed to train a machine-learning force field.
+
+SSCHA[¶](#sscha "Permalink to this headline")
+---------------------------------------------
+
+Once the prerequisites have been installed, python-sscha can be downloaded and installed with
+
+pip install cellconstructor python-sscha
+
+Alternatively, it is possible to use the most recent version from the github repository \[[https://github.com/SSCHAcode](https://github.com/SSCHAcode)\], under CellConstructor and python-sscha repositories.
+
+The installation is performed in this case with
+
+python setup.py install
+
+### Personalize the compiler[¶](#personalize-the-compiler "Permalink to this headline")
+
+If you have multiple compilers installed, and want to force pip to employ a specific fortran compile, you can specify its path in the FC environment variable. Remember that the compiler employed to compile the code should match with the linker, indicated in the LDSHARED variable.
+
+For example
+
+FC=gfortran LDSHARED=gfortran pip install cellconstructor python-sscha
+
+For the development version of the code, subtitute the pip call with the python setup.py install.
+
+### Running the testsuite[¶](#running-the-testsuite "Permalink to this headline")
+
+To be sure everything is working, you can run the testsuite. Make sure to install the pytest package with
+
+pip install pytest
+
+Then run the testsuite with
+
+cellconstrutor\_test.py
+
+If it works without errors, then the code has been correctly installed.
+
+TDSCHA[¶](#tdscha "Permalink to this headline")
+-----------------------------------------------
+
+As for the SSCHA code, also TDSCHA is distributed on PyPi
+
+pip install tdscha
+
+Alternatively, the code to compute Raman and IR spectrum can be downloaded from GitHub at \[[https://github.com/SSCHAcode/tdscha](https://github.com/SSCHAcode/tdscha)\]
+
+To install the github code, that enables the MPI parallelization also without the JULIA speedup, you can use:
+
+git clone https://github.com/SSCHAcode/tdscha.git
+cd tdscha
+MPICC=mpicc python setup.py install
+
+where mpicc is a valid mpi c compiler (the specification of MPICC can be dropped, but parallelization will not be available aside for the julia mode discussed below).
+
+### JULIA speedup enhancement[¶](#julia-speedup-enhancement "Permalink to this headline")
+
+The TDSCHA code exploits JULIA to speedup the calculation by a factor of 10x-15x with the same number of processors.
+
+To have it working, download and install julia from \[[https://julialang.org/downloads/](https://julialang.org/downloads/)\]. Alternatively, to install julia on linux we can employ juliaup:
+
+curl -fsSL https://install.julialang.org | sh
+
+Hit enter when asked to install julia.
+
+To use julia, either open a new terminal, or hit:
+
+source ~/.bashrc
+
+Then, open a terminal and type `julia`. Inside the julia prompt, type `]` The prompt should change color and display the julia version ending with `pkg>`
+
+Install the required julia libraries
+
+pkg> add SparseArrays, LinearAlgebra, InteractiveUtils, PyCall
+
+This should install the required libraries. press backspace to return to the standard julia prompt and exit with
+
+julia> exit()
+
+Then, install the python bindings for julia with
+
+pip install julia
+
+Now, you should be able to exploit the julia speedup in the TDSCHA calculations. It is not required to install julia before TDSCHA, it can also be done in a later moment.
+
+### MPI Parallelization[¶](#mpi-parallelization "Permalink to this headline")
+
+MPI parallelization is not necessary for the tutorial, however you may like to configure it in practical calculation to further speedup the code. For production runs, it is suggested to combine the mpi parallelization with the julia speedup.
+
+The TDSCHA code exploits the mpi parallelization using mpi4py, This assumes that you have a MPI C compiler installed. This is done by installing the library `openmpi-bin` which we installed in the requirements.
+
+You can now install mpi4py
+
+pip install mpi4py
+
+The parallelization is automatically enabled in the julia version and if mpi4py is available. However, to run the parallel code without the julia speedup, you need to recompile the code from the github repository as (not the version installed with pip)
+
+MPICC=mpicc python setup.py install
+
+e sure that at the end of the installation no error are displayed, and the write PARALLEL ENVIRONMENT DECTECTED SUCCESFULLY is displayed. Note that, if using the julia enhanced version, the last command is not required, and you can install only mpi4py.
+
+Install qe-5.1.0\_elph[¶](#install-qe-5-1-0-elph "Permalink to this headline")
+------------------------------------------------------------------------------
+
+In order to install this old version of Quantum Espresso, which is tuned to allow the combination of electron-phonon matrix elements with SSCHA dynamical matrices, follow these instructions:
+
+git clone https://github.com/SSCHAcode/qe-5.1.0\_elph.git
+cd qe-5.1.0\_elph
+./configure
+make all
+
+It may happen that the compilation fails with a message like
+
+Error: Rank mismatch between actual argument at...
+
+In this case you need to edit the make.sys file with the following command
+
+sed -i "s/FFLAGS         = -O3 -g/FFLAGS         = -O3 -g -fallow-argument-mismatch/g" make.sys
+
+and rerun
+
+make all
+
+again.
+
+EPIq[¶](#epiq "Permalink to this headline")
+-------------------------------------------
+
+The EPIq code is hosted in a git repository. The last stable version can be downloaded [here.](https://gitlab.com/the-epiq-team/epiq/-/releases/EPIq-1.0)
+
+> Once the source code has been downloaded, unzip the archive and enter the epiq main folder (`cd epiq`). EPIq has very few prerequisites:
+> 
+> *   `BLAS` and `LAPACK` libraries.
+>     
+> *   Any MPI fortran compiler ( e.g. `mpif90` for `openmpi` ).
+>     
+> 
+> > Then compile _EPIq_. Enter in the source directory and run `make` as:
+
+cd epiq
+make all
+
+In some cases (like in quantum mobile), the compilation may fail. If it fails with error:
+
+gfortran: error: unrecognized command line option ‘-fallow-argument-mismatch’; did you mean ‘-Wno-argument-mismatch’?
+
+This can be fixed replacing `-fallow-argument-mismatch` with `-Wno-argument-mismatch` in the make.sys file. This can be done automatically with the following command:
+
+sed -i 's/-fallow-argument-mismatch/-Wno-argument-mismatch/g' make.sys
+
+Then run again `make all`.
+
+If everything went smoothly, an executable file named epiq.x will be created in the `bin` folder. If the compilation was not successful, this probabily means that the `configure` could not find the necessary libraries/compiler. You should manually modify the make.sys file in order to correctly locate them.
+
+fermisurfer installation[¶](#fermisurfer-installation "Permalink to this headline")
+-----------------------------------------------------------------------------------
+
+Fermisurfer is a program for the visualization of Fermi surface resolved physical quantities. First, install preresquisites with:
+
+sudo apt-get install -y libwxgtk3.0-gtk3-dev
+
+Download fermisurfer [here](https://osdn.net/projects/fermisurfer/releases/71529) and extract the tar archive:
+
+tar -xsf fermisurfer-2.1.0.tar.gz
+
+Finally, enter the fermisurfer directory and install with:
+
+./configure
+ make
+ sudo make install
+
+F3ToyModel installation[¶](#f3toymodel-installation "Permalink to this headline")
+---------------------------------------------------------------------------------
+
+F3ToyModel is a force-field that can mimic the physics of ferroelectric transitions in FCC lattices. All preresquisites are met with the SSCHA installation.
+
+The code for this force-field can be downloaded from the SSCHA github [here](https://github.com/SSCHAcode/F3ToyModel) with the command:
+
+> git clone https://github.com/SSCHAcode/F3ToyModel.git
+
+Now enter the F3ToyModel directory and install with:
+
+> python setup.py install
+
+### Related Topics
+
+*   [Documentation overview](index.html)
+    *   Previous: [Welcome to Tutorial SSCHA School’s documentation!](index.html "previous chapter")
+    *   Next: [Hands-on-session 1 - First SSCHA simulations: free energy and structural relaxations](tutorial_01_first_simulations.html "next chapter")
+
+### Quick search
+
+ 
+
+$('#searchbox').show(0);
+
+©2023, Lorenzo Monacelli. | Powered by [Sphinx 4.2.0](http://sphinx-doc.org/) & [Alabaster 0.7.12](https://github.com/bitprophet/alabaster) | [Page source](_sources/installation.rst.txt)
+
 
 ## Download
 
