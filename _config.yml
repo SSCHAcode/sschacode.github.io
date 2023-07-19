@@ -22,6 +22,7 @@ baseurl: "/"
 navbar-links:
 #  News: "news"
   Download and installation: "download"
+  Lectures: "lectures"
   Tutorials:
     - Overview: "tutorials"
     - 1. Lead telluride: "/Tutorials/Tutorial_PbTe"
