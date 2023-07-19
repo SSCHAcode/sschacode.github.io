@@ -19,7 +19,9 @@ Here we provide several video lectures
 
 Lecture given by Francesco Mauri at the [2023 SSCHA School](http://sscha.eu/Schools/2023/home/):
 
+{% raw %}
 <iframe src="https://www.youtube.com/watch?v=Ja1KG6FBPNA" frameborder="0">        </iframe>
+{% endraw %}
 
 kk3
 
