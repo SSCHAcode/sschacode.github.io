@@ -23,7 +23,7 @@ Lecture given by Francesco Mauri at the [2023 SSCHA School](http://sscha.eu/Scho
 <iframe src="https://www.youtube.com/watch?v=Ja1KG6FBPNA" frameborder="0">        </iframe>
 {% endraw %}
 
-kk3
+4
 
 <a name="Non-perturbative-anharmonicity-and-the-SSCHA"></a>
 # Non-perturbative anharmonicity and the SSCHA
