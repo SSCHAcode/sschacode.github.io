@@ -21,7 +21,7 @@ baseurl: "/"
 # List of links in the navigation bar
 navbar-links:
 #  News: "news"
-  Donwload and installation: "download"
+  Download and installation: "download"
   Tutorials:
     - Overview: "tutorials"
     - 1. Lead telluride: "/Tutorials/Tutorial_PbTe"
