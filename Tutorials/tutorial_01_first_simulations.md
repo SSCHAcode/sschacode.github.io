@@ -1,10 +1,10 @@
 ---
 layout: page
-title: First SSCHA simulations, free energy and structural relaxations
+title: First SSCHA simulations
 ---
 
 In this hands-on tutorial we provide ready to use examples to setup your first
-SSCHA calculation.
+SSCHA calculation. Here we show how the SSCHA can be used to calculate free energies and relax a structure.  
 
 This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2023/home/) by Diego Martinez Gutierrez. You can see here the video os the hands-on session:
 
