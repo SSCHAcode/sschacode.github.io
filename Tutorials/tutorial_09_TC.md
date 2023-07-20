@@ -9,7 +9,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <p>In previous lessons we saw how to calculate vibrational properties of material using SSCHA. Now we will use this acquired knowledge to calculate lattice thermal conductivity of materials. We will need dynamical matrices (<strong>auxiliary ones, not hessians</strong>) and the third order force constants (we already calculated them when we checked the dynamical stability of the system). With these we can calculate materials’ harmonic (phonon frequencies and phonon group velocities) and anharmonic properties (phonon lifetimes and spectral functions) which is all we need to calculate lattice thermal conductivity.</p>
 <section id="lattice-thermal-conductivity-of-silicon">
-<h2>Lattice thermal conductivity of silicon<a class="headerlink" href="#lattice-thermal-conductivity-of-silicon" title="Permalink to this headline">¶</a></h2>
+<h2>Lattice thermal conductivity of silicon<a class="headerlink" href="#lattice-thermal-conductivity-of-silicon" title="Permalink to this headline"> </a></h2>
 <p>As a first exercise let’s calculate lattice thermal conductivity of silicon. Silicon is very harmonic material which means it’s lattice thermal conductivity is very high. This also makes it a good test case to check the equivalence of Green-Kubo and Boltzmann transport equation approaches in the limit of vanishing anharmonicity. To speed up the calculation we will use Tersoff potential to obtain the second and third order force constants. We will do this with this simple script:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">quippy.potential</span> <span class="kn">import</span> <span class="n">Potential</span>
@@ -184,7 +184,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 </div>
 </section>
 <section id="lattice-thermal-conductivity-of-gete">
-<h2>Lattice thermal conductivity of GeTe<a class="headerlink" href="#lattice-thermal-conductivity-of-gete" title="Permalink to this headline">¶</a></h2>
+<h2>Lattice thermal conductivity of GeTe<a class="headerlink" href="#lattice-thermal-conductivity-of-gete" title="Permalink to this headline"> </a></h2>
 <p>As a second example we will calculate lattice thermal conductivity of GeTe. GeTe is a highly anharmonic material with a phase transition from rhombohedral to cubic phase at around 700 K. This means its lattice thermal conductivity is very low. Additionally, it should show difference between <em>SRTA</em> and <em>GK</em> methods.</p>
 <p>For SSCHA minimization we can calculate atomic properties using <a class="reference external" href="https://archive.materialscloud.org/record/2021.42">Gaussian Approximation Potential</a> developed for this material. However, in the interest of time we provided the dynamical matrices calculated at 0 K and the third order force constantsin the folder 09_Thermal_conductivity_calculations_with_the_SSCHA.</p>
 <div class="topic">
