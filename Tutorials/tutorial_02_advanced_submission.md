@@ -571,45 +571,5 @@ They are called ESP_x.pwi EXP_x.pwo, the input and output files, and with ESP_x.
 <p>As for this NVT, you can also use <em>vc_relax</em> for the NPT simulation or the NVT with variable cell shape.</p>
 </section>
 </section>
-</section>
 
 
-          </div>
-
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="tutorial_01_first_simulations.html" title="previous chapter">Hands-on-session 1 - First SSCHA simulations: free energy and structural relaxations</a></li>
-      <li>Next: <a href="tutorial_03_secondorder_phase_transitions.html" title="next chapter">Hands-on-session 3 - Calculations of second-order phase transitions with the SSCHA</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2023, Lorenzo Monacelli.
-
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-
-      |
-      <a href="_sources/tutorial_02_advanced_submission.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
