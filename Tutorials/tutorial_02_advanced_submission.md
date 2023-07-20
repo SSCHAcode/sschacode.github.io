@@ -10,7 +10,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z0K_9zrGcJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <section id="manual-submission">
-<h2>Manual submission<a class="headerlink" href="#manual-submission" title="Permalink to this headline">¶</a></h2>
+<h2>Manual submission<a class="headerlink" href="#manual-submission" title="Permalink to this headline"> </a></h2>
 <dl class="simple">
 <dt>The SSCHA calculation comprises three main steps iterated until convergence:</dt><dd><ol class="arabic simple">
 <li><p>The generation of a random ensemble of ionic configurations</p></li>
@@ -80,9 +80,9 @@ Please write in a file the following script and run it.</p>
 </div>
 <p>You should see the figure <a class="reference internal" href="#harmonic-disp"><span class="std std-ref">Dispersion of the harmonic phonons of H3S</span></a>.</p>
 <figure class="align-center" id="id1">
-<span id="harmonic-disp"></span><a class="reference internal image-reference" href="_images/harmonic_h3s_dispersion.png"><img alt="Phonon dispersion with imaginary modes." src="_images/harmonic_h3s_dispersion.png" style="width: 50%;" /></a>
+<span id="harmonic-disp"></span><a class="reference internal image-reference" href="../figures_02/harmonic_h3s_dispersion.png"><img alt="Phonon dispersion with imaginary modes." src="../figures_02/harmonic_h3s_dispersion.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Dispersion of the harmonic phonons of H3S</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Dispersion of the harmonic phonons of H3S</span><a class="headerlink" href="#id1" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>The dispersion presents imaginary phonons throughout most of the Brillouin zone.
@@ -104,7 +104,7 @@ Since the starting point for the SSCHA does not matter, we may flip the phonons 
 Save the resulting dynamical matrix as ‘start_sscha’ to continue with the following section.</p>
 </div>
 <section id="ensemble-generation">
-<h3>Ensemble generation<a class="headerlink" href="#ensemble-generation" title="Permalink to this headline">¶</a></h3>
+<h3>Ensemble generation<a class="headerlink" href="#ensemble-generation" title="Permalink to this headline"> </a></h3>
 <p>Now that we have a good starting point for the dynamical matrix, we are ready to
 generate the first ensemble to start the free energy optimization.
 Here is a script to generate the ensemble.</p>
@@ -148,7 +148,7 @@ Either add this after loading the dynamical matrix or do it once overriding the 
 </div>
 </section>
 <section id="calculation-of-energies-and-forces">
-<h3>Calculation of energies and forces<a class="headerlink" href="#calculation-of-energies-and-forces" title="Permalink to this headline">¶</a></h3>
+<h3>Calculation of energies and forces<a class="headerlink" href="#calculation-of-energies-and-forces" title="Permalink to this headline"> </a></h3>
 <p>Very good; if you imposed the sum rule correctly, the ensemble should have been correctly generated.
 The script should have created the <em>data</em> directory and two sets of dynamical matrices:</p>
 <ol class="arabic simple">
@@ -265,7 +265,7 @@ rm -rf <span class="nv">$ENERGY_FILE</span>
 <p>Here, we do not need conversion, as these are the default units quantum Espresso gives. However, remember to convert correctly to these units if you use a different program, like VASP.</p>
 </section>
 <section id="free-energy-minimization">
-<h3>Free energy minimization<a class="headerlink" href="#free-energy-minimization" title="Permalink to this headline">¶</a></h3>
+<h3>Free energy minimization<a class="headerlink" href="#free-energy-minimization" title="Permalink to this headline"> </a></h3>
 <p>We have the ensemble ready to be loaded back into the Python script and start a minimization.
 This is done with the following scripts</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sscha</span><span class="o">,</span> <span class="nn">sscha.Ensemble</span><span class="o">,</span> <span class="nn">sscha.SchaMinimizer</span>
@@ -304,7 +304,7 @@ a cluster.</p>
 </section>
 </section>
 <section id="automatic-submission-with-a-cluster">
-<h2>Automatic submission with a cluster<a class="headerlink" href="#automatic-submission-with-a-cluster" title="Permalink to this headline">¶</a></h2>
+<h2>Automatic submission with a cluster<a class="headerlink" href="#automatic-submission-with-a-cluster" title="Permalink to this headline"> </a></h2>
 <p>In the previous section, you made all the steps to run a sscha calculation manually.
 This consists of iterating through the following steps:</p>
 <ol class="arabic simple">
@@ -494,7 +494,7 @@ in this case, we also create the local scratch directory and copy the pseudopote
 <p>Customize the cluster.py file to connect to the ekhi server, following the instructions provided in the <a class="reference internal" href="Ekhi.html#ekhiconfig"><span class="std std-ref">ekhi guide</span></a>.</p>
 </div>
 <section id="how-to-submit-a-calculation-with-a-cluster-automatically">
-<h3>How to submit a calculation with a cluster automatically<a class="headerlink" href="#how-to-submit-a-calculation-with-a-cluster-automatically" title="Permalink to this headline">¶</a></h3>
+<h3>How to submit a calculation with a cluster automatically<a class="headerlink" href="#how-to-submit-a-calculation-with-a-cluster-automatically" title="Permalink to this headline"> </a></h3>
 <p>Now that we have seen how to configure the cluster, it is time to start an actual calculation.
 We can use this option to directly evaluate the ensemble generated manually before in the following way:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cellconstructor</span> <span class="k">as</span> <span class="nn">CC</span><span class="o">,</span> <span class="nn">cellconstructor.Phonons</span>
@@ -571,45 +571,5 @@ They are called ESP_x.pwi EXP_x.pwo, the input and output files, and with ESP_x.
 <p>As for this NVT, you can also use <em>vc_relax</em> for the NPT simulation or the NVT with variable cell shape.</p>
 </section>
 </section>
-</section>
 
 
-          </div>
-
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="tutorial_01_first_simulations.html" title="previous chapter">Hands-on-session 1 - First SSCHA simulations: free energy and structural relaxations</a></li>
-      <li>Next: <a href="tutorial_03_secondorder_phase_transitions.html" title="next chapter">Hands-on-session 3 - Calculations of second-order phase transitions with the SSCHA</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2023, Lorenzo Monacelli.
-
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-
-      |
-      <a href="_sources/tutorial_02_advanced_submission.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
