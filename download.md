@@ -5,7 +5,7 @@ title: Installation
 
 Here we provide the installation guide of the SSCHA code as well as other related codes distributed within the [SSCHA github](https://github.com/SSCHAcode) repository. 
 
-## Requirements
+# 1. Requirements
 
 Most of the codes require a fortran or C compiler and MPI configured. Here we install all the requirements to properly setup the SSCHA code. To properly compile and install the SSCHA code, you need a fortran compiler and LAPACK/BLAS available.
 
@@ -14,9 +14,9 @@ On Debian-based Linux distribution, all the software required is installed with 
 sudo apt update
 sudo apt install libblas-dev liblapack-dev liblapacke-dev gfortran openmpi-bin
 ```
-Note that some of the name of the library may change slightly in different linux versions or on MacOS.
+Note that some of the names of the libraries may change slightly in different linux versions or on MacOS.
 
-### Python installation[¶](#python-installation "Permalink to this headline")
+## 1.1 Python installation
 
 SSCHA is a Python library and program. Most linux distribution come with python already installed, however, for a performance boost, it is usually better to use the python distribution provided by the anaconda environment. The Quantum Mobile virtual machine already comes with anaconda installed. In case you are running on your own machine, anaconda python can be downloaded and installed from \[www.anaconda.com/download\]
 
