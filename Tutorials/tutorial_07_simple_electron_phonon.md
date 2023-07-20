@@ -242,7 +242,7 @@ K_POINTS {automatic}
 <p>where <span class="math notranslate nohighlight">\(\omega_{\mu}(\mathbf{q})\)</span> and <span class="math notranslate nohighlight">\(e^a_{\mu}(\mathbf{q})\)</span> are, respectively, the phonon frequencies and polarization vectors obtained diagonalizing the Fourier interpolated SSCHA force constants at point q, and <span class="math notranslate nohighlight">\(m_a\)</span> the masses of the atoms. The Dirac delta on the equation is approximated with a Gaussian of 10 cm-1 broadening, following the input parameter. In the output elph_fc.out the code gives the SSCHA dynamical matrix at each q point, the phonon linewidth (HWHM), the contribution to the electron-phonon coupling of each mode, etc. Note that the code skips the Gamma point and does not consider it in the calculation. The reason is that the equation used at this point is divergent (see discussion in Appendix C in <a class="reference external" href="https://arxiv.org/abs/2303.02621">arXiv:2303.02621</a>). The code also calculates the total electron-phonon coupling constant <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\omega_{log}\)</span>. It also gives the value of the the superconducting critical temperature calculated for different values of the Coulomb pseudopotential <span class="math notranslate nohighlight">\(\mu^*\)</span> within the semiempirical McMillan and Allen-Dynes formulas.</p>
 <p>The code also prints the calculated Eliashberg function, phonon density of states, partial electron-phonon coupling constant, as well as the projection of both the phonon DOS and Eliashberg function on different atoms. We can do for example plots like this one with this data:</p>
 <figure class="align-default" id="id3">
-<img alt="../figures7/a2F_PdH.pdf" src="../figures7/a2F_PdH.pdf" />
+<img alt="../figures_07/a2F_PdH.pdf" src="../figures_07/a2F_PdH.pdf" />
 <figcaption>
 <p><span class="caption-number">Fig. 15 </span><span class="caption-text">Figure with the <span class="math notranslate nohighlight">\(\alpha^2F(\omega)\)</span> Eliashberg function, its partial contributions from Pd and H atoms. The partial contribution to the electron-phonon coupling constant is also plotted, <span class="math notranslate nohighlight">\(\lambda(\omega)\)</span>.</span><a class="headerlink" href="#id3" title="Permalink to this image"> </a></p>
 </figcaption>
@@ -288,7 +288,7 @@ K_POINTS {automatic}
 </div>
 <p>In the output the code will calculate the superconducting gap as a function of temperature. In the provided file t_gap.dat the gap as a function of temperature is provided. This can be used to generate plots like this one to estimate the critical temperature from the temperature at which the gap closes.</p>
 <figure class="align-default" id="id4">
-<img alt="../figures7/gap_PdH.pdf" src="../figures7/gap_PdH.pdf" />
+<img alt="../figures_07/gap_PdH.pdf" src="../figures_07/gap_PdH.pdf" />
 <figcaption>
 <p><span class="caption-number">Fig. 16 </span><span class="caption-text">Superconducting gap as a function of temperature.</span><a class="headerlink" href="#id4" title="Permalink to this image"> </a></p>
 </figcaption>
