@@ -265,4 +265,3 @@ You may need to restart the virtual machine.</p>
 <p>Does this translate to larger supercells?</p>
 </div>
 </section>
-</section>
