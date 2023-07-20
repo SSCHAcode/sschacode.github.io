@@ -1,17 +1,16 @@
-::: {.document}
-::: {.documentwrapper}
-::: {.bodywrapper}
-::: {.body role="main"}
-::: {#hands-on-session-1-first-sscha-simulations-free-energy-and-structural-relaxations .section}
-Hands-on-session 1 - First SSCHA simulations: free energy and structural relaxations[¶](#hands-on-session-1-first-sscha-simulations-free-energy-and-structural-relaxations "Permalink to this headline"){.headerlink}
-=====================================================================================================================================================================================================================
+---
+layout: page
+title: First SSCHA simulations: free energy and structural relaxations
+---
 
-In this hands-on we provide ready to use examples to setup your first
+In this hands-on tutorial we provide ready to use examples to setup your first
 SSCHA calculation.
 
-::: {#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble .section}
-The free energy of gold: a simulation in the NVT ensemble[¶](#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble "Permalink to this headline"){.headerlink}
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2023/home/) by Diego Martinez Gutierrez. You can see here the video os the hands-on session:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cE6Sw_7hSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## The free energy of gold: a simulation in the NVT ensemble
 
 This simple tutorial explains how to setup a SSCHA calculation starting
 just from the structure, in this case a cif file we downloaded from the
