@@ -559,4 +559,4 @@ This makes the graph lineal and so we can easily estimate the critic temperature
 </figcaption>
 </figure>
 </section>
-</section>
+
