@@ -736,5 +736,5 @@ If you want to use ASE for your calculator, you can only use the inner paralleli
 Moreover, the SSCHA code needs to be configured and correctly installed on the cluster, which may be a difficult operation due to the hybrid Fortran/pyhton structure.</p>
 </section>
 </section>
-</section>
+
 
