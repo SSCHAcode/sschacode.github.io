@@ -139,8 +139,8 @@ Make sure that at the end of the installation no error is displayed, and the wri
 
 In order to install this old version of Quantum Espresso, which is tuned to allow the combination of electron-phonon matrix elements with SSCHA dynamical matrices, follow these instructions:
 ```
-git clone https://github.com/SSCHAcode/qe-5.1.0\_elph.git
-cd qe-5.1.0\_elph
+git clone https://github.com/SSCHAcode/qe-5.1.0_elph.git
+cd qe-5.1.0_elph
 ./configure
 make all
 ```
