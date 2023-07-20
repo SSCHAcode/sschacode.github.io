@@ -24,7 +24,7 @@ navbar-links:
   Installation: "download"
   Lectures: "lectures"
   Tutorials:
-#    - 1. First SSCHA simulations: "/Tutorials/tutorial_01_first_simulations"
+    - 1. First SSCHA simulations: "/Tutorials/tutorial_01_first_simulations"
 #    - 2. Setting up automatic SSCHA simulations on clusters: "/Tutorials/tutorial_02_advanced_submission"
 #    - 3. Calculation of second-order phase transitions with the SSCHA: "/Tutorials/tutorial_03_secondorder_phase_transitions"
 #    - 4. Calculation of spectral functions with the SSCHA: "/Tutorials/tutorial_04_calculation_spectrum"
