@@ -1,6 +1,6 @@
 ---
 layout: page
-title: First SSCHA simulations. Free energy and structural relaxations
+title: First SSCHA simulations, free energy and structural relaxations
 ---
 
 In this hands-on tutorial we provide ready to use examples to setup your first
