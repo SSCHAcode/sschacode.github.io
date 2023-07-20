@@ -572,4 +572,4 @@ After that, you can collect the results with this <em>extract.sh</em> script</p>
 </figure>
 <p>From the plot, you can see that you need at least a 8x8x8 grid to obtain a converged value, using smearing equal to 1.0 cm-1.</p>
 </section>
-</section>
+
