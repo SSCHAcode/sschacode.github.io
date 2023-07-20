@@ -11,7 +11,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 <p>The SCHA phonons are non-interacting quasiparticles that already include anharmonic effects (i.e. interaction between standard harmonic phonons) at some level. However, anharmoncity causes interaction between  the SCHA phonons too. The interactions between phonons causes a change of their energy spectrum: from the overlap of simple Dirac-delta functions  centered around the SSCHA phonon frequencies, to the overlap of Lorentzians with finite width (i.e. the quasiparticles have finite lifetime) and centered around shifted energies, or structures even more complex  (when the anharmoncity is so strong that the quasiparticle picture has to be abandoned).
 For each <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> of the Brillouin zone, the SCHA phonons energy spectrum <span class="math notranslate nohighlight">\(\sigma(\boldsymbol{q},\Omega)\)</span> is given by Eq.(70)</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig1.png"><img alt="../figures_04 /Fig1.png" src="../figures_04 /Fig1.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig1.png"><img alt="../figures_04/Fig1.png" src="../figures_04/Fig1.png" style="width: 400px;" /></a>
 </figure>
 <p>where <span class="math notranslate nohighlight">\(\boldsymbol{G}\)</span> is the SCHA phonons Green function, given by
 <span class="math notranslate nohighlight">\(\boldsymbol{G}=\boldsymbol{G}^{(0)}+\boldsymbol{G}^{(0)}\boldsymbol{\Pi}\,\,\boldsymbol{G}\)</span>, with
@@ -19,20 +19,20 @@ For each <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> of
 taking into account the interaction (in order to make easier the comparison with the literature, here and in the subsequent equations,
 the equation numbers refer to the paper here <a class="reference external" href="https://arxiv.org/abs/2103.03973">https://arxiv.org/abs/2103.03973</a>). The SSCHA code allows to compute these quantities, even if in the current implementation the selfenergy can be computed only in the bubble approximation (Eq. (75))</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig2.png"><img alt="../figures_04 /Fig2.png" src="../figures_04 /Fig2.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig2.png"><img alt="../figures_04/Fig2.png" src="../figures_04/Fig2.png" style="width: 400px;" /></a>
 </figure>
 <p>i.e. the self-energy terms including the 4th order FCs are discarded. In this equation <span class="math notranslate nohighlight">\(\delta_{\scriptscriptstyle{\text{se}}}\)</span> is an infinitely small positive number (a smearing parameter), that in actual calculations has to be chosen, toegher with the integration <span class="math notranslate nohighlight">\(\boldsymbol{k}\)</span>-grid, in order to find converged results.</p>
 <p>The code, in addition to providing the ability to compute the spectral function through the full formula Eq. (70), allows for various approximations to be used in order to both compute the spectral function with reduced computational cost and conduct an analysis of the different contributions to the spectral function provided by each mode. The main approximation is to negeclet the off-diagonal terms in the self-energy written in the SCHA-modes basis set. In other words, we can negelct the possibility that the interaction mixes different SCHA phonons. In that case, the total spectrum  is given by the the sum of the spectrum of each mode, <span class="math notranslate nohighlight">\(\sigma_{\mu}(\boldsymbol{q},\Omega)\)</span>, as shown in Eq.(78),</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig3.png"><img alt="../figures_04 /Fig3.png" src="../figures_04 /Fig3.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig3.png"><img alt="../figures_04/Fig3.png" src="../figures_04/Fig3.png" style="width: 400px;" /></a>
 </figure>
 <p>with  <span class="math notranslate nohighlight">\(\sigma_{\mu}(\boldsymbol{q},\Omega)\)</span> having a generalized Lorentzian-like expression shown in Eq.(79)</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig4.png"><img alt="../figures_04 /Fig4.png" src="../figures_04 /Fig4.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig4.png"><img alt="../figures_04/Fig4.png" src="../figures_04/Fig4.png" style="width: 400px;" /></a>
 </figure>
 <p>with <span class="math notranslate nohighlight">\(\mathcal{Z}_{\mu}(\boldsymbol{q},\Omega)\)</span> defined in Eq.(80)</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig5.png"><img alt="../figures_04 /Fig5.png" src="../figures_04 /Fig5.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig5.png"><img alt="../figures_04/Fig5.png" src="../figures_04/Fig5.png" style="width: 400px;" /></a>
 </figure>
 <p>where <span class="math notranslate nohighlight">\(\omega_{\mu}(\boldsymbol{q})\)</span> is the frequency (energy) of the SCHA phonon <span class="math notranslate nohighlight">\((\boldsymbol{q},\mu)\)</span>, and
 <span class="math notranslate nohighlight">\(\boldsymbol{\Pi}_{\mu\mu}(\boldsymbol{q},\Omega)\)</span> is the corresponding diagonal element of the self-energy. This is the spectrum in the
@@ -41,7 +41,7 @@ have kind of frequency-dependent center and width. As a matter of fact, in gener
 meaning that the quasiparticle picture for that mode is not appropriate. However, there are cases where the interaction  between the SCHA phonons does not affect the
 quasiparticle picture but causes only a shift in the quasiparticle energy and the appearance of a finite linediwth (i.e. finite lifetime) with respect to the non-interacting case. In that case, we can write the spectral function of the mode as a true Lorentzian, Eq.(81),</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig6.png"><img alt="../figures_04 /Fig6.png" src="../figures_04 /Fig6.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig6.png"><img alt="../figures_04/Fig6.png" src="../figures_04/Fig6.png" style="width: 400px;" /></a>
 </figure>
 <p>i.e., the SCHA phonon <span class="math notranslate nohighlight">\((\boldsymbol{q},\mu)\)</span> is a quasiparticle with definite energy <span class="math notranslate nohighlight">\(\Omega_{\mu}(\boldsymbol{q})\)</span> (
 <span class="math notranslate nohighlight">\(\Delta_{\mu}(\boldsymbol{q})=\Omega_{\mu}(\boldsymbol{q})-\omega_{\mu}(\boldsymbol{q})\)</span> is called the energy shift)
@@ -49,16 +49,16 @@ and lifetime <span class="math notranslate nohighlight">\(\tau_{\mu}(\boldsymbol
 is the Lorentzian half width at half maximum (HWHM). The quantities  <span class="math notranslate nohighlight">\(\Omega_{\mu}(\boldsymbol{q})\)</span> and
 <span class="math notranslate nohighlight">\(\Gamma_{\mu}(\boldsymbol{q})\)</span> satisfy the relations given in Eqs.(82),(83)</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig7.png"><img alt="../figures_04 /Fig7.png" src="../figures_04 /Fig7.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig7.png"><img alt="../figures_04/Fig7.png" src="../figures_04/Fig7.png" style="width: 400px;" /></a>
 </figure>
 <p>Notice that the first one is a self-consistent equation. Instead of solving the self-consistent equation to evaluate <span class="math notranslate nohighlight">\(\Omega_{\mu}(\boldsymbol{q})\)</span> two approximated  approaches can be adpoted, both implemented in the SSCHA. One, that we call “one-shot”, evaluates the r.h.s of Eq.(82) at the SCHA frequency (Eqs.(84))</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig8.png"><img alt="../figures_04 /Fig8.png" src="../figures_04 /Fig8.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig8.png"><img alt="../figures_04/Fig8.png" src="../figures_04/Fig8.png" style="width: 400px;" /></a>
 </figure>
 <p>This approximation is  reasonable as long as the energy shift <span class="math notranslate nohighlight">\(\Delta_{\mu}(\boldsymbol{q})=\Omega_{\mu}(\boldsymbol{q})-\omega_{\mu}(\boldsymbol{q})\)</span> is small.
 In particular, this is true if the SCHA self-energy is a (small) perturbation of the SCHA free propagator (not meaning that we are in a perturbative regime with respect to the harmonic approximation). In thas case, perturbation theory can be employed to evaluate the spectral function. If in Eq.(80) we keep only the first-order term in the self-energy, we get Eqs.(86),(87):</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig9.png"><img alt="../figures_04 /Fig9.png" src="../figures_04 /Fig9.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig9.png"><img alt="../figures_04/Fig9.png" src="../figures_04/Fig9.png" style="width: 400px;" /></a>
 </figure>
 <p>This concludes the overview on the quantities that we are going to compute for PbTe.</p>
 </section>
@@ -201,7 +201,7 @@ The FC3 file in D3Q format is</p>
 the number of <span class="math notranslate nohighlight">\(\boldsymbol{R},\boldsymbol{S}\)</span> considered. Each subsequent line refers to a couple <span class="math notranslate nohighlight">\(\boldsymbol{R},\boldsymbol{S}\)</span>, with <code class="docutils literal notranslate"><span class="pre">R_x</span> <span class="pre">R_y</span> <span class="pre">R_z</span></code> and <code class="docutils literal notranslate"><span class="pre">S_x</span> <span class="pre">S_y</span> <span class="pre">S_z</span></code> the crystal coordinates of <span class="math notranslate nohighlight">\(\boldsymbol{R}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{S}\)</span>, respectively, and <code class="docutils literal notranslate"><span class="pre">phi(alpha_1,at_1,alpha_2,at_2,alpha_3,at_3)</span></code> the corresponding FCs value  <span class="math notranslate nohighlight">\(\Phi^{\alpha_1\alpha_2\alpha_3}_{a_1 a_2 a_3}(0,\boldsymbol{R},\boldsymbol{S})\)</span>.</p>
 <p>Equipped with the third order SSCHA FCs ,written in real space in the <cite>FC3</cite> file, and the second-order SSCHA FCs, written in reciprocal space in the <em>SSCHA.T300.dyn#q</em> files, we have all the ingredient to compute the spectral functions. As first calculation, we compute the spectral function using Eq.(70) but within the “static approximation”, this meaning that we keep the selfenergy blocked with <span class="math notranslate nohighlight">\(\Omega=0\)</span>, as shown in Eq.(66) (within the bubble approximation)</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /Fig10.png"><img alt="../figures_04 /Fig10.png" src="../figures_04 /Fig10.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/Fig10.png"><img alt="../figures_04/Fig10.png" src="../figures_04/Fig10.png" style="width: 400px;" /></a>
 </figure>
 <p>In order to do that, exit from the current directory <em>hessian</em>, create a directory <em>spectral_static</em>, enter into it, and use this input file <em>spectral_static.py</em> to compute the spectral function in the static approximation, for the special point <span class="math notranslate nohighlight">\(X\)</span></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cellconstructor</span> <span class="k">as</span> <span class="nn">CC</span>
@@ -249,7 +249,7 @@ With</p>
 </div>
 <p>where the first line indicates the lenght of the path. This would be relevant in case we had not just a single <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> point, but a path of <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span>-points. In that case, we would have several blocks, one for each <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> point, and the first column of each block would indicate the lenght of the <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span>-path. In this case, since we have just one point, we have just one block with the first column equal to zero. Plotting the 3rd vs 2nd column we obtain this result:</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /static_X.png"><img alt="../figures_04 /static_X.png" src="../figures_04 /static_X.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/static_X.png"><img alt="../figures_04/static_X.png" src="../figures_04/static_X.png" style="width: 600px;" /></a>
 </figure>
 <p>We have Dirac deltas ( to be precise, extremely narrow Lorentzians whose width is given only by the choice of the finite size of the used energy grid) around values that coincides with the Hessian frequency values (plotted here with vertical lines), that you can find in the <code class="docutils literal notranslate"><span class="pre">Hessian.dyn3</span></code> file obtained in the previous run. Indeed, the Hessian calculation corresponds exactly to a calculation done with the static self-energy. Two observations. The height of the spikes is proportional to the degeneracy of the modes. The yellow line indicates the integral function <span class="math notranslate nohighlight">\(\int_0^{\Omega}\sigma(\Omega',\boldsymbol{q})\,d\Omega'\)</span>, which at the end returns the value: [number of modes]/2 (therefore 3 in this case). This is a general sum rule fulfilled by the spectral function (not only in the static approximation).</p>
 <p>Now we do a full calculation (no static approximation anymore). In this case, we need to specify the smearing parameter
@@ -287,7 +287,7 @@ cm-1 (thus we will have 1.0, 5.5, and 10.0 cm-1) With</p>
 </div>
 <p>in output we have three files with the spectral functions, one for each smearing value. In general, convergence must be studied with respect to the integration <span class="math notranslate nohighlight">\(\boldsymbol{k}\)</span>-grid  and smearing used. Plotting the static result and the dynamic result for sm=1.0 cm-1, both computed with 20x20x20 <span class="math notranslate nohighlight">\(\boldsymbol{k}\)</span>-grid,  we see this result</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /dynamic_X.png"><img alt="../figures_04 /dynamic_X.png" src="../figures_04 /dynamic_X.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/dynamic_X.png"><img alt="../figures_04/dynamic_X.png" src="../figures_04/dynamic_X.png" style="width: 600px;" /></a>
 </figure>
 <p>Therefore, we can conclude that in <span class="math notranslate nohighlight">\(X\)</span> the SSCHA phonons are barely affected by the interaction. However, the situation is different if analogous calculation is done in <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
 <div class="topic">
@@ -296,7 +296,7 @@ cm-1 (thus we will have 1.0, 5.5, and 10.0 cm-1) With</p>
 </div>
 <p>This is the result you should obtain</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /G_spectrum.png"><img alt="../figures_04 /G_spectrum.png" src="../figures_04 /G_spectrum.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/G_spectrum.png"><img alt="../figures_04/G_spectrum.png" src="../figures_04/G_spectrum.png" style="width: 600px;" /></a>
 </figure>
 <p>Notice that here the triple-degenerate optical mode of the Hessian dynamical matrix is splitted into due different peaks of the static spectral function (LO and double degenerate TO). This is due to the LO-TO splitting occurring in PbTe. The frequencies in the Hessian dynamical matrix in <span class="math notranslate nohighlight">\(\Gamma\)</span> refer only to the short-range part of the FCs. However, the long-range dipole-dipole contribution coming from the Effective Charges (nonanalytic contribution), which is at the origin of the LO-TO splitting, is taken into account when the spectral function is computed. Moreover, notice that when dynamic spectral function is considered, the double-degenerate TO mode gets smeared, showing a strong non-Lorentzian character. When 4x4x4 supercell calculations are performed, it clearly appears a satellite peak.</p>
 <p>Before continuing the spectral analysis, let us spend some time to investigate the static correction. As said, the static spectral
@@ -342,7 +342,7 @@ are the eigenvalues, there is not a complex spectrum to be analyzed. Indeed, the
 <p>where the first column is the lenght of the path in 2:math:<cite>pi</cite>/Angstrom, the next (6, in this case) columns are the
 SSCHA frequencies, and the next (6, in this case) columns are the SSCHA+static bubble self-energy-corrected frequencies. This is the plot obtained with this result</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /static_path.png"><img alt="../figures_04 /static_path.png" src="../figures_04 /static_path.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/static_path.png"><img alt="../figures_04/static_path.png" src="../figures_04/static_path.png" style="width: 600px;" /></a>
 </figure>
 <p>Therefore, as long as one is interested only in the static correction, e.g. because one wants to study the structural instability,
 the routine <code class="docutils literal notranslate"><span class="pre">get_static_correction_along_path</span></code> is the one that has to be employed. Indeed, notice that this is the proper way to
@@ -412,7 +412,7 @@ using the one-shot, Eqs.(84),(85) and the perturbative, Eqs.(86),(87),  values o
 very tentative approach to solve the self-consistent relation Eqs.(82),(83), and produce the relative Lorentzian spectral functions.
 Plotting the spectral functions of the TO mode from <em>spectral_func_1.00.dat</em>  and <em>spectral_func_lorentz_one_shot_1.00.dat</em> we obtain this</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /NoMM_Spectral.png"><img alt="../figures_04 /NoMM_Spectral.png" src="../figures_04 /NoMM_Spectral.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/NoMM_Spectral.png"><img alt="../figures_04/NoMM_Spectral.png" src="../figures_04/NoMM_Spectral.png" style="width: 600px;" /></a>
 </figure>
 <p>This confirms the strong non-Lorentzian character of this mode</p>
 </div></blockquote>
@@ -504,7 +504,7 @@ Plotting the spectral functions of the TO mode from <em>spectral_func_1.00.dat</
 <p>you obtain this figure</p>
 <blockquote>
 <div><figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /freq.png"><img alt="../figures_04 /freq.png" src="../figures_04 /freq.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/freq.png"><img alt="../figures_04/freq.png" src="../figures_04/freq.png" style="width: 600px;" /></a>
 </figure>
 </div></blockquote>
 <p>Here you have the plot of the shifted SSCHA phonon frequencies with the linewidth. However, it must be remembered that this picture is appropriate as long
@@ -512,7 +512,7 @@ as the Lorentzian picture is valid. We already know that at least in <span class
 is done with a 4x4x4 supercell). In that case, the best thing to do is a spectral calculation (full, or in the no-mode-mixing approximation), and use the
 three columns (lenght of the path &amp; energy &amp; spectral value) to do a colorplot. For example, this is the kind of result that you obtain for PbTe with the 4x4x4 supercell</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /spec_path.png"><img alt="../figures_04 /spec_path.png" src="../figures_04 /spec_path.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/spec_path.png"><img alt="../figures_04/spec_path.png" src="../figures_04/spec_path.png" style="width: 400px;" /></a>
 </figure>
 <div class="topic">
 <p class="topic-title">Exercise</p>
@@ -568,7 +568,7 @@ After that, you can collect the results with this <em>extract.sh</em> script</p>
 </div>
 <p>so as to obtain the files <em>4x4x4.dat</em>, <em>8x8x8.dat</em>, <em>16x16x16.dat</em>, and <em>32x32x32.dat</em>. Plotting them you obtain</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04 /convergence.png"><img alt="../figures_04 /convergence.png" src="../figures_04 /convergence.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/convergence.png"><img alt="../figures_04/convergence.png" src="../figures_04/convergence.png" style="width: 400px;" /></a>
 </figure>
 <p>From the plot, you can see that you need at least a 8x8x8 grid to obtain a converged value, using smearing equal to 1.0 cm-1.</p>
 </section>
