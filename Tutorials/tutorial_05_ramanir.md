@@ -11,18 +11,18 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 Instead, we will employ the Lanczos algorithm within the Time-Dependent Self-Consistent Harmonic Approximation (TD-SCHA) <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.104305">Monacelli, Mauri, Physical Review B 103, 104305, 2021</a>.</p>
 <p>For this reason, we need the package <code class="docutils literal notranslate"><span class="pre">tdscha</span></code> (it is suggested to configure it with the Julia speedup to run faster, see the installation guide).</p>
 <section id="computing-the-ir-signal-in-ice">
-<h2>Computing the IR signal in ICE<a class="headerlink" href="#computing-the-ir-signal-in-ice" title="Permalink to this headline">¶</a></h2>
+<h2>Computing the IR signal in ICE<a class="headerlink" href="#computing-the-ir-signal-in-ice" title="Permalink to this headline"> </a></h2>
 <p>We use an ensemble already computed of the phase XI of ice (low-temperature ice ad ambient pressure and prototype of standard cubic ice) to get the IR spectrum.</p>
 <p>Inside the directory data, we find an already calculated ensemble of ice XI at 0K with the corresponding original dynamical matrix <em>start_dyn_ice1</em> employed to generate the ensemble and the dynamical matrix <em>final_dyn_ice1</em> after the SSCHA minimization.</p>
 <section id="an-introduction">
-<h3>An introduction<a class="headerlink" href="#an-introduction" title="Permalink to this headline">¶</a></h3>
+<h3>An introduction<a class="headerlink" href="#an-introduction" title="Permalink to this headline"> </a></h3>
 <p>The infrared spectrum is related to the dipole-dipole response function:</p>
 <div class="math notranslate nohighlight">
 \[\chi_{MM}(\omega) = \int_{-\infty}^{\infty}dt e^{-i\omega t}\left&lt;M(t) M(0)\right&gt;\]</div>
 <p>where the average <span class="math notranslate nohighlight">\(\left&lt;M(t)M(0)\right&gt;\)</span> is the quantum average at finite temperature.</p>
 <p>Exploiting the TD-SCHA formalism introduced in the previous lecture, this response function can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eqchi">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eqchi" title="Permalink to this equation">¶</a></span>\[\chi_{MM}(\omega) = \boldsymbol{r}(M) \boldsymbol{G}(\omega) \boldsymbol{q}(M)\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eqchi" title="Permalink to this equation"> </a></span>\[\chi_{MM}(\omega) = \boldsymbol{r}(M) \boldsymbol{G}(\omega) \boldsymbol{q}(M)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\boldsymbol{G}(\omega)\)</span> is the TD-SCHA green function, while the <span class="math notranslate nohighlight">\(\boldsymbol{r}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> are vectors that quantify the perturbation and response, respectively.</p>
 <p>In particular, if we neglect two-phonon effects (nonlinear coupling with light), we get that</p>
 <div class="math notranslate nohighlight">
@@ -45,7 +45,7 @@ However, it is usually an excellent approximation.
 </div>
 </section>
 <section id="prepare-the-infrared-response">
-<h3>Prepare the infrared response<a class="headerlink" href="#prepare-the-infrared-response" title="Permalink to this headline">¶</a></h3>
+<h3>Prepare the infrared response<a class="headerlink" href="#prepare-the-infrared-response" title="Permalink to this headline"> </a></h3>
 <p>We need to attach the Raman Tensor and effective charges computed inside <em>ir_raman_complete.pho</em> to the final dynamical matrix,
 we will use this to initialize the response function calculation, as in <a class="reference internal" href="#equation-eqchi">Eq.1</a>.</p>
 <p>To attach the content of an espresso ph calculation (only Dielectric tensor, Raman Tensor, and Born effective charges)
@@ -65,7 +65,7 @@ the Dielectric tensor</p>
 <p>Followed by the effective charges and the Raman tensor.</p>
 </section>
 <section id="submitting-the-ir-calculation">
-<h3>Submitting the IR calculation<a class="headerlink" href="#submitting-the-ir-calculation" title="Permalink to this headline">¶</a></h3>
+<h3>Submitting the IR calculation<a class="headerlink" href="#submitting-the-ir-calculation" title="Permalink to this headline"> </a></h3>
 <p>With the following script, we submit a TD-SCHA calculation for the IR.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">cellconstructor</span> <span class="k">as</span> <span class="nn">CC</span><span class="o">,</span> <span class="nn">cellconstructor.Phonons</span>
@@ -122,13 +122,13 @@ You can plot the results by using:</p>
 <figure class="align-default" id="ir-scha">
 <a class="reference internal image-reference" href="../figures_05/IR_v2.png"><img alt="../figures_05/IR_v2.png" src="../figures_05/IR_v2.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">IR spectrum with both <em>include_v3</em> and <em>include_v4</em> set to False.</span><a class="headerlink" href="#ir-scha" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">IR spectrum with both <em>include_v3</em> and <em>include_v4</em> set to False.</span><a class="headerlink" href="#ir-scha" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>Additionally, <code class="docutils literal notranslate"><span class="pre">tdscha-plot.py</span></code> takes three more parameters: the range of the frequencies to be displayed and the smearing.</p>
 </section>
 <section id="deep-dive-into-the-calculation">
-<h3>Deep dive into the calculation<a class="headerlink" href="#deep-dive-into-the-calculation" title="Permalink to this headline">¶</a></h3>
+<h3>Deep dive into the calculation<a class="headerlink" href="#deep-dive-into-the-calculation" title="Permalink to this headline"> </a></h3>
 <p>Let us dive a bit into the calculation. The beginning of the script should
 be almost self-explanatory, as we are just loading dynamical matrices, dielectric tensors, and effective charges.</p>
 <p>The line</p>
@@ -182,7 +182,7 @@ The calculation can also be run in parallel using <em>mpirun</em> before calling
 <figure class="align-default" id="irv3">
 <a class="reference internal image-reference" href="../figures_05/IR_v3.png"><img alt="../figures_05/IR_v3.png" src="../figures_05/IR_v3.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">IR signal accounting for the three-phonon scattering</span><a class="headerlink" href="#irv3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">IR signal accounting for the three-phonon scattering</span><a class="headerlink" href="#irv3" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="irv4">
@@ -190,7 +190,7 @@ The calculation can also be run in parallel using <em>mpirun</em> before calling
 <figcaption>
 <p><span class="caption-number">Fig. 14 </span><span class="caption-text">IR signal accounting for all anharmonic scattering.
 The peaks that appear slightly below 2500 cm-1 is a
-combination mode known to be present in ice. See <a class="reference external" href="https://pubs.aip.org/aip/jcp/article-abstract/155/18/184502/199619/The-microscopic-origin-of-the-anomalous-isotopic?redirectedFrom=fulltext">Cherubini et al, J Chem Phys 155, 184502, 2021</a></span><a class="headerlink" href="#irv4" title="Permalink to this image">¶</a></p>
+combination mode known to be present in ice. See <a class="reference external" href="https://pubs.aip.org/aip/jcp/article-abstract/155/18/184502/199619/The-microscopic-origin-of-the-anomalous-isotopic?redirectedFrom=fulltext">Cherubini et al, J Chem Phys 155, 184502, 2021</a></span><a class="headerlink" href="#irv4" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <div class="topic" id="exercize-polarization-ir">
@@ -199,7 +199,7 @@ combination mode known to be present in ice. See <a class="reference external" h
 </div>
 </section>
 <section id="analyze-the-output">
-<h3>Analyze the output<a class="headerlink" href="#analyze-the-output" title="Permalink to this headline">¶</a></h3>
+<h3>Analyze the output<a class="headerlink" href="#analyze-the-output" title="Permalink to this headline"> </a></h3>
 <p>In the last part, we employed the script <code class="docutils literal notranslate"><span class="pre">tdscha-plot.py</span></code> to display the simulation result. This is a quick way to show the results of a calculation.</p>
 <p>Here, we will dive deeper into the calculation output file to extract the response function and get the results.</p>
 <p>The Lanczos algorithm provides a set of coefficients <span class="math notranslate nohighlight">\(a_i\)</span>, <span class="math notranslate nohighlight">\(b_i\)</span>, and <span class="math notranslate nohighlight">\(c_i\)</span> through which the green function is evaluated thanks to a continued fraction:</p>
@@ -255,7 +255,7 @@ however, now you have full access to the response function, both its imaginary a
 </section>
 </section>
 <section id="raman-response">
-<h2>Raman response<a class="headerlink" href="#raman-response" title="Permalink to this headline">¶</a></h2>
+<h2>Raman response<a class="headerlink" href="#raman-response" title="Permalink to this headline"> </a></h2>
 <p>The Raman response is very similar to the IR.
 Raman probes the fluctuations of the polarizability instead of those of the polarization,
 and it occurs when the samples interact with two light sources: the incoming electromagnetic
@@ -298,7 +298,7 @@ Try with different polarization and even orthogonal polarization; what does it c
 </pre></div>
 </div>
 <section id="unpolarize-raman-and-ir">
-<h3>Unpolarize Raman and IR<a class="headerlink" href="#unpolarize-raman-and-ir" title="Permalink to this headline">¶</a></h3>
+<h3>Unpolarize Raman and IR<a class="headerlink" href="#unpolarize-raman-and-ir" title="Permalink to this headline"> </a></h3>
 <p>In the previous section, we saw how to compute Raman and IR with specific polarization of the incoming and
 outcoming radiation, and on oriented crystals (single crystals).
 However, the most common situation is a powder sample probed with unpolarized light.</p>
@@ -332,6 +332,5 @@ While this is just the average of the IR signal’s x, y, and z, the Raman is mo
 <a class="reference internal image-reference" href="../figures_05/raman_unpolarized.png"><img alt="../figures_05/raman_unpolarized.png" src="../figures_05/raman_unpolarized.png" style="width: 50%;" /></a>
 </figure>
 <p>You should employ a supercell size sufficiently big to converge the simulation properly. In this case, the 1x1x1 supercell is too tiny to converge the calculation and get meaningful results.</p>
-</section>
 </section>
 </section>
