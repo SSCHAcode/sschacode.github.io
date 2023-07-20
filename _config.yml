@@ -31,6 +31,7 @@ navbar-links:
     - 4. Tin telluride with force fields: "/Tutorials/SnTe"
     - 5. Sulfur hydride: "/Tutorials/Automatic_Calculations"
     - 6. Lanthanum hydride: "/Tutorials/VariableCellRelaxation"
+    - Old tutorials: "/Tutorials/Old"
   Faqs: "faqs"
   API documentation: "documentation"
   References and how to cite: "references"
