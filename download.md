@@ -35,9 +35,9 @@ sudo apt install python-dev
 
 Most of the code can be easily installed with the following pip command:
 ```
-pip install ase spglib
+pip install ase spglib quippy-ase
 ```
-The Atomic Simulation Environment (ASE) is employed to read and write structure files. SPGLIB is used to recognize the space-group and perform symmetry anaylisys. 
+The Atomic Simulation Environment (ASE) is employed to read and write structure files. SPGLIB is used to recognize the space-group and perform symmetry anaylisys. QUIPPY-ASE is used to combine the SSCHA with Machine Learning potentials. If you are not goint to use this feature there is no need to install it.
 
 # 2. SSCHA
 
