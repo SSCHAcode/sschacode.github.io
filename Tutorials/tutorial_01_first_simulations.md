@@ -77,7 +77,7 @@ However, in this case, due to the high symmetries, only one calculation is reqir
 <p>These parameters are almost self-explaining.
 In contrast with Molecular Dynamics (MD) or Metropolis-Monte Carlo (MC) calculations, where the equilibrium probability distribution is sampled from a dynamical evolution of a structure, the SSCHA encodes the whole probability distribution as an analytical function. Therefore, to compute properties, we can generate on the fly the configurations that sample the equilibrium distribution.</p>
 <figure class="align-default" id="id1">
-<span id="diagram"></span><a class="reference internal image-reference" href="_images/Diagram1.png"><img alt="Diagram." src="_images/Diagram1.png" style="width: 400px;" /></a>
+<span id="diagram"></span><a class="reference internal image-reference" href="figures_01/Diagram1.png"><img alt="Diagram." src="figures_01//Diagram1.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Workflow of the SSCHA objects for a free energy minimization.</span><a class="headerlink" href="#id1" title="Permalink to this image"> </a></p>
 </figcaption>
@@ -221,7 +221,7 @@ Simply type</p>
 </div>
 <p>You will see two windows.</p>
 <figure class="align-default" id="id2">
-<span id="fig-goldminim"></span><a class="reference internal image-reference" href="_images/gold_minim.png"><img alt="Minimizatio data of Gold." src="_images/gold_minim.png" style="width: 400px;" /></a>
+<span id="fig-goldminim"></span><a class="reference internal image-reference" href="figures_01/gold_minim.png"><img alt="Minimizatio data of Gold." src="figures_01/gold_minim.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Minimization data of Gold.</span><a class="headerlink" href="#id2" title="Permalink to this image"> </a></p>
 </figcaption>
@@ -233,7 +233,7 @@ When it reaches 0.5 of its initial value (equal to the number of configurations)
 <p>On the right-side you see the free energy gradients, which must go to zero to converge. The top-right is the gradient of the SSCHA dynamical matrix, while on bottom-right there is the gradient of the average atomic positions.</p>
 <p>Indeed, since the gold atomic positions are all fixed by symmetries, it is always zero (but it will be different from zero in more complex system).</p>
 <figure class="align-default" id="id3">
-<span id="fig-goldfreqs"></span><a class="reference internal image-reference" href="_images/frequency_minim.png"><img alt="Frequencies vs steps" src="_images/frequency_minim.png" style="width: 400px;" /></a>
+<span id="fig-goldfreqs"></span><a class="reference internal image-reference" href="figures_01/frequency_minim.png"><img alt="Frequencies vs steps" src="figures_01/frequency_minim.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">All the SSCHA phonon frequencies as a function of the step in the NVT simulation.</span><a class="headerlink" href="#id3" title="Permalink to this image"> </a></p>
 </figcaption>
@@ -341,7 +341,7 @@ Here, all the frequencies in the supercell (at each q point commensurate with th
 </pre></div>
 </div>
 <figure class="align-default" id="id4">
-<span id="fig-dispersion"></span><a class="reference internal image-reference" href="_images/gold_dispersion.png"><img alt="Dispersion plot of gold" src="_images/gold_dispersion.png" style="width: 450px;" /></a>
+<span id="fig-dispersion"></span><a class="reference internal image-reference" href="figures_01/gold_dispersion.png"><img alt="Dispersion plot of gold" src="figures_01/gold_dispersion.png" style="width: 450px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">Comparison between the SSCHA and the harmonic phonon dispersion of Gold.</span><a class="headerlink" href="#id4" title="Permalink to this image"> </a></p>
 </figcaption>
@@ -514,7 +514,7 @@ After it finishes, you can plot the results written in the file thermal_expansio
 </pre></div>
 </div>
 <figure class="align-default" id="id5">
-<span id="fig-goldexpansion"></span><a class="reference internal image-reference" href="_images/thermal_expansion.png"><img alt="Thermal expansion of Gold" src="_images/thermal_expansion.png" style="width: 450px;" /></a>
+<span id="fig-goldexpansion"></span><a class="reference internal image-reference" href="figures_01/thermal_expansion.png"><img alt="Thermal expansion of Gold" src="figures_01/thermal_expansion.png" style="width: 450px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Thermal expansion of Gold. From the fit of the data we can compute the volumetric
 thermal expansion coefficient (at 300 K).</span><a class="headerlink" href="#id5" title="Permalink to this image"> </a></p>
@@ -899,7 +899,7 @@ the equilibrium distribution.
 
 ![[Fig. 1 ]{.caption-number}[Workflow of the SSCHA objects for a free
 energy
-minimization.]{.caption-text}[ ](#id1 "Permalink to this image"){.headerlink}](_images/Diagram1.png)
+minimization.]{.caption-text}[ ](#id1 "Permalink to this image"){.headerlink}](figures_01/Diagram1.png)
 
 The code that sets up and perform the SSCHA is the following:
 
@@ -1087,7 +1087,7 @@ with the SSCHA. Simply type
 You will see two windows.
 
 ![[Fig. 2 ]{.caption-number}[Minimization data of
-Gold.]{.caption-text}[ ](#id2 "Permalink to this image"){.headerlink}](_images/gold_minim.png)
+Gold.]{.caption-text}[ ](#id2 "Permalink to this image"){.headerlink}](figures_01/gold_minim.png)
 
 In [[Fig. 2]{.std .std-numref}](#fig-goldminim){.reference .internal} we
 have all the minimization data. On the top-left panel, we see the free
@@ -1114,7 +1114,7 @@ system).
 
 ![[Fig. 3 ]{.caption-number}[All the SSCHA phonon frequencies as a
 function of the step in the NVT
-simulation.]{.caption-text}[ ](#id3 "Permalink to this image"){.headerlink}](_images/frequency_minim.png)
+simulation.]{.caption-text}[ ](#id3 "Permalink to this image"){.headerlink}](figures_01/frequency_minim.png)
 
 Instead, [[Fig. 3]{.std .std-numref}](#fig-goldfreqs){.reference
 .internal} represents the evolution of the SSCHA phonon frequencies.
@@ -1254,7 +1254,7 @@ calculation, we can run it with
 
 ![[Fig. 4 ]{.caption-number}[Comparison between the SSCHA and the
 harmonic phonon dispersion of
-Gold.]{.caption-text}[ ](#id4 "Permalink to this image"){.headerlink}](_images/gold_dispersion.png)
+Gold.]{.caption-text}[ ](#id4 "Permalink to this image"){.headerlink}](figures_01/gold_dispersion.png)
 
 The script will plot the figure of the phonon dispersion [[Fig. 4]{.std
 .std-numref}](#fig-dispersion){.reference .internal}. It is quite
@@ -1478,7 +1478,7 @@ thermal expansion value) is the following
 ![[Fig. 5 ]{.caption-number}[Thermal expansion of Gold. From the fit of
 the data we can compute the volumetric thermal expansion coefficient (at
 300
-K).]{.caption-text}[ ](#id5 "Permalink to this image"){.headerlink}](_images/thermal_expansion.png)
+K).]{.caption-text}[ ](#id5 "Permalink to this image"){.headerlink}](figures_01/thermal_expansion.png)
 
 We report the final thermal expansion in [[Fig. 5]{.std
 .std-numref}](#fig-goldexpansion){.reference .internal}. The volumetric
