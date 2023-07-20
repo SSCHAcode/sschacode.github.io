@@ -18,38 +18,38 @@ Note that some of the names of the libraries may change slightly in different li
 
 ## 1.1 Python installation
 
-SSCHA is a Python library and program. Most linux distribution come with python already installed, however, for a performance boost, it is usually better to use the python distribution provided by the anaconda environment. The Quantum Mobile virtual machine already comes with anaconda installed. In case you are running on your own machine, anaconda python can be downloaded and installed from \[www.anaconda.com/download\]
+SSCHA is a Python library and program. Most linux distribution come with python already installed, however, for a performance boost, it is usually better to use the python distribution provided by the anaconda environment. Anaconda python can be downloaded and installed from [www.anaconda.com/download](https://www.anaconda.com/download).
 
 Once you installed the software, at the beginning of your terminal you should see a
-
+```
 (base) $
-
-The (base) identify the current anaconda environment. It may be necessary to restart the terminal after the installation to have Anaconda start properly.
+```
+The (base) identifies the current anaconda environment. It may be necessary to restart the terminal after the installation to have Anaconda start properly.
 
 If you are **not** using anaconda but the default python from the linux distribution, it may be necessary to install the python header files to correctly compile the SSCHA extension
-
+```
 sudo apt install python-dev
+```
 
-### Install python packages[¶](#install-python-packages "Permalink to this headline")
+## 1.2 Install python packages
 
 Most of the code can be easily installed with the following pip command:
+```
+pip install ase spglib
+```
+The Atomic Simulation Environment (ASE) is employed to read and write structure files. SPGLIB is used to recognize the space-group and perform symmetry anaylisys. 
 
-pip install ase spglib quippy-ase
-
-The Atomic Simulation Environment (ASE), employed to read and write structure files. SPGLIB is used to recognize the space-group and perform symmetry anaylisys. Quippy is employed to train a machine-learning force field.
-
-SSCHA[¶](#sscha "Permalink to this headline")
----------------------------------------------
+# 2. SSCHA
 
 Once the prerequisites have been installed, python-sscha can be downloaded and installed with
-
+```
 pip install cellconstructor python-sscha
+```
 
-Alternatively, it is possible to use the most recent version from the github repository \[[https://github.com/SSCHAcode](https://github.com/SSCHAcode)\], under CellConstructor and python-sscha repositories.
-
-The installation is performed in this case with
-
+Alternatively, it is possible to use the most recent version from the github repository [https://github.com/SSCHAcode](https://github.com/SSCHAcode), under CellConstructor and python-sscha repositories. The installation is performed in this case with
+```
 python setup.py install
+```
 
 ### Personalize the compiler[¶](#personalize-the-compiler "Permalink to this headline")
 
