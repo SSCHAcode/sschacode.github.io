@@ -11,7 +11,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cE6Sw_7hSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <section id="the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble">
-<h2>The free energy of gold: a simulation in the NVT ensemble<a class="headerlink" href="#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble" title="Permalink to this headline">¶</a></h2>
+<h2>The free energy of gold: a simulation in the NVT ensemble<a class="headerlink" href="#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble" title="Permalink to this headline"></a></h2>
 <p>This simple tutorial explains how to setup a SSCHA calculation starting just from the structure, in this case a cif file we downloaded from the [Materials Project](<a class="reference external" href="https://materialsproject.org/materials/mp-81/">https://materialsproject.org/materials/mp-81/</a>) database that we can find in the <em>01_First_SSCHA_simulations</em> directory.</p>
 <dl class="simple">
 <dt>Starting from the Gold structure in the primitive cell, to run the SSCHA we need:</dt><dd><ul class="simple">
@@ -79,7 +79,7 @@ In contrast with Molecular Dynamics (MD) or Metropolis-Monte Carlo (MC) calculat
 <figure class="align-default" id="id1">
 <span id="diagram"></span><a class="reference internal image-reference" href="_images/Diagram1.png"><img alt="Diagram." src="_images/Diagram1.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Workflow of the SSCHA objects for a free energy minimization.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Workflow of the SSCHA objects for a free energy minimization.</span><a class="headerlink" href="#id1" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>The code that sets up and perform the SSCHA is the following:</p>
@@ -223,7 +223,7 @@ Simply type</p>
 <figure class="align-default" id="id2">
 <span id="fig-goldminim"></span><a class="reference internal image-reference" href="_images/gold_minim.png"><img alt="Minimizatio data of Gold." src="_images/gold_minim.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Minimization data of Gold.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Minimization data of Gold.</span><a class="headerlink" href="#id2" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>In <a class="reference internal" href="#fig-goldminim"><span class="std std-numref">Fig. 2</span></a> we have all the minimization data. On the top-left panel, we see the free energy. As expected, it decreases (since the SSCHA is minimizing it).
@@ -235,7 +235,7 @@ When it reaches 0.5 of its initial value (equal to the number of configurations)
 <figure class="align-default" id="id3">
 <span id="fig-goldfreqs"></span><a class="reference internal image-reference" href="_images/frequency_minim.png"><img alt="Frequencies vs steps" src="_images/frequency_minim.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">All the SSCHA phonon frequencies as a function of the step in the NVT simulation.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">All the SSCHA phonon frequencies as a function of the step in the NVT simulation.</span><a class="headerlink" href="#id3" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>Instead, <a class="reference internal" href="#fig-goldfreqs"><span class="std std-numref">Fig. 3</span></a> represents the evolution of the SSCHA phonon frequencies.
@@ -248,7 +248,7 @@ Here, all the frequencies in the supercell (at each q point commensurate with th
 <p>At the end of the simulation, the code writes the final dynamical matrix in the quantum espresso file format: <em>sscha_T300_dynX</em> where X goes over the number of irreducible q points.</p>
 <p>In the next section, we analyze in details each section of the script to provide a bit more insight on the simulation, and a guide to modify it to fit your needs and submit your own system.</p>
 <section id="plot-the-phonon-dispersion">
-<h3>Plot the phonon dispersion<a class="headerlink" href="#plot-the-phonon-dispersion" title="Permalink to this headline">¶</a></h3>
+<h3>Plot the phonon dispersion<a class="headerlink" href="#plot-the-phonon-dispersion" title="Permalink to this headline"> </a></h3>
 <p>Now that the SSCHA minimization ended, we can compare the harmonic and anharmonic phonon dispersion of Gold.</p>
 <p>To this purpouse, we can simply run a script like the following. You find a copy of this script already in Examples/ThermodynamicsOfGold/plot_dispersion.py.</p>
 <p>You can use it even in your simulation, simply edit the value of the uppercase keyword at the beginning of the script to match your needs.</p>
@@ -343,7 +343,7 @@ Here, all the frequencies in the supercell (at each q point commensurate with th
 <figure class="align-default" id="id4">
 <span id="fig-dispersion"></span><a class="reference internal image-reference" href="_images/gold_dispersion.png"><img alt="Dispersion plot of gold" src="_images/gold_dispersion.png" style="width: 450px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Comparison between the SSCHA and the harmonic phonon dispersion of Gold.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Comparison between the SSCHA and the harmonic phonon dispersion of Gold.</span><a class="headerlink" href="#id4" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>The script will plot the figure of the phonon dispersion <a class="reference internal" href="#fig-dispersion"><span class="std std-numref">Fig. 4</span></a>.
@@ -356,7 +356,7 @@ It is quite different from the experimental one because of the poor accuracy of 
 </section>
 </section>
 <section id="running-in-the-npt-ensemble-simulating-thermal-expansion">
-<h2>Running in the NPT ensemble: simulating thermal expansion<a class="headerlink" href="#running-in-the-npt-ensemble-simulating-thermal-expansion" title="Permalink to this headline">¶</a></h2>
+<h2>Running in the NPT ensemble: simulating thermal expansion<a class="headerlink" href="#running-in-the-npt-ensemble-simulating-thermal-expansion" title="Permalink to this headline"> </a></h2>
 <p>Now that you have some experience with the NVT simulation we are ready for the next step: NPT,
 or relaxing the lattice.</p>
 <p>With python-sscha it is very easy to run NPT simulation, you simply have to replace the line of the NVT script with the target pressure for the simulation:</p>
@@ -517,7 +517,7 @@ After it finishes, you can plot the results written in the file thermal_expansio
 <span id="fig-goldexpansion"></span><a class="reference internal image-reference" href="_images/thermal_expansion.png"><img alt="Thermal expansion of Gold" src="_images/thermal_expansion.png" style="width: 450px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Thermal expansion of Gold. From the fit of the data we can compute the volumetric
-thermal expansion coefficient (at 300 K).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+thermal expansion coefficient (at 300 K).</span><a class="headerlink" href="#id5" title="Permalink to this image"> </a></p>
 </figcaption>
 </figure>
 <p>We report the final thermal expansion in <a class="reference internal" href="#fig-goldexpansion"><span class="std std-numref">Fig. 5</span></a>.
@@ -528,7 +528,7 @@ thanks to the thermodynamic relation:</p>
 <p>Also in this case, the result is quite off with experiments, due to the not completely realistic force-field employed. To get a more realistic approach, you should use <em>ab-initio</em> calculations or a more refined force-field.</p>
 </section>
 <section id="ab-initio-calculation-with-the-sscha-code">
-<h2>Ab initio calculation with the SSCHA code<a class="headerlink" href="#ab-initio-calculation-with-the-sscha-code" title="Permalink to this headline">¶</a></h2>
+<h2>Ab initio calculation with the SSCHA code<a class="headerlink" href="#ab-initio-calculation-with-the-sscha-code" title="Permalink to this headline"> </a></h2>
 <p>The SSCHA code is compatible with the Atomic Simulation Environment (ASE), which we employed in the previous tutorial to get a fast force-field for Gold.</p>
 <p>However, ASE already provides an interface with most codes to run ab initio simulations.
 The simplest way of interfacing the SSCHA to an other ab initio code is to directly use ASE.</p>
@@ -703,7 +703,7 @@ Instead, we take the result obtained with EMT in the previous sections, and try 
 However, your calculation will probably take forever.
 To speedup things, lets discuss parallelization and how to exploit modern HPC infrastructures.</p>
 <section id="parallelization">
-<h3>Parallelization<a class="headerlink" href="#parallelization" title="Permalink to this headline">¶</a></h3>
+<h3>Parallelization<a class="headerlink" href="#parallelization" title="Permalink to this headline"> </a></h3>
 <p>If you actually tried to run the code of the previous section on a laptop, it will take forever.
 The reason is that DFT calculations are much more expensive than the SSCHA minimization. While SSCHA minimizes the number of ab initio calculations (especially when compared with MD or PIMD), still they are the bottleneck of the computational time.</p>
 <p>For this reason, we need an opportune parallelization strategy to reduce the total time to run a SSCHA.</p>
@@ -899,7 +899,7 @@ the equilibrium distribution.
 
 ![[Fig. 1 ]{.caption-number}[Workflow of the SSCHA objects for a free
 energy
-minimization.]{.caption-text}[¶](#id1 "Permalink to this image"){.headerlink}](_images/Diagram1.png)
+minimization.]{.caption-text}[ ](#id1 "Permalink to this image"){.headerlink}](_images/Diagram1.png)
 
 The code that sets up and perform the SSCHA is the following:
 
@@ -1087,7 +1087,7 @@ with the SSCHA. Simply type
 You will see two windows.
 
 ![[Fig. 2 ]{.caption-number}[Minimization data of
-Gold.]{.caption-text}[¶](#id2 "Permalink to this image"){.headerlink}](_images/gold_minim.png)
+Gold.]{.caption-text}[ ](#id2 "Permalink to this image"){.headerlink}](_images/gold_minim.png)
 
 In [[Fig. 2]{.std .std-numref}](#fig-goldminim){.reference .internal} we
 have all the minimization data. On the top-left panel, we see the free
@@ -1114,7 +1114,7 @@ system).
 
 ![[Fig. 3 ]{.caption-number}[All the SSCHA phonon frequencies as a
 function of the step in the NVT
-simulation.]{.caption-text}[¶](#id3 "Permalink to this image"){.headerlink}](_images/frequency_minim.png)
+simulation.]{.caption-text}[ ](#id3 "Permalink to this image"){.headerlink}](_images/frequency_minim.png)
 
 Instead, [[Fig. 3]{.std .std-numref}](#fig-goldfreqs){.reference
 .internal} represents the evolution of the SSCHA phonon frequencies.
@@ -1144,7 +1144,7 @@ provide a bit more insight on the simulation, and a guide to modify it
 to fit your needs and submit your own system.
 
 ::: {#plot-the-phonon-dispersion .section}
-### Plot the phonon dispersion[¶](#plot-the-phonon-dispersion "Permalink to this headline"){.headerlink}
+### Plot the phonon dispersion[ ](#plot-the-phonon-dispersion "Permalink to this headline"){.headerlink}
 
 Now that the SSCHA minimization ended, we can compare the harmonic and
 anharmonic phonon dispersion of Gold.
@@ -1254,7 +1254,7 @@ calculation, we can run it with
 
 ![[Fig. 4 ]{.caption-number}[Comparison between the SSCHA and the
 harmonic phonon dispersion of
-Gold.]{.caption-text}[¶](#id4 "Permalink to this image"){.headerlink}](_images/gold_dispersion.png)
+Gold.]{.caption-text}[ ](#id4 "Permalink to this image"){.headerlink}](_images/gold_dispersion.png)
 
 The script will plot the figure of the phonon dispersion [[Fig. 4]{.std
 .std-numref}](#fig-dispersion){.reference .internal}. It is quite
@@ -1275,7 +1275,7 @@ they become more rigid (energy increases) or softer?
 :::
 
 ::: {#running-in-the-npt-ensemble-simulating-thermal-expansion .section}
-Running in the NPT ensemble: simulating thermal expansion[¶](#running-in-the-npt-ensemble-simulating-thermal-expansion "Permalink to this headline"){.headerlink}
+Running in the NPT ensemble: simulating thermal expansion[ ](#running-in-the-npt-ensemble-simulating-thermal-expansion "Permalink to this headline"){.headerlink}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Now that you have some experience with the NVT simulation we are ready
@@ -1478,7 +1478,7 @@ thermal expansion value) is the following
 ![[Fig. 5 ]{.caption-number}[Thermal expansion of Gold. From the fit of
 the data we can compute the volumetric thermal expansion coefficient (at
 300
-K).]{.caption-text}[¶](#id5 "Permalink to this image"){.headerlink}](_images/thermal_expansion.png)
+K).]{.caption-text}[ ](#id5 "Permalink to this image"){.headerlink}](_images/thermal_expansion.png)
 
 We report the final thermal expansion in [[Fig. 5]{.std
 .std-numref}](#fig-goldexpansion){.reference .internal}. The volumetric
@@ -1496,7 +1496,7 @@ force-field.
 :::
 
 ::: {#ab-initio-calculation-with-the-sscha-code .section}
-Ab initio calculation with the SSCHA code[¶](#ab-initio-calculation-with-the-sscha-code "Permalink to this headline"){.headerlink}
+Ab initio calculation with the SSCHA code[ ](#ab-initio-calculation-with-the-sscha-code "Permalink to this headline"){.headerlink}
 ----------------------------------------------------------------------------------------------------------------------------------
 
 The SSCHA code is compatible with the Atomic Simulation Environment
@@ -1716,7 +1716,7 @@ calculation will probably take forever. To speedup things, lets discuss
 parallelization and how to exploit modern HPC infrastructures.
 
 ::: {#parallelization .section}
-### Parallelization[¶](#parallelization "Permalink to this headline"){.headerlink}
+### Parallelization[ ](#parallelization "Permalink to this headline"){.headerlink}
 
 If you actually tried to run the code of the previous section on a
 laptop, it will take forever. The reason is that DFT calculations are
