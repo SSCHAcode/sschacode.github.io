@@ -3,25 +3,17 @@ layout: page
 title: Installation
 ---
 
-  Software Installation — SSCHA School 2023 documentation        
+Here we provide the installation guide of the SSCHA code as well as other related codes distributed within the [SSCHA github](https://github.com/SSCHAcode) repository. 
 
-Software Installation[¶](#software-installation "Permalink to this headline")
-=============================================================================
-
-This installation guide here is valid for Linux machines as well as MacOS with intel processors.
-
-Users of Windows can use the virtual machine provided by Quantum Mobile available [here](https://quantum-mobile.readthedocs.io/en/latest/releases/versions/23.04.03.html). The instructions to install this virtual machine are provided in that link. However, you will need to increase the RAM allocated to the virtual machine to at least 4Gb to be able to run all the tutorials on it. Once you have installed the virtual machine, follow the instructions below to install all the needed software to work on the tutorials.
-
-Requirements[¶](#requirements "Permalink to this headline")
------------------------------------------------------------
+## Requirements
 
 Most of the codes require a fortran or C compiler and MPI configured. Here we install all the requirements to properly setup the SSCHA code. To properly compile and install the SSCHA code, you need a fortran compiler and LAPACK/BLAS available.
 
 On Debian-based Linux distribution, all the software required is installed with (Tested on Quantum Mobile and ubuntu 20.04):
-
+```
 sudo apt update
 sudo apt install libblas-dev liblapack-dev liblapacke-dev gfortran openmpi-bin
-
+```
 Note that some of the name of the library may change slightly in different linux versions or on MacOS.
 
 ### Python installation[¶](#python-installation "Permalink to this headline")
