@@ -1173,10 +1173,10 @@ cat > input << EOF
 &end
 EOF
 ```
-
 and it is launched with:
-
-$: sscha -i input --save-data data_saved > output
+```
+sscha -i input --save-data data_saved > output
+```
 
 At the end of the minimizations, performed with several populations, we have:
 
@@ -1376,8 +1376,9 @@ CC.Spectral.get_static_correction_along_path(dyn=dyn,
 This calculation (like all the calculations described below) 
 can be performed in parallel on NPROC processors, using MPI. Called input.py the input file
 we launch it with
-
-$: mpirun -np NPROC python input.py > output
+```
+mpirun -np NPROC python input.py > output
+```
 
 In the file *"v2_v2+d3static_freq.dat"* we have 8 rows (one for each q point).
 The first column is the length of the path followed along these 8 points in $$2\pi$$/Å units.
@@ -1463,7 +1464,7 @@ CC.Spectral.get_full_dynamic_correction_along_path(dyn=dyn,
                                                    filename_sp='static_spectral_func')
 ```
 
-The input values e1, e0, de define the energy grid where the spectral function will be computed: initial, final and spacing value of the energy grid in cm$${}^{-1}$$, respectively. The input values sm0, sm1, nsm define the values used for $$\delta_{\text{se}}$$ of Eq. (75), the smearing used to compute the self-energy: initial, final and number of intermediate values between them, in cm$${}^{-1}$$ (however, as long as we consider the static approximation, the value of $\delta_{\text{se}}$ is immaterial). 
+The input values e1, e0, de define the energy grid where the spectral function will be computed: initial, final and spacing value of the energy grid in cm$${}^{-1}$$, respectively. The input values sm0, sm1, nsm define the values used for $$\delta_{\text{se}}$$ of Eq. (75), the smearing used to compute the self-energy: initial, final and number of intermediate values between them, in cm$${}^{-1}$$ (however, as long as we consider the static approximation, the value of $$\delta_{\text{se}}$$ is immaterial). 
 
 We decided to project out the part of the spectral function due to the pure translation modes (since they convey
 a trivial information). The result is in the *"static_spectral_func_1.0.dat"* file. 
