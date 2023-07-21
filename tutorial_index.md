@@ -16,7 +16,7 @@ Each tutorial includes also a recorded video of the hands-on session held during
 Additionally, we provide extra tutorials as Jupyter notebooks 
 
 <div style="text-align: center;">
-  <a href="http://sscha.eu/tutorials/" style="display: inline-block; margin-bottom: 10px;" class="btn btn-primary btn-lg">Jupyter Notebooks</a>
+  <a href="http://sscha.eu/Tutorials/Old/" style="display: inline-block; margin-bottom: 10px;" class="btn btn-primary btn-lg">Jupyter Notebooks</a>
 </div>
 
 

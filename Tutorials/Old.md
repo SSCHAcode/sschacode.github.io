@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Old Tutorials
+title: Tutorials with Jupyter
 ---
 
-In order to get familiar with the code we strongly suggest that before attempting a real calculation you run the tutorials provided here.
+The following tutorials are on the form of jupyter notebooks. You can find the notebooks in the Tutorials directory of the [source code](https://github.com/SSCHAcode/python-sscha) from GitHub
 
 We suggest that you start to run the tutorials in the following order:
 
