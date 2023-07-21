@@ -23,7 +23,7 @@ navbar-links:
 #  News: "news"
   Installation: "download"
   Lectures: "lectures"
-  Tutorials: "tutorial_index"
+  Tutorials:
     - 1. First SSCHA simulations. Structure relaxation at finite temperature and thermal expansion: "/Tutorials/tutorial_01_first_simulations"
     - 2. Setting up automatic SSCHA simulations on clusters: "/Tutorials/tutorial_02_advanced_submission"
     - 3. Calculation of second-order phase transitions: "/Tutorials/tutorial_03_secondorder_phase_transitions"
@@ -36,7 +36,7 @@ navbar-links:
   Faqs: "faqs"
   API documentation: "documentation"
   References and how to cite: "references"
-  Schools: "/Schools/2023/home"
+  Schools: 
     - 2023: "/Schools/2023/home"
 #  Developers: "developers"
   Contact: "contact"
