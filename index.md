@@ -34,5 +34,8 @@ With the SSCHA code, you can easily obtain the following properties:
 The method works even in presence of strong anharmonicity and with sizable quantum fluctuations of nuclei.
 Running each simulation is extremely easy.
 
-[Jump into the tutorials](http://sscha.eu/tutorial_index/){: .btn .btn-primary .btn-lg}
+<div style="text-align: center;">
+  <a href="http://sscha.eu/tutorial_index/" style="display: inline-block; margin-bottom: 10px;" class="btn btn-primary btn-lg">Jump into the tutorials</a>
+</div>
+
 

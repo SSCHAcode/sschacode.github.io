@@ -13,19 +13,10 @@ Welcome to our collection of tutorials that will guide you through the usage of 
 
 Each tutorial includes also a recorded video of the hands-on session held during the SSCHA school 2023. 
 
-Additionally, we provide extra tutorial in the form of Jupyter notebooks [Here](tutorials.md)
+Additionally, we provide extra tutorials as Jupyter notebooks 
+
+<div style="text-align: center;">
+  <a href="http://sscha.eu/tutorials/" style="display: inline-block; margin-bottom: 10px;" class="btn btn-primary btn-lg">Jupyter Notebooks</a>
+</div>
 
 
-{% include_relative Tutorials/tutorial_01_first_simulations.md %}
-{% include_relative Tutorials/tutorial_02_advanced_submission.md %}
-{% include_relative Tutorials/tutorial_03_secondorder_phase_transitions.md%}
-{% include_relative Tutorials/tutorial_04_calculation_spectrum.md %}
-{% include_relative Tutorials/tutorial_04_calculation_spectrum.md %}
-{% include_relative Tutorials/tutorial_05_ramanir.md %}
-{% include_relative Tutorials/tutorial_06_the_SSCHA_with_MLP.md %}
-{% include_relative Tutorials/tutorial_07_simple_electron_phonon.md %}
-{% include_relative Tutorials/tutorial_09_TC.md %}
-
-
-
-￼
