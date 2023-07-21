@@ -302,4 +302,4 @@ K_POINTS {automatic}
 <li><p>In this example we have used auxiliary SSCHA dynamical matrices to incorporate anharmonic effects into the calculation of electron-phonon properties. However, we could have also used those dynamical matrices that come from the Hessian of the SSCHA free energy. Sometimes the differences are minor, but in other cases it may be important. In this cases the best approach is to calculate the Eliashberg function with the full spectral function as described recently in <a class="reference external" href="https://arxiv.org/abs/2303.07962">arXiv:2303.07962</a>.</p></li>
 </ol>
 </section>
-</section>
+
