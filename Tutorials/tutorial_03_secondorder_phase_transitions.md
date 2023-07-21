@@ -319,7 +319,7 @@ We can choose if we neglect or not in the calculation the four phonon scattering
 <p>The Sobol sequences reduces the number of configurations by doing a better mapping of the gaussian than a random distribution. By uniformity spreading the samplings with a low discrepancy sequence like Sobol it is possible to reduce the number of configurations needed. Low discrepancy sequences tend to sample space “more uniformly” than random numbers. Algorithms that use such sequences may have superior convergence.
 You can test this in the calculation of the hessian by changing the number of configurations and the mapping scheme in the <em>ensemble.generate()</em> function.</p>
 </div>
-</section>
+
 <section id="second-order-phase-transition">
 <h2>Second order phase transition<a class="headerlink" href="#second-order-phase-transition" title="Permalink to this headline"> </a></h2>
 <p>Up to now we studied the system at T=0K and we found that there is an instability. However, we can repeat the minimization at many temperatures, and track the phonon frequency to see which is the temperature at which the system becomes stable.</p>
