@@ -7,6 +7,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e-F-EKHA_3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<section id="theoretical-introduction">
 <h2>Theoretical introduction<a class="headerlink" href="#theoretical-introduction" title="Permalink to this headline"> </a></h2>
 <p>The SCHA phonons are non-interacting quasiparticles that already include anharmonic effects (i.e. interaction between standard harmonic phonons) at some level. However, anharmoncity causes interaction between  the SCHA phonons too. The interactions between phonons causes a change of their energy spectrum: from the overlap of simple Dirac-delta functions  centered around the SSCHA phonon frequencies, to the overlap of Lorentzians with finite width (i.e. the quasiparticles have finite lifetime) and centered around shifted energies, or structures even more complex  (when the anharmoncity is so strong that the quasiparticle picture has to be abandoned).
 For each <span class="math notranslate nohighlight">\(\boldsymbol{q}\)</span> of the Brillouin zone, the SCHA phonons energy spectrum <span class="math notranslate nohighlight">\(\sigma(\boldsymbol{q},\Omega)\)</span> is given by Eq.(70)</p>
@@ -62,6 +63,7 @@ In particular, this is true if the SCHA self-energy is a (small) perturbation of
 </figure>
 <p>This concludes the overview on the quantities that we are going to compute for PbTe.</p>
 </section>
+
 <section id="calculations-on-pbte">
 <h2>Calculations on PbTe<a class="headerlink" href="#calculations-on-pbte" title="Permalink to this headline"> </a></h2>
 <p>We will perform calculations on PbTe in the rock-salt structure and, in order to speed-up the calculation, we will employ the force-field model already used in previous tutorials (the force-field model can be downloaded and installed from here <a class="reference external" href="https://github.com/SSCHAcode/F3ToyModel">https://github.com/SSCHAcode/F3ToyModel</a>). The calculations that we are going to perform are heavily underconverged and have to be consiered just as a guide to use of the SSCHA code. We will use a 2x2x2 supercell for PbTe. In order to define the force-field model
@@ -287,7 +289,7 @@ cm-1 (thus we will have 1.0, 5.5, and 10.0 cm-1) With</p>
 </div>
 <p>in output we have three files with the spectral functions, one for each smearing value. In general, convergence must be studied with respect to the integration <span class="math notranslate nohighlight">\(\boldsymbol{k}\)</span>-grid  and smearing used. Plotting the static result and the dynamic result for sm=1.0 cm-1, both computed with 20x20x20 <span class="math notranslate nohighlight">\(\boldsymbol{k}\)</span>-grid,  we see this result</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../figures_04/dynamic_X.png"><img alt="../figures_04/dynamic_X.png" src="../figures_04/dynamic_X.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../figures_04/dynamic_X.png"><img alt="../figures_04/dynamic_X.png" src="../figures_04/dynamic_X.png" style="width: 100%" /></a>
 </figure>
 <p>Therefore, we can conclude that in <span class="math notranslate nohighlight">\(X\)</span> the SSCHA phonons are barely affected by the interaction. However, the situation is different if analogous calculation is done in <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
 <div class="topic">
