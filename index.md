@@ -14,3 +14,21 @@ If you are simulating transport or thermal properties of materials, phase diagra
 Visit the [SSCHA GitHub](https://github.com/SSCHAcode) page to access all our repositories and do not miss our [YouTube channel](https://www.youtube.com/@SSCHAcode) to see videos with lectures about the SSCHA and hands-on tutorials:
 
 <iframe style="width:100%" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUGVzxx49_SspeWpADPb3ckYOSUrUCKJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+With the SSCHA code, you can easily obtain the following properties:
+
+- __Phase diagrams__ (first and second-order phase transitions; Ferroelectric and Peierls transitions).
+
+- __Thermodynamic properties at finite temperature__ (Entropy, thermal expansion, bulk modulus).
+
+- __Vibrational spectroscopy__ (Raman & IR).
+
+- __Thermal transport in presence of strong anharmonicity__.
+
+- __Electron-phonon coupling and superconductivity__.
+
+
+The method works even in presence of strong anharmonicity and with sizable quantum fluctuations of nuclei.
+Running each simulation is extremely easy.
+[Jump into the tutorials](http://sscha.eu/tutorial_index/){: .btn .btn-primary .btn-lg}
+
