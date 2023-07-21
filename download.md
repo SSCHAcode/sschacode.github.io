@@ -7,7 +7,7 @@ Here we provide the installation guide of the SSCHA code as well as other relate
 
 # Easy installation through Anaconda
 
-The SSCHA code comes as a python library. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)) 
+The SSCHA code comes as a python library, with computationally intense part speedup with C, Fortran and Julia. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)) 
 
 
 ```
@@ -26,6 +26,12 @@ conda activate sscha
 ```
 
 This installation method should work also on clusters and with computers with custom configurations. You must remember to activate the ``sscha`` environment even in your submission scripts on clusters.
+
+To activate the julia speedup on the SSCHA minimization, you must ensure julia dependencies are correctly setup. To do this, run the following line:
+
+```
+python -c 'import julia; julia.install()'
+```
 
 
 # Installing without Anaconda 
@@ -145,7 +151,7 @@ MPICC=mpicc python setup.py install
 ```
 where mpicc is a valid mpi c compiler (the specification of MPICC can be dropped, but parallelization will not be available aside for the julia mode discussed below).
 
-## 3.2 MPI Parallelization for TDSCHA
+###  MPI Parallelization for TDSCHA
 
 MPI parallelization is not necessary, however you may like to configure it in practical calculations to further speedup the code. For production runs, it is suggested to combine the mpi parallelization with the julia speedup.
 
