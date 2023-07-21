@@ -10,6 +10,6 @@ If you are simulating transport or thermal properties of materials, phase diagra
 
 In this website you will find the instructions to [install](http://sscha.eu/download/) the code, [lectures](http://sscha.eu/lectures/) with the theory behind the SSCHA, and tutorials that will mentor you in the practical use of the SSCHA. 
 
-Do not miss our [YouTube channel](https://www.youtube.com/@SSCHAcode) to see videos with lectures about the SSCHA and hands-on tutorials:
+Visit the [SSCHA GitHub](https://github.com/SSCHAcode) page to access all our repositories and do not miss our [YouTube channel](https://www.youtube.com/@SSCHAcode) to see videos with lectures about the SSCHA and hands-on tutorials:
 
 <iframe style="width:100%" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUGVzxx49_SspeWpADPb3ckYOSUrUCKJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
