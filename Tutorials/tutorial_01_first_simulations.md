@@ -555,7 +555,7 @@ The simplest way of interfacing the SSCHA to an other ab initio code is to direc
         <span class="c1"># Where to find the pseudopotential</span>
         <span class="s1">&#39;pseudo_dir&#39;</span> <span class="p">:</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span>
         <span class="s1">&#39;tprnfor&#39;</span> <span class="p">:</span> <span class="mi">True</span><span class="p">,</span>   <span class="c1"># Print the forces</span>
-        <span class="s1">&#39;tstress&#39;</span> <span class="p">:</span> <span class="mi">True</span><span class="p">,</span>   <span class="c1"># Print the stress tensor</span>
+        <span class="s1">&#39;tstress&#39;</span> <span class="p">:</span> <span class="mi">True</span>   <span class="c1"># Print the stress tensor</span>
     <span class="p">},</span>
     <span class="s1">&#39;system&#39;</span> <span class="p">:</span> <span class="p">{</span>
         <span class="c1"># Specify the basis set cutoffs</span>
