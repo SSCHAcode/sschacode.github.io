@@ -10,6 +10,8 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cE6Sw_7hSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+
 <section id="the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble">
 <h2>The free energy of gold: a simulation in the NVT ensemble<a class="headerlink" href="#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble" title="Permalink to this headline"></a></h2>
 <p>This simple tutorial explains how to setup a SSCHA calculation starting just from the structure, in this case a cif file we downloaded from the [Materials Project](<a class="reference external" href="https://materialsproject.org/materials/mp-81/">https://materialsproject.org/materials/mp-81/</a>) database that we can find in the <em>01_First_SSCHA_simulations</em> directory.</p>
@@ -551,7 +553,9 @@ The simplest way of interfacing the SSCHA to an other ab initio code is to direc
         <span class="c1"># Avoid writing wavefunctions on the disk</span>
         <span class="s1">&#39;disk_io&#39;</span> <span class="p">:</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span>
         <span class="c1"># Where to find the pseudopotential</span>
-        <span class="s1">&#39;pseudo_dir&#39;</span> <span class="p">:</span> <span class="s1">&#39;.&#39;</span>
+        <span class="s1">&#39;pseudo_dir&#39;</span> <span class="p">:</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;tprnfor&#39;</span> <span class="p">:</span> <span class="mi">True</span><span class="p">,</span>   <span class="c1"># Print the forces</span>
+        <span class="s1">&#39;tstress&#39;</span> <span class="p">:</span> <span class="mi">True</span>   <span class="c1"># Print the stress tensor</span>
     <span class="p">},</span>
     <span class="s1">&#39;system&#39;</span> <span class="p">:</span> <span class="p">{</span>
         <span class="c1"># Specify the basis set cutoffs</span>

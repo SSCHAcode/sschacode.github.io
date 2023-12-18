@@ -10,6 +10,8 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JWQyO-EACVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+
 <h2>Structural instability: calculation of the Hessian<a class="headerlink" href="#structural-instability-calculation-of-the-hessian" title="Permalink to this headline"> </a></h2>
 <p>According to Landau’s theory, a second-order phase transition occurs
 when the free energy curvature around the high-symmetry structure on the direction of the order parameter becomes negative:</p>

@@ -5,7 +5,7 @@ title: Installation
 
 Here we provide the installation guide of the SSCHA code as well as other related codes distributed within the [SSCHA GitHub](https://github.com/SSCHAcode) repository. 
 
-# Easy installation through Anaconda
+# 1. Easy installation through Anaconda
 
 The SSCHA code comes as a python library, with computationally intense part speedup with C, Fortran and Julia. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)) 
 
@@ -34,7 +34,7 @@ python -c 'import julia; julia.install()'
 ```
 
 
-# Installing without Anaconda 
+# 2. Installing without Anaconda 
 
 If you do not have anaconda to handle your dependencies you need to manually compile the code.
 
@@ -167,7 +167,7 @@ MPICC=mpicc python setup.py install
 ```
 Make sure that at the end of the installation no error is displayed, and the write PARALLEL ENVIRONMENT DECTECTED SUCCESFULLY is displayed. Note that, if using the julia enhanced version, the last command is not required, and you can install only mpi4py.
 
-# 4. Install qe-5.1.0_elph
+# 3. Install qe-5.1.0_elph
 
 In order to install this old version of Quantum Espresso, which is tuned to allow the combination of electron-phonon matrix elements with SSCHA dynamical matrices, follow these instructions:
 ```
@@ -191,7 +191,7 @@ make all
 ```
 again.
 
-# 5. F3ToyModel installation
+# 4. F3ToyModel installation
 
 F3ToyModel is a force-field that can mimic the physics of ferroelectric transitions in FCC lattices. All preresquisites are met with the SSCHA installation.
 

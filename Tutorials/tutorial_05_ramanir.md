@@ -7,6 +7,8 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_6pJ4uI0UKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+
 <p>In the previous tutorial, you learned how to compute the spectral function by integrating the bubble in the Fourier space, with the dynamical ansatz formulated by <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111">Bianco et al, Physical Review B, 96 , 014111, 2017</a>.
 Instead, we will employ the Lanczos algorithm within the Time-Dependent Self-Consistent Harmonic Approximation (TD-SCHA) <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.104305">Monacelli, Mauri, Physical Review B 103, 104305, 2021</a>.</p>
 <p>For this reason, we need the package <code class="docutils literal notranslate"><span class="pre">tdscha</span></code> (it is suggested to configure it with the Julia speedup to run faster, see the installation guide).</p>

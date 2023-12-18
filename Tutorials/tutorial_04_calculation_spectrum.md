@@ -7,6 +7,8 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e-F-EKHA_3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+
 <section id="theoretical-introduction">
 <h2>Theoretical introduction<a class="headerlink" href="#theoretical-introduction" title="Permalink to this headline"> </a></h2>
 <p>The SCHA phonons are non-interacting quasiparticles that already include anharmonic effects (i.e. interaction between standard harmonic phonons) at some level. However, anharmoncity causes interaction between  the SCHA phonons too. The interactions between phonons causes a change of their energy spectrum: from the overlap of simple Dirac-delta functions  centered around the SSCHA phonon frequencies, to the overlap of Lorentzians with finite width (i.e. the quasiparticles have finite lifetime) and centered around shifted energies, or structures even more complex  (when the anharmoncity is so strong that the quasiparticle picture has to be abandoned).
