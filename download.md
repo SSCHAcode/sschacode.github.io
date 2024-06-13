@@ -5,29 +5,30 @@ title: Installation
 
 Here we provide the installation guide of the SSCHA code as well as other related codes distributed within the [SSCHA GitHub](https://github.com/SSCHAcode) repository. 
 
-# 1. Easy installation through Anaconda
+# 1. Easy installation through Anaconda/Mamba
 
-The SSCHA code comes as a python library, with computationally intense part speedup with C, Fortran and Julia. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)) 
+The SSCHA code comes as a python library, with computationally intense part speedup with C, Fortran and Julia. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)).
 
+If anaconda is too big, you can alternatively install [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), a much faster and lightweight alternative to ``conda``. Then, replace ``conda`` with ``micromamba`` in the following commands.
 
 ```
-conda create -n sscha -c conda-forge python=3.10 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2
+conda create -n sscha -c conda-forge python=3.11 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2
 conda activate sscha
 pip install ase julia mpi4py
 pip install cellconstructor python-sscha tdscha
 ```
 
-This is the safest and best way to install the SSCHA. The first line creates a new pristine python environment with all the required libraries to compile the source code. The second line activates the newly installed environment. Then, the thrid command installs the additional dependencies, the last line compiles and install the SSCHA code.
+This is the safest and best way to install the SSCHA. The first line creates a new pristine Python environment with all the required libraries to compile the source code. The second line activates the newly installed environment. Then, the third command installs the additional dependencies, and the last line compiles and installs the SSCHA code.
 
-To use the SSCHA, you must activate the python environment with:
+To use the SSCHA, you must activate the Python environment with the following:
 
 ```
 conda activate sscha
 ```
 
-This installation method should work also on clusters and with computers with custom configurations. You must remember to activate the ``sscha`` environment even in your submission scripts on clusters.
+This installation method should also work on clusters and computers with custom configurations. Remember to activate the ``sscha`` environment even in your submission scripts on clusters.
 
-To activate the julia speedup on the SSCHA minimization, you must ensure julia dependencies are correctly setup. To do this, run the following line:
+You must ensure Julia's dependencies are correctly set up to activate Julia's speedup on the SSCHA minimization. To do this, run the following line:
 
 ```
 python -c 'import julia; julia.install()'
@@ -36,26 +37,26 @@ python -c 'import julia; julia.install()'
 
 # 2. Installing without Anaconda 
 
-If you do not have anaconda to handle your dependencies you need to manually compile the code.
+If you do not have anaconda to handle your dependencies, you need to compile the code manually.
 
-Most of the codes require a fortran or C compiler and MPI configured. Here we install all the requirements to properly setup the SSCHA code. To properly compile and install the SSCHA code, you need a fortran compiler and LAPACK/BLAS available.
+You need a FORTRAN and C compiler with MPI configured. Here, we install all the requirements to properly set up the SSCHA code. To properly compile and install the SSCHA code, you need a FORTRAN compiler and LAPACK/BLAS available.
 
 On Debian-based Linux distribution, all the software required is installed with (Tested on Quantum Mobile and ubuntu 20.04):
 ```
 sudo apt update
 sudo apt install libblas-dev liblapack-dev liblapacke-dev gfortran openmpi-bin
 ```
-Note that some of the names of the libraries may change slightly in different linux versions or on MacOS.
+Note that some of the names of the libraries may change slightly in different Linux versions or on MacOS.
 
 ## Python installation
 
-Up to version 1.4 of SSCHA, it supports only python <= 3.10. If you are using the default python in the system, make sure to have installed the development header files. On ubuntu, they can be installed with:
+Up to version 1.4 of SSCHA, it supports only python <= 3.11. If you are using the default Python in the system, install the development header files. On Ubuntu, they can be installed with:
 
 ```
 sudo apt install python-dev
 ```
 
-If you use anaconda, they are automatically installed.
+If you use Anaconda or Micromamba, they are automatically installed.
 
 ## Prerequisites
 
@@ -66,23 +67,23 @@ pip install ase spglib==2.2
 ```
 
 ### Julia speedup
-The SSCHA benefits from julia being installed in the system. If present,
-it will be automatically used to speedup the calculation.
+The SSCHA benefits from having Julia installed in the system. If present,
+it will be automatically used to speed up the calculation.
 
 To install julia, refer to the official website [julialang.org/downloads/](https://julialang.org/downloads/)
-Alternatively, to install julia on linux we can employ juliaup:
+Alternatively, to install Julia on linux we can employ Juliaup:
 ```
 curl -fsSL https://install.julialang.org | sh
 ```
-Hit enter when asked to install julia.
+Hit enter when asked to install Julia.
 
-Then, install the python bindings for julia with
+Then, install the Python bindings for Julia with
 ```
 pip install julia
 ```
 
 
-The tdscha extension to compute Raman and IR requires some additional julia packages that can be installed within a julia terminal. Update your configuration to have access to the newly installed julia
+The tdscha extension to compute Raman and IR requires additional julia packages that can be installed within a julia terminal. Update your configuration to have access to the newly installed julia
 ```
 source ~/.bashrc
 ```
@@ -110,7 +111,7 @@ pip install cellconstructor python-sscha
 Alternatively, it is possible to use the most recent version from the [SSCHA GitHub](https://github.com/SSCHAcode) repository, under CellConstructor and python-sscha repositories. The installation is performed in this case with
 
 ```
-python setup.py install
+pip install .
 ```
 
 ### Personalize the compiler
@@ -121,15 +122,15 @@ For example
 ```
 FC=gfortran LDSHARED=gfortran pip install cellconstructor python-sscha
 ```
-For the development version of the code, subtitute the pip call with the python setup.py install.
+For the development version of the code, substitute the pip call with the python setup.py install.
 
-### Running the testsuite
+### Running the test suite
 
-To be sure everything is working, you can run the testsuite. Make sure to install the pytest package with
+To be sure everything is working, you can run the test suite. Make sure to install the pytest package with
 ```
 pip install pytest
 ```
-Then run the testsuite with
+Then run the test with
 ```
 cellconstrutor_test.py
 ```
@@ -165,7 +166,7 @@ The parallelization is automatically enabled in the julia version and if mpi4py 
 ```
 MPICC=mpicc python setup.py install
 ```
-Make sure that at the end of the installation no error is displayed, and the write PARALLEL ENVIRONMENT DECTECTED SUCCESFULLY is displayed. Note that, if using the julia enhanced version, the last command is not required, and you can install only mpi4py.
+Make sure that no error is displayed at the end of the installation and that the write PARALLEL ENVIRONMENT DECTECTED SUCCESFULLY is displayed. Note that if using the Julia enhanced version, the last command is not required, and you can install only mpi4py.
 
 # 3. Install qe-5.1.0_elph
 
@@ -201,5 +202,5 @@ git clone https://github.com/SSCHAcode/F3ToyModel.git
 ```
 Now enter the F3ToyModel directory and install with:
 ```
-python setup.py install
+pip install .
 ```
