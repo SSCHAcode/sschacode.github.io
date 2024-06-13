@@ -34,6 +34,25 @@ You must ensure Julia's dependencies are correctly set up to activate Julia's sp
 python -c 'import julia; julia.install()'
 ```
 
+Note: this command may fail if you are using micromamba. To solve the issue, you need to manually specify the binary location of micromamba to julia:
+
+```
+export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba
+```
+Replacing ``$HOME/.local/bin/micromamba`` with the path to the micromamba binary if you changed the default.
+Then, proceed with the manual installation of PyCall.
+
+Open a Julia shell, typing ``Julia ``. Enter in the package manager by typing ``]``. You should see your prompt turning into a ``pkg>``. Then build the conda extension and compile PyCall.
+```
+build Conda
+add PyCall
+```
+
+To make it work also after the next login, also add the environment variable to the init script
+```
+echo "export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba" >> $HOME/.bashrc
+```
+
 
 # 2. Installing without Anaconda 
 
