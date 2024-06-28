@@ -10,7 +10,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cE6Sw_7hSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/NBHTeeiM5Dmg3XF).
 
 <section id="the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble">
 <h2>The free energy of gold: a simulation in the NVT ensemble<a class="headerlink" href="#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble" title="Permalink to this headline"></a></h2>
