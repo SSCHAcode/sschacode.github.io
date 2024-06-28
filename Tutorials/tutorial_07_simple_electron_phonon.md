@@ -7,7 +7,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oSRAx6eNFtc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/NBHTeeiM5Dmg3XF).
 
 <p>In this hands-on-session we will learn to calculate the electron-phonon interaction and superconductivity properties in strongly anharmonic systems combining electron-phonon matrix elements calculated within density-functional perturbation theory (DFPT), as implemented in Quantum Espresso (QE), and the anharmonic phonon frequencies and polarization vectors obtained with the SSCHA. For that purpose we will use a slightly modified version of Quantum Espresso version 5.1.0, which includes some extra features developed by us that can be used to combine the electron-phonon matrix elements with real space SSCHA force constants, calculate the <span class="math notranslate nohighlight">\(\alpha^2F(\omega)\)</span>, calculate <span class="math notranslate nohighlight">\(T_c\)</span>  with empirical equations, and solve isotropic Migdal-Eliashberg equations.</p>
 <section id="calculation-of-the-electron-phonon-matrix-elements">
