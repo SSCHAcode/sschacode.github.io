@@ -7,7 +7,7 @@ This tutorial was prepared for the [2023 SSCHA School](http://sscha.eu/Schools/2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FjhvCO_dWdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/Y48Wc8iX9Z76jqN).
+The material needed for this tutorial can be downloaded [here](https://ehubox.ehu.eus/s/NBHTeeiM5Dmg3XF).
 
 <p>In previous lessons we saw how to calculate vibrational properties of material using SSCHA. Now we will use this acquired knowledge to calculate lattice thermal conductivity of materials. We will need dynamical matrices (<strong>auxiliary ones, not hessians</strong>) and the third order force constants (we already calculated them when we checked the dynamical stability of the system). With these we can calculate materials’ harmonic (phonon frequencies and phonon group velocities) and anharmonic properties (phonon lifetimes and spectral functions) which is all we need to calculate lattice thermal conductivity.</p>
 <section id="lattice-thermal-conductivity-of-silicon">
