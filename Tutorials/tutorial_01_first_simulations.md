@@ -14,7 +14,7 @@ The material needed for this tutorial can be downloaded [here](https://ehubox.eh
 
 <section id="the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble">
 <h2>The free energy of gold: a simulation in the NVT ensemble<a class="headerlink" href="#the-free-energy-of-gold-a-simulation-in-the-nvt-ensemble" title="Permalink to this headline"></a></h2>
-<p>This simple tutorial explains how to setup a SSCHA calculation starting just from the structure, in this case a cif file we downloaded from the [Materials Project](<a class="reference external" href="https://materialsproject.org/materials/mp-81/">https://materialsproject.org/materials/mp-81/</a>) database that we can find in the <em>01_First_SSCHA_simulations</em> directory.</p>
+<p>This simple tutorial explains how to setup a SSCHA calculation starting just from the structure, in this case, a [cif file of gold](Au.cif) that we prepared using [Materials Project](<a class="reference external" href="https://materialsproject.org/materials/mp-81/">https://materialsproject.org/materials/mp-81/</a> database that we can find in the <em>01_First_SSCHA_simulations</em> directory or downloaded from [here](Au.cif).</p>
 <dl class="simple">
 <dt>Starting from the Gold structure in the primitive cell, to run the SSCHA we need:</dt><dd><ul class="simple">
 <li><p>Compute the harmonic phonons (dynamical matrix)</p></li>
