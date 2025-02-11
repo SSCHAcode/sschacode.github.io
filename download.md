@@ -12,11 +12,12 @@ The SSCHA code comes as a python library, with computationally intense part spee
 If anaconda is too big, you can alternatively install [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), a much faster and lightweight alternative to ``conda``. Then, replace ``conda`` with ``micromamba`` in the following commands.
 
 ```
-conda create -n sscha -c conda-forge python=3.11 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2
+conda create -n sscha -c conda-forge python=3.11 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2 setuptools=64
 conda activate sscha
 pip install ase julia mpi4py
 pip install cellconstructor python-sscha tdscha
 ```
+
 
 This is the safest and best way to install the SSCHA. The first line creates a new pristine Python environment with all the required libraries to compile the source code. The second line activates the newly installed environment. Then, the third command installs the additional dependencies, and the last line compiles and installs the SSCHA code.
 
@@ -40,19 +41,30 @@ Note: this command may fail if you are using micromamba. To solve the issue, you
 export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba
 ```
 Replacing ``$HOME/.local/bin/micromamba`` with the path to the micromamba binary if you changed the default.
-Then, proceed with the manual installation of PyCall.
+To make it work after the next login, add the environment variable to the init script
+```
+echo "export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba" >> $HOME/.bashrc
+```
 
-Open a Julia shell, typing ``Julia ``. Enter in the package manager by typing ``]``. You should see your prompt turning into a ``pkg>``. Then build the conda extension and compile PyCall.
+To configure Julia PyCall to work with anaconda (or micromamba), open a Julia shell, typing ``Julia ``. Enter in the package manager by typing ``]``. You should see your prompt turning into a ``pkg>``. Then build the conda extension and compile PyCall.
 ```
 build Conda
 add PyCall
 ```
 
-To make it work also after the next login, also add the environment variable to the init script
-```
-echo "export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba" >> $HOME/.bashrc
-```
 
+## Troubleshooting
+
+New Python versions and numpy dropped the support for the automatic Fortran compilation required by cell constructor and python-sscha.
+If your installation errors with something similar to
+```
+ModuleNotFoundError: No module named 'distutils.msvccompiler'
+```
+Run 
+```
+pip install --force-reinstall setuptools==64
+```
+then retry to install cellconstructor and python-sscha.
 
 # 2. Installing without Anaconda 
 
