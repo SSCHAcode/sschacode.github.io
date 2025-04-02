@@ -24,3 +24,7 @@ As the theory of the SSCHA work has been previously published, we would also kin
   Lorenzo Monacelli, Ion Errea, Matteo Calandra, and Francesco Mauri. 
   Physical Review B 97, 214101 (2018).
 
+If you are using the SSCHA thernal conductivity features you should cite the following paper:
+- [*Lattice thermal conductivity in the anharmonic overdamped regime*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.104314).
+  Đorđe Dangić, Giovanni Caldarelli, Raffaello Bianco, Ivana Savić and Ion Errea.
+  Physical Review B 111, 104314 (2025).
