@@ -84,7 +84,7 @@ If you use Anaconda or Micromamba, they are automatically installed.
 ### Python libraries
 We need to install the prerequisites with pip:
 ```
-pip install ase spglib==2.2
+pip install ase spglib
 ```
 
 ### Julia speedup
