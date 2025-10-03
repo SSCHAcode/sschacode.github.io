@@ -143,7 +143,6 @@ For example
 ```
 FC=gfortran LDSHARED=gfortran pip install cellconstructor python-sscha
 ```
-For the development version of the code, substitute the pip call with the python setup.py install.
 
 ### Running the test suite
 
@@ -169,9 +168,8 @@ To install the GitHub code that enables the MPI parallelization also without the
 ```
 git clone https://github.com/SSCHAcode/tdscha.git
 cd tdscha
-MPICC=mpicc python setup.py install
+pip install .
 ```
-where mpicc is a valid mpi c compiler (the specification of MPICC can be dropped, but parallelization will not be available aside for the julia mode discussed below).
 
 ###  MPI Parallelization for TDSCHA
 
@@ -185,7 +183,7 @@ pip install mpi4py
 ```
 The parallelization is automatically enabled in the julia version and if mpi4py is available. However, to run the parallel code without the julia speedup, you need to recompile the code from the github repository as (not the version installed with pip)
 ```
-MPICC=mpicc python setup.py install
+pip install .
 ```
 Make sure that no error is displayed at the end of the installation and that the write PARALLEL ENVIRONMENT DECTECTED SUCCESFULLY is displayed. Note that if using the Julia enhanced version, the last command is not required, and you can install only mpi4py.
 
