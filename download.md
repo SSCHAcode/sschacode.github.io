@@ -12,7 +12,7 @@ The SSCHA code comes as a python library, with computationally intense part spee
 If anaconda is too big, you can alternatively install [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), a much faster and lightweight alternative to ``conda``. Then, replace ``conda`` with ``micromamba`` in the following commands.
 
 ```
-conda create -n sscha -c conda-forge python=3.11 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2 setuptools=64
+conda create -n sscha -c conda-forge python gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib pkgconfig
 conda activate sscha
 pip install ase julia mpi4py
 pip install cellconstructor python-sscha tdscha
@@ -35,7 +35,8 @@ You must ensure Julia's dependencies are correctly set up to activate Julia's sp
 python -c 'import julia; julia.install()'
 ```
 
-Note: this command may fail if you are using micromamba. To solve the issue, you need to manually specify the binary location of micromamba to julia:
+
+Note: this command may fail in some version of micromamba if you are using micromamba. To solve the issue, you need to manually specify the binary location of micromamba to julia:
 
 ```
 export CONDA_JL_CONDA_EXE=$HOME/.local/bin/micromamba
@@ -235,3 +236,27 @@ Now enter the F3ToyModel directory and install with:
 ```
 pip install .
 ```
+
+
+## Throubleshooting
+
+
+It is possible to have the following error. In this case, it means you have two different julia version installed. Just remove the one with anaconda `conda remove julia`, and everything should work correctly.
+
+```
+┌ Warning: CHOLMOD version incompatibility
+│
+│ Julia was compiled with CHOLMOD version 4.0.4. It is
+│ currently linked with version 5.3.1.
+│ This might cause Julia to terminate when working with
+│ sparse matrix factorizations, e.g. solving systems of
+│ equations with \.
+│
+│ It is recommended that you use Julia with the same major
+│ version of CHOLMOD as the one used during the build, or
+│ download the generic binaries from www.julialang.org,
+│ which ship with the correct versions of all dependencies.
+└ @ SparseArrays.CHOLMOD ~/micromamba/envs/sscha/share/julia/stdlib/v1.10/SparseArrays/src/solvers/cholmod.jl:206
+```
+
+
