@@ -56,17 +56,6 @@ add PyCall
 
 ## Troubleshooting
 
-New Python versions and numpy dropped the support for the automatic Fortran compilation required by cell constructor and python-sscha.
-If your installation errors with something similar to
-```
-ModuleNotFoundError: No module named 'distutils.msvccompiler'
-```
-Run 
-```
-pip install --force-reinstall setuptools==64
-```
-then retry to install cellconstructor and python-sscha.
-
 # 2. Installing without Anaconda 
 
 If you do not have anaconda to handle your dependencies, you need to compile the code manually.
@@ -82,7 +71,7 @@ Note that some of the names of the libraries may change slightly in different Li
 
 ## Python installation
 
-Up to version 1.4 of SSCHA, it supports only python <= 3.11. If you are using the default Python in the system, install the development header files. On Ubuntu, they can be installed with:
+If you are using the default Python in the system, install the development header files. On Ubuntu, they can be installed with:
 
 ```
 sudo apt install python-dev
@@ -238,7 +227,7 @@ pip install .
 ```
 
 
-## Throubleshooting
+### Errors in julia
 
 
 It is possible to have the following error. In this case, it means you have two different julia version installed. Just remove the one with anaconda `conda remove julia`, and everything should work correctly.
