@@ -111,7 +111,7 @@ Finally, the dynamical matrix for the minimization is loaded and readied. Since 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ensemble</span> <span class="o">=</span> <span class="n">sscha</span><span class="o">.</span><span class="n">Ensemble</span><span class="o">.</span><span class="n">Ensemble</span><span class="p">(</span><span class="n">dyn_sscha</span><span class="p">,</span>
         <span class="n">T0</span> <span class="o">=</span> <span class="n">Temperature</span><span class="p">,</span> <span class="n">supercell</span> <span class="o">=</span> <span class="n">dyn_sscha</span><span class="o">.</span><span class="n">GetSupercell</span><span class="p">())</span>
 <span class="c1"># Detect space group</span>
-<span class="n">symm</span><span class="o">=</span><span class="n">spglib</span><span class="o">.</span><span class="n">get_spacegroup</span><span class="p">(</span><span class="n">dyn_sscha</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_ase_atoms</span><span class="p">(),</span>
+<span class="n">symm</span><span class="o">=</span><span class="n">spglib</span><span class="o">.</span><span class="n">get_spacegroup</span><span class="p">(</span><span class="n">dyn_sscha</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_spglib_cell</span><span class="p">(),</span>
         <span class="mf">0.005</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial SG = &#39;</span><span class="p">,</span> <span class="n">symm</span><span class="p">)</span>
 </pre></div>
