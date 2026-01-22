@@ -59,38 +59,15 @@ The material for the hands-on sessions will be shared with the students after re
 
 # Registration
 
-Registration is now open. Deadline is June 18, 2023. **Regular Registration Fee: 150€**
+Registration is now open. Deadline is May 17, 2026.
 
-The registration fee includes all the school material, lectures, hands-on sessions, coffee breaks, and conference dinner. There is a limited number of students that can be accepted. Students will be accepted on a first come, first served basis. So register as soon as possible. 
+The registration fee includes all the school material, lectures, and hands-on sessions. There is a limited number of students that can be accepted. Students will be accepted on a first come, first served basis. So register as soon as possible. 
 
 Registration to the conference is done through UIK’s platform: 
 
 [https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent)
 <!-- [https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent) 
 -->
-
-If you are already user of such platform, log in with your mail and password. Otherwise, register first to be a user.  Find detailed instructions for registration and access to your personal area on UIK’s platform [here](Registration_instructions_SSCHA.pdf). You will find useful information with screenshots to lead you through the registration process. Once registered you will have access to your personal area where you can find your invoice and attendance certificate.
-
-Points to consider in the registration process:
-- It is important to write your affiliation. Even though the field is not compulsory, it will be needed for your badge. 
-- Click on the dinner option if you are going to attend. Although it is included in your fee, it is important to click, otherwise we will think you are not coming. Write your food restrictions, if any, in the space provided once you click.
-- You can either pay by credit card or bank transfer:
-  - Credit card: you will be able to finish your registration straight away. 
-  - Bank transfer:  You will have to upload a proof of payment on step 5. Your registration will be validated later on.  
-- We have arranged some low-budget accommodation possibilities in shared rooms for some students that can be accessed in the registration process. Other possibilities need to be arranged by the students themselves. See [here](#Accommodation) for suggestions.   
-- If your fee is to be paid by your institution, have in mind that you will have to change the billing address on step 4 by clicking on the tab “Add a new address”, and write your institution’s billing address. Many institutions ask for a pro forma invoice to be able to make the payment. You can also get it on step 4 but remember to change the billing address first. 
-
- <ins><b>Abstract submission</b></ins>:
- 
-The registered students will have the option to send an abstract to the school. Some of the contributions will be selected for a contributed talk and the rest will be presented in a poster session. The contributions we expect are related to systems where phonons play a crucial and anharmonicity may be important. 
-
-The asbtracts can be submitted following this link:
-
-[https://forms.gle/TjCes3fuZsY9T7nW6](https://forms.gle/TjCes3fuZsY9T7nW6)
-
-Important points about the abstrac submission:
-- **Deadline for the abstract submission has been extended**. New deadline is May 15, 2023.
-- Only abstracts of registered students will be considered.
 
 <a name="Organizers"></a>
 
