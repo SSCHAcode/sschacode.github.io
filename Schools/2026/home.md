@@ -2,7 +2,7 @@
 layout: page
 title: SSCHA School 2026
 subtitle: June 8-12, 2026 - Online
-bigimg: "../../img/Donostia_Igeldotik_2.jpeg"
+bigimg: "../../img/SSCHA_Logo_original_Horizontala_leyeda_Gabe.png"
 ---
 
 The first *"Summer School on the Calculation of Ionic Quantum and Anharmonic Effects with the Stochastic Self-Consistent Harmonic Approximation"* will be held in Donostia/San Sebastián, Spain, from June 26-30, 2023. It will be a fantastic opportunity to learn the fundamental physics behind the SSCHA code and to get hands-on training sessions on its different utilities with lectures given by the developers of the code.
