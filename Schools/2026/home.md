@@ -2,6 +2,7 @@
 layout: page
 title: SSCHA School 2026
 subtitle: June 8-12, 2026 - Online
+bigimg: "../../img/SSCHA_logo_sides.png"
 ---
 
 The second *"School on the Calculation of Ionic Quantum and Anharmonic Effects with the Stochastic Self-Consistent Harmonic Approximation"* will take place **online** from June 8–12, 2026. This edition will offer an excellent opportunity to explore the fundamental physics behind the SSCHA code and engage in hands-on training sessions guided by the code’s developers.
