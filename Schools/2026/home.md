@@ -56,12 +56,12 @@ The material for the hands-on sessions will be shared with the students after re
 
 Registration is now open. Deadline is May 17, 2026.
 
-The registration fee includes all the school material, lectures, and hands-on sessions. There is a limited number of students that can be accepted. Students will be accepted on a first come, first served basis. So register as soon as possible. 
+The registration includes all the school material, lectures, and hands-on sessions. There is a limited number of students that can be accepted. Students will be accepted on a first come, first served basis. So register as soon as possible. 
 
-Registration to the conference is done through UIK’s platform: 
+In order to register follow this link: 
 
-[https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/en/activity/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent)
-<!-- [https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent](https://www.uik.eus/es/curso/summer-school-calculation-ionic-quantum-anharmonic-effects-stochastic-self-consistent) 
+[https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor](https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor)
+<!-- [https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor](https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor) 
 -->
 
 <a name="Organizers"></a>
