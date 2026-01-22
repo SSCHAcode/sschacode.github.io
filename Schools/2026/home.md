@@ -5,57 +5,41 @@ subtitle: June 8-12, 2026 - Online
 bigimg: "../../img/SSCHA_logo_sides.png"
 ---
 
-The first *"Summer School on the Calculation of Ionic Quantum and Anharmonic Effects with the Stochastic Self-Consistent Harmonic Approximation"* will be held in Donostia/San Sebastián, Spain, from June 26-30, 2023. It will be a fantastic opportunity to learn the fundamental physics behind the SSCHA code and to get hands-on training sessions on its different utilities with lectures given by the developers of the code.
+The second *"School on the Calculation of Ionic Quantum and Anharmonic Effects with the Stochastic Self-Consistent Harmonic Approximation"* will take place **online** from June 8–12, 2026. This edition will offer an excellent opportunity to explore the fundamental physics behind the SSCHA code and engage in hands-on training sessions guided by the code’s developers.
 
-This will be your school if you want to learn how to calculate thermodynamic, vibrational, transport, spectroscopic, and superconducting properties in strongly anharmonic materials. The lectures and the hands-on sessions will focus first on the basics of the SSCHA and first simple calculations. More advanced lectures on phase transitions, spectroscopic properties, thermal conductivity, and electron-phonon interactions will follow later. In the hands-on sessions the student will learn to calculate the critical temperature of charge-density wave transitions, Raman and Infrared spectra of strongly anharmonic systems, the thermal conductivity at different levels of theory, and the superconducting properties of materials even if the harmonic approximation collapses.   
+This school is ideal for participants interested in learning how to compute thermodynamic, vibrational, transport, spectroscopic, and superconducting properties in strongly anharmonic materials, as well as for those wishing to become familiar with the latest advances in the SSCHA framework. The program will begin with introductory lectures and practical sessions covering the core concepts of the SSCHA and basic calculations. Subsequently, more specialized lectures will delve into phase transitions, spectroscopic properties, thermal conductivity, and electron–phonon interactions. During the hands-on sessions, participants will learn how to compute the critical temperature of charge-density-wave transitions, Raman and infrared spectra of strongly anharmonic systems, thermal conductivity at multiple theoretical levels, and the superconducting properties of materials, even in regimes where the harmonic approximation fails.
 
-Students are expected to bring their own laptop for the hands-on sessions. No prior knowledge on the SSCHA is needed for  participating in the school, but it is advised to have some knowledge on the theory of phonons as well as some experience in computer simulations with *ab initio* methods or force fields.   
+All lectures and practical activities will be delivered online. While no prior experience with the SSCHA is required, participants are encouraged to have some background in phonon theory and familiarity with computer simulations using *ab initio* methods or force fields.
 
-We wait for you in the beautiful city of San Sebastian this summer.
+We look forward to welcoming you this June to explore the capabilities and subtleties of the SSCHA.
    
 In this website you can find the following information:
-- [Lecturers](#Lecturers)
+- [Lecturers and instructors](#Lecturers)
 - [Hands-On sessions](#Hands-On sessions)
 - [Program](#Program)
-- [Registration and abstract submission](#Registration)
-- [Venue and travel information](#Travel)
+- [Registration](#Registration)
 - [Organizers and contact](#Organizers)
-
-Institutional sponsors:
-
-<a href="https://cfm.ehu.es"><img src="/img/CFM.jpg" alt="CFM" height="85"/></a>
-<a href="https://www.ehu.eus/eu/home"><img src="/img/EHU.jpg" alt="UPV/EHU" height="95"/></a>
-<a href="http://dipc.ehu.es"><img src="/img/DIPC.JPG" alt="DIPC" height="65"/></a>
-<a href="https://erc.europa.eu/homepage"><img src="/img/ERC.jpg" alt="ERC" height="90"/></a>
 
 <a name="Lecturers"></a>
 
-# Lecturers
+# Lecturers and instructors
 
-[![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *University of Modena, Italy*
-
-[![Giovanni Marini](../../img/Giovanni_Marini.jpg)](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini) [**Giovanni Marini**](https://2d-me.iit.it/our-staff-details/-/people/giovanni-marini) - *Istituto Italiano di Tecnologia, Italy*
+[![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *University of Modena and Reggio Emilia, Italy*
 
 [![Ion Errea](../../img/Ion_Errea.jpg)](https://cfm.ehu.es/errealab/) [**Ion Errea**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
-[![Francesco Mauri](../../img/Francesco_Mauri.jpg)](http://www2.phys.uniroma1.it/doc/mauri/) [**Francesco Mauri**](http://www2.phys.uniroma1.it/doc/mauri/) - *La Sapienza University, Italy*
-
-[![Antonio Siciliano](../../img/Antonio_Siciliano.jpg)](https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) [**Antonio Siciliano**](https://phd.uniroma1.it/web/ANTONIO-SICILIANO_nP1696073_EN.aspx) - *La Sapienza University, Italy*
-
-[![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) [**Lorenzo Monacelli**](https://scholar.google.it/citations?user=J5BKff0AAAAJ&hl=en) - *EPFL, Switzerland*
+[![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://www.lafisicadimonacelli.it) [**Lorenzo Monacelli**](https://www.lafisicadimonacelli.it) - *La Sapienza University, Italy*
 
 [![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://cfm.ehu.es/errealab/) [**Đorđe Dangić**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
-[![Diego Martínez Gutiérrez](../../img/Diego_Martinez.jpg)](https://cfm.ehu.es/errealab/) [**Diego Martínez Gutiérrez**](https://cfm.ehu.es/errealab/) - *Centro de Física de Materiales, Spain*
-
-[![Guglielmo Marchese](../../img/Guglielmo_Marchese.jpg)](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) [**Guglielmo Marchese**](https://phd.uniroma1.it/web/GUGLIELMO-MARCHESE_nP1657123_IT.aspx) - *La Sapienza University, Italy*
+More names to be announced soon.
 
 
 <a name="Hands-On sessions"></a>
 
 # Hands-On sessions
 
-The tutorials for the Hands-On session can be downloaded from [here](sscha-school-2023.pdf).
+The material for the hands-on sessions will be shared with the students.
 
 <a name="Program"></a>
 
