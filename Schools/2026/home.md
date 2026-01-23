@@ -30,6 +30,8 @@ In this website you can find the following information:
 
 [![Ion Errea](../../img/Ion_Errea.jpg)](https://cfm.ehu.es/errealab/) [**Ion Errea**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
+[![Giovanni Marini](../../img/Giovanni_Marini.jpg)](https://scholar.google.com/citations?user=2gKILfYAAAAJ&hl=en) [**Giovanni Marini**](https://scholar.google.com/citations?user=2gKILfYAAAAJ&hl=en) - *University of Trento, Italy*
+
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://www.lafisicadimonacelli.it) [**Lorenzo Monacelli**](https://www.lafisicadimonacelli.it) - *La Sapienza University, Italy*
 
 
