@@ -34,8 +34,6 @@ In this website you can find the following information:
 
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://www.lafisicadimonacelli.it) [**Lorenzo Monacelli**](https://www.lafisicadimonacelli.it) - *La Sapienza University, Italy*
 
-
-
 More names to be announced soon.
 
 <a name="Hands-On sessions"></a>
