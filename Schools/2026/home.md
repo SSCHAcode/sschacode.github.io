@@ -24,13 +24,15 @@ In this website you can find the following information:
 
 # Lecturers and instructors
 
-[![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](http://personale.unimore.it/Rubrica/dettaglio/rbianco) [**Raffaello Bianco**](http://personale.unimore.it/Rubrica/dettaglio/rbianco) - *Università degli studi di Modena e Reggio Emilia, Italy*
+[![Raffaello Bianco](../../img/Raffaello_Bianco.jpg)](https://scholar.google.com/citations?hl=en&user=YtXgXCAAAAAJ) [**Raffaello Bianco**](https://scholar.google.com/citations?hl=en&user=YtXgXCAAAAAJ) - *Università degli studi di Modena e Reggio Emilia, Italy*
+
+[![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://cfm.ehu.es/errealab/) [**Đorđe Dangić**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
 [![Ion Errea](../../img/Ion_Errea.jpg)](https://cfm.ehu.es/errealab/) [**Ion Errea**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
 
 [![Lorenzo Monacelli](../../img/Lorenzo_Monacelli.jpg)](https://www.lafisicadimonacelli.it) [**Lorenzo Monacelli**](https://www.lafisicadimonacelli.it) - *La Sapienza University, Italy*
 
-[![Đorđe Dangić](../../img/Dorde_Dangic.jpg)](https://cfm.ehu.es/errealab/) [**Đorđe Dangić**](https://cfm.ehu.es/errealab/) - *University of the Basque Country, Spain*
+
 
 More names to be announced soon.
 
@@ -46,7 +48,7 @@ The material for the hands-on sessions will be shared with the students after re
 
 |   | Monday, <br /> June 8 | Tuesday, <br /> June 9 | Wednesday, <br /> June 10 | Thursday, <br /> June 11  | Friday, <br /> June 12 |
 |---|---|---|---|---|---|
-| 13:00-14:30  CET | Lecture1: <br /> **Lecturer1** <br /> *Theory of lattice vibrations, anharmonicity, and the SSCHA* | Lecture2: <br /> **Lecturer2** <br /> *First and second-order phase transitions in the SSCHA* | Lecture3: <br /> **Lecturer3** <br /> *Spectral functions, Raman and infrared spectra of strongly anharmonic materials* | Lecture4: <br /> **Lecturer4** <br /> *Thermal conductivity in strongly anharmonic crystals* | Lecture5: <br /> **Lecturer5** <br /> *Theory of the electron-phonon interaction and superconductivity in anharmonic crystals* <br /> |
+| 13:00-14:30  CET | Lecture1: <br /> **Ion Errea** <br /> *Theory of lattice vibrations, anharmonicity, and the SSCHA* | Lecture2: <br /> **Raffaello Bianco** <br /> *First and second-order phase transitions in the SSCHA* | Lecture3: <br /> **Lorenzo Monacelli** <br /> *Spectral functions, Raman and infrared spectra of strongly anharmonic materials* | Lecture4: <br /> **Đorđe Dangić** <br /> *Thermal conductivity in strongly anharmonic crystals* | Lecture5: <br /> **Giovanni Marini** <br /> *Theory of the electron-phonon interaction and superconductivity in anharmonic crystals* <br /> |
 | 14:30-14:45 CET | Break | Break  | Break  | Break  | Break  | 
 | 14:45-17:00 CET | Hands-on-session1: <br /> **Several Instructors** <br />  *First SSCHA simulations: free energy and structural relaxations* | Hands-on-session2: <br /> **Several Instructors** <br />  *Structural phase transitions with the SSCHA*  | Hands-on-session3: <br /> **Several Instructors** <br />  *Spectral functions, Raman and infrared spectra with the SSCHA* | Hands-on-session4: <br /> **Several Instructors** <br />  *Thermal conductivity calculations with the SSCHA* | Hands-on-session5: <br /> **Several Instructors** <br /> *Electron-phonon calculations with SSCHA phonons* | 
 
