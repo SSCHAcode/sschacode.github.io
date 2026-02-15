@@ -9,15 +9,15 @@ Here we provide the installation guide of the SSCHA code as well as other relate
 
 The SSCHA code comes as a python library, with computationally intense part speedup with C, Fortran and Julia. The easiest way to install is through Anaconda ([how to install anaconda](https://www.anaconda.com/download)).
 
-If anaconda is too big, you can alternatively install [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), a much faster and lightweight alternative to ``conda``. Then, replace ``conda`` with ``micromamba`` in the following commands.
+Alternatively to the proprietary ``Anaconda``, you can use the faster and lightweight [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html). Replace ``conda`` with ``micromamba`` in the following commands.
 
 ```
 conda create -n sscha -c conda-forge python gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib pkgconfig
 conda activate sscha
+pip install meson meson-python ninja
 pip install ase julia mpi4py
-pip install cellconstructor python-sscha tdscha
+pip install --no-build-isolation cellconstructor python-sscha tdscha
 ```
-
 
 This is the safest and best way to install the SSCHA. The first line creates a new pristine Python environment with all the required libraries to compile the source code. The second line activates the newly installed environment. Then, the third command installs the additional dependencies, and the last line compiles and installs the SSCHA code.
 
@@ -84,7 +84,8 @@ If you use Anaconda or Micromamba, they are automatically installed.
 ### Python libraries
 We need to install the prerequisites with pip:
 ```
-pip install ase spglib
+pip install meson meson-python ninja
+pip install ase julia mpi4py spglib mpi4py
 ```
 
 ### Julia speedup
@@ -126,13 +127,13 @@ Now, you should be able to exploit the julia speedup in the TDSCHA calculations.
 
 Once the prerequisites have been installed, python-sscha can be downloaded and installed with
 ```
-pip install cellconstructor python-sscha
+pip install cellconstructor python-sscha --no-build-isolation 
 ```
 
 Alternatively, it is possible to use the most recent version from the [SSCHA GitHub](https://github.com/SSCHAcode) repository, under CellConstructor and python-sscha repositories. The installation is performed in this case with
 
 ```
-pip install .
+pip install --no-build-isolation .
 ```
 
 ### Personalize the compiler
@@ -141,7 +142,7 @@ If you have multiple compilers installed, and want to force pip to employ a spec
 
 For example
 ```
-FC=gfortran LDSHARED=gfortran pip install cellconstructor python-sscha
+FC=gfortran LDSHARED=gfortran pip install --no-build-isolation cellconstructor python-sscha
 ```
 
 ### Running the test suite
@@ -160,7 +161,7 @@ If it works without errors, then the code has been correctly installed.
 
 As for the SSCHA code, also TDSCHA (time-dependent SCHA) is distributed on PyPi
 ```
-pip install tdscha
+pip install --no-build-isolation tdscha
 ```
 Alternatively, it can be downloaded from [GitHub](https://github.com/SSCHAcode/tdscha).
 
@@ -168,7 +169,7 @@ To install the GitHub code that enables the MPI parallelization also without the
 ```
 git clone https://github.com/SSCHAcode/tdscha.git
 cd tdscha
-pip install .
+pip install --no-build-isolation .
 ```
 
 ###  MPI Parallelization for TDSCHA
