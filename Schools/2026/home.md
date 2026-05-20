@@ -56,15 +56,9 @@ The material for the hands-on sessions will be shared with the students after re
 
 # Registration
 
-Registration is now open. Deadline is May 17, 2026.
+Registration is close. 
 
-The registration includes all the school material, lectures, and hands-on sessions. There is a limited number of students that can be accepted. Students will be accepted on a first come, first served basis. So register as soon as possible. 
-
-In order to register follow this link: 
-
-[https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor](https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor)
-<!-- [https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor](https://docs.google.com/forms/d/e/1FAIpQLSeBv2E0fFWO_gYZPLRaT-ufpIlYC4d6GuHmR8kC5hcnyZSUhA/viewform?usp=publish-editor) 
--->
+The registration includes all the school material, lectures, and hands-on sessions. 
 
 <a name="Organizers"></a>
 
