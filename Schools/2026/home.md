@@ -56,7 +56,7 @@ The material for the hands-on sessions will be shared with the students after re
 
 # Registration
 
-Registration is close. 
+Registration is closed. 
 
 The registration includes all the school material, lectures, and hands-on sessions. 
 
