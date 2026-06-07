@@ -12,7 +12,9 @@ This school is ideal for participants interested in learning how to compute ther
 All lectures and practical activities will be delivered online. Depending on the number of registered students, hands-on sessions will be performed in different groups in parallel. While no prior experience with the SSCHA is required, participants are encouraged to have some background in phonon theory and familiarity with computer simulations using *ab initio* methods or force fields.
 
 We look forward to welcoming you this June to explore the capabilities and subtleties of the SSCHA.
-   
+
+The Zoom link will be shared with the participants via the email they used for registration.
+
 In this website you can find the following information:
 - [Lecturers and instructors](#Lecturers)
 - [Hands-On sessions](#Hands-On sessions)
@@ -40,7 +42,9 @@ More names to be announced soon.
 
 # Hands-On sessions
 
-The material for the hands-on sessions will be shared with the students after registration closes.
+The instructions for the hands-on sessions can be downloaded from [here](SSCHA_Tutorials.pdf).
+
+The repository with the hands-on material is available at: [https://github.com/SSCHAcode/sscha_school_2026](https://github.com/SSCHAcode/sscha_school_2026)
 
 <a name="Program"></a>
 
